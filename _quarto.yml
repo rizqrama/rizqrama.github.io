@@ -1,0 +1,30 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Rizqi Ramadhan"
+  description: "PhD Researcher | Research Progress and Projects"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: meetings/index.qmd
+        text: Weekly Progress
+      - href: publications/index.qmd
+        text: Publications
+      - href: projects/index.qmd
+        text: Projects
+    right:
+      - icon: github
+        href: https://github.com/rizqrama
+        aria-label: GitHub
+  page-footer:
+    center: "© 2026 Rizqi Ramadhan · Made with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 2
