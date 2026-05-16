@@ -221,7 +221,6 @@ This research proposal is currently structured around two interconnected phase/i
 ### (Proposed) Conceptual Framework
 
 ```{mermaid}
-%%| mermaid-format: png
 flowchart TD
     A["Driving others as caregiving activity"]
     A --> B["Capturing trips done for other's purpose"]
