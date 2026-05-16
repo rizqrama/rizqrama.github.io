@@ -1,0 +1,85 @@
+/* =====================
+   TITLE BLOCK
+   ===================== */
+
+/* Instead of full reset with 'all: unset', we selectively
+   remove only the background image that Quarto adds by default.
+   This preserves the spacing and layout Quarto sets up. */
+#title-block-header {
+  background-image: none !important;
+  margin-bottom: 2em;
+}
+
+/* Page title — slightly smaller than reference's 2.5em,
+   kept centered for a clean academic look */
+#title-block-header.quarto-title-block.default .quarto-title .title {
+  font-size: 2em;
+  text-align: center;
+  margin: 0 0 0.5em 0;
+}
+
+/* =====================
+   DESCRIPTION (subtitle below page title)
+   ===================== */
+
+/* Tightened from reference's original large margins —
+   keeps the header compact without too much empty space */
+.description p {
+  text-align: center;
+  margin: 0 1em 2em 1em;
+  padding: 0 0 1em 0;
+}
+
+/* Underline links in description by default,
+   remove underline on hover for a subtle interactive feel */
+.description a {
+  text-decoration: underline !important;
+}
+
+.description a:hover {
+  text-decoration: none !important;
+}
+
+/* =====================
+   LISTING CARDS
+   ===================== */
+
+/* Base card style — transparent background, no default border.
+   Warmer shadow using --taupe instead of plain black,
+   giving depth that matches the warm color palette */
+.card {
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 2px 2px 12px rgba(70, 63, 58, 0.15);
+}
+
+/* Powder blush top border — adds a small accent stripe
+   at the top of each card, making it distinctly yours */
+.card {
+  border-top: 3px solid var(--powder-blush) !important;
+}
+
+/* =====================
+   CARD IMAGE
+   ===================== */
+
+/* Rounded top corners only on card images —
+   matches the card's border-radius on the top edge */
+.card-img {
+  border-radius: 8px 8px 0px 0px;
+}
+
+/* =====================
+   TITLE COLOR FIX
+   ===================== */
+
+/* Light mode title */
+#title-block-header.quarto-title-block.default .quarto-title .title {
+  color: var(--carbon-black);
+}
+
+/* Dark mode title */
+[data-bs-theme="dark"] #title-block-header.quarto-title-block.default .quarto-title .title {
+  color: var(--soft-linen);
+}

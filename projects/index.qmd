@@ -1,0 +1,20 @@
+---
+title: "Projects"
+listing:
+  contents: "*.qmd"
+  sort: "date desc"
+  type: default
+  exclude:
+    filename: "index.qmd"
+  fields: [date, title, description, categories]
+  sort-ui: false
+  filter-ui: false
+format:
+  html:
+    page-layout: full
+title-block-banner: false
+header-includes: >
+  <link rel="stylesheet" href="../assets/listing-default.css">
+resources:
+  - ../assets/listing-default.css
+---

@@ -1,0 +1,286 @@
+---
+title: "Progress Report — 2026-05-11"
+date: 2026-05-11
+description: "Literature on care institutionalization and survey question development"
+categories: [literature, survey, methodology]
+---
+
+::: {.panel-tabset}
+
+## Progress Report
+
+### 1. What I Want to Discuss Today
+
+1. Reporting my reading progress
+2. Asking feedback for my research directions (especially on the literatures that already incorp modeling and mathematical stuff)
+
+### 2. Current Situation
+
+#### What I did
+
+- Reading literatures on the institutionalization of care services
+- Trying to translate theories and findings from the literature into survey questions
+
+#### What I could not do / What is delayed
+
+- Fixating the questions required for improving
+- Developing mathematical models for the alternative total economic output calculation
+
+### 3. Where I Am Stuck / What I Can Not Decide on My Own
+
+- The questions I can fixate on the improved travel survey
+- How to translate findings from previous research into survey questions
+- Reference of methods to calculate the economic output of the care services
+
+### 4. Things I Want to Confirm
+
+- The initial conceptual framework
+
+## Research Documentation
+
+### Pick-Up and Drop-Off Trips as Caregiving Activity
+from measuring social welfare to the potential of formalizing care services
+
+### Increasing trend of dependent regardless demographic switch
+
+The betterment of life quality supporting system prolongs the life expectancy of the population nowadays. In parallel, the fertility rate shows a declining trend. These demographic changes have reduced the aggregate burden of child rearing, while increasing the burden of elder care.
+
+For example, I attached trends of dependent population from Japan, US, and Sweden. Across all three countries, the under-15 share has declined steadily while the 65+ share has risen. This pattern expected to continue through 2040.
+
+#### Japan Past and Predicted Dependent Population
+
+| Year           | Under 15 (%) | 65+ (%) | Combined (%) |
+| -------------- | :----------: | :-----: | :----------: |
+| 1970           |     ~24%     |   ~7%   |     ~31%     |
+| 1980           |     ~23%     |   ~9%   |     ~32%     |
+| 1990           |     ~19%     |  ~12%   |     ~31%     |
+| 2000           |     ~15%     |  ~17%   |     ~32%     |
+| 2010           |     ~13%     |  ~23%   |     ~36%     |
+| 2020           |     ~12%     |  ~29%   |     ~41%     |
+| 2030 *(proj.)* |     ~10%     |  ~31%   |     ~41%     |
+| 2040 *(proj.)* |     ~9%      |  ~36%   |     ~45%     |
+
+**Sources:**
+
+- [Japan Statistics Bureau, 2020 Population Census](https://www.stat.go.jp/english/data/kokusei/2020/summary.html)
+- [National Institute of Population and Social Security Research, *Population Projections for Japan: 2023 Revision*](https://www.ipss.go.jp/pp-zenkoku/e/zenkoku_e2023/pp2023e_Summary.pdf)
+- [UN World Population Prospects 2024](https://population.un.org/wpp/)
+
+#### US Past and Predicted Dependent Population
+
+| Year | Under 15 (%) | 65+ (%) | Combined (%) |
+|------|:------------:|:-------:|:------------:|
+| 1970 | ~28% | ~10% | ~38% |
+| 1980 | ~22% | ~11% | ~33% |
+| 1990 | ~22% | ~13% | ~35% |
+| 2000 | ~21% | ~12% | ~33% |
+| 2010 | ~20% | ~13% | ~33% |
+| 2020 | ~18% | ~17% | ~35% |
+| 2030 *(proj.)* | ~18% | ~21% | ~39% |
+| 2040 *(proj.)* | ~17% | ~22% | ~39% |
+
+**Sources:**
+
+- [U.S. Census Bureau, *The Older Population: 2020*](https://www2.census.gov/library/publications/decennial/2020/census-briefs/c2020br-07.pdf)
+- [U.S. Census Bureau, *Population Projections for the United States: 2020 to 2060*](https://www.census.gov/content/dam/Census/library/publications/2020/demo/p25-1144.pdf)
+- [Urban Institute, *Age Distribution of the U.S. Population 1950–2060*](https://www.urban.org/sites/default/files/2015/10/09/t2_age_distribution.pdf)
+- [UN World Population Prospects 2024](https://population.un.org/wpp/)
+
+#### Sweden Past and Predicted Dependent Population
+
+| Year           | Under 15 (%) | 65+ (%) | Combined (%) |
+| -------------- | :----------: | :-----: | :----------: |
+| 1970           |     ~21%     |  ~14%   |     ~35%     |
+| 1980           |     ~20%     |  ~16%   |     ~36%     |
+| 1990           |     ~18%     |  ~18%   |     ~36%     |
+| 2000           |     ~18%     |  ~17%   |     ~35%     |
+| 2010           |     ~17%     |  ~18%   |     ~35%     |
+| 2020           |     ~18%     |  ~20%   |     ~38%     |
+| 2030 *(proj.)* |     ~17%     |  ~22%   |     ~39%     |
+| 2040 *(proj.)* |     ~17%     |  ~23%   |     ~40%     |
+
+**Sources:**
+
+- [Statistics Sweden (SCB), via Statista](https://www.statista.com/statistics/525637/sweden-elderly-share-of-the-total-population-by-age-group/)
+- [Eurostat EUROPOP2025 projections](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Population_projections_in_the_EU)
+- [UN World Population Prospects 2024](https://population.un.org/wpp/)
+
+
+::: {.callout-note icon=false}
+##
+"Dependency ratio, an important indicator of the amount of time, energy, and money the working age population must devote to non workers."
+
+— *Folbre and Nelson (2000)*
+:::
+
+### Measuring household time allocation
+
+- beneficial to understand how tasks and resources are allocated within a household.
+- The most common method is by utilizing time use surveys which usually collected by national bureaus or agencies
+- Miller and Sedai (2021) broaden the data source by using panel-time diaries to account the effect of time-varying variables
+
+### (Older) Household heads had to reduce time allocated for other than caregiving
+
+- For every additional hour of caregiving activities, study from Miller and Sedai (2021) shows that allocated time for work, leisure, home production, and personal care are reduced.
+- The panel time-use data shows that women have a greater time reduction on caring for self rather than men, thus inflicting health degradation.
+- We are also interested if the reduction of other life aspects because of non-spousal care also applies to younger household heads.
+
+### Treating PUDO trips as unpaid caregiving  activities can be a first step to understand relationship between providing care and social welfare
+
+- Using Becker's (1965) time allocation framework, we can see that the increasing care needs (increasing duration of caregiving) of a household member will effectively raises providers' marginal benefit of giving care.
+- Caregiving activity includes all unpaid physical, medical, and school related assistance to others which often is a time intensive task (Miller and Sedai, 2021)
+
+### Potential of increased total economic production by putting nonmarket care-related activities into calculation
+
+- Folbre and Nelson (2000) argues the economy will seem to grow if we put value on non-market family-related or care-related activities and include them in calculation
+- Robert Eisner (1989) adds that the working hours of nonmarket activities accounts a significant amount of 40% to 60% from the total US output value
+- The Europe Union made effort to develop alternative income calculation by utilizing time-use data of activities
+- Calculation can also pushed further by taking account the value of household capital and raw materials (Ironmonger, 1996)
+
+### The Idea of *Gross Economic Product* by Ironmonger (1996)
+
+$$GEP = GHP + GMP$$
+
+Where:
+
+$$GHP = W_H + K_H = \left(\sum_{i=1}^{n} h_i \cdot w\right) + \left(K_{eq} + K_{hous}\right)$$
+
+$$GMP = GDP - K_{hous}$$
+
+$$GEP = \left(\sum_{i=1}^{n} h_i \cdot w\right) + K_{eq} + K_{hous} + GDP - K_{hous} = \left(\sum_{i=1}^{n} h_i \cdot w\right) + K_{eq} + GDP$$
+
+**Variable descriptions:**
+
+| Symbol     | Description                                                                                 |
+| ---------- | ------------------------------------------------------------------------------------------- |
+| $GEP$      | Gross Economic Product — total value added by both household and market sectors             |
+| $GHP$      | Gross Household Product — value added by unpaid household activities                        |
+| $GMP$      | Gross Market Product — GDP adjusted to remove double-counted owner-occupied housing         |
+| $GDP$      | Conventional Gross Domestic Product as measured by the SNA                                  |
+| $W_H$      | Value of unpaid household labor (~83% of GHP in Australia 1992)                             |
+| $h_i$      | Hours worked per week in household industry $i$ (e.g. meal prep, child care, laundry)       |
+| $w$        | Imputed wage rate per hour (AUD 14.25/hr in 1992)                                           |
+| $n$        | Number of household industries (8 in the paper's classification)                            |
+| $K_H$      | Total household capital contribution to GHP                                                 |
+| $K_{eq}$   | Imputed rental value of household equipment and vehicles                                    |
+| $K_{hous}$ | Imputed rental value of owner-occupied housing (deducted from GDP to avoid double-counting) |
+
+
+### The shift from household task to monetized service
+
+- Increasing trend of women participation in paid employment is believed by Folbre and Nelson (2000) as one aspect triggering the commodification of traditionally domestic tasks, including caring and homemaking activities
+- This is usually the case when doing more homemaking activities tends to lower parents earnings, thus indicating the increasing demand of care services due to longer paid working hours.
+- There is also another case when reallocate their non-market time and effort away from material production towards the personal and emotional actions
+
+### Factors affecting demand of paid care service (Folbre and Nelson, 2000)
+
+#### Encouraging factors
+
+- expected freedom from doing bulk number of tedious homemaking activities
+- provide better quality of service, if:
+	- caring activities seemed as matter of choice rather than necessity
+	- costs being more widely and equitably distributed
+	- get care services from those specially trained
+- enhance recipients' sense of life control
+
+#### Discouraging factors
+
+- Unable to replace personal care services that highly value the identity of provider and the continuity of the relationship
+- It is not guaranteed whether market competition will produce high quality care.
+- The market of care services may not be affordable equally across diverse groups.
+- Acute capitalization will make care services impersonal, thus produced at minimum cost and sold to the highest bidder
+
+### Factors affecting supply of paid care service (Morgan, 2005)
+
+#### Encouraging factors
+
+- Responsibility of care is being left to private markets
+- Enormous supply of low-wage and low-skilled workers
+- Lack of unionization that could push wages higher and promote better working condition
+
+#### Discouraging factors
+
+- Markets, even for services, are strictly controlled by government
+- Workforce rights are highly protected:
+  - generous parental leave benefit
+  - relatively high minimum wage
+  - requirement of receiving specific vocational education
+- strong influence from worker unions
+
+
+### (Proposed) Research Question
+
+This research proposal is currently structured around two interconnected phase/inquiries:
+
+#### RQ 1
+- How to utilize PUDO trips as an alternative measurement of economic production
+
+#### RQ 2
+- What factors causing PUDO trips as a care service hard to institutionalized?
+
+### (Proposed) Conceptual Framework
+
+```{mermaid}
+%%| mermaid-format: png
+flowchart TD
+    A["Driving others as caregiving activity"]
+    A --> B["Capturing trips done for other's purpose"]
+
+    B --> B1["Measure time and resource allocation"]
+    B --> B2["Capturing emotional and interrelation characteristics"]
+
+    B1 --> B1a
+    B2 --> B2a
+
+    subgraph C["Improved travel-diary surveys"]
+        B1a["1st layer questions"]
+        B2a["2nd layer questions"]
+    end
+
+    B1a --> B1b["Developing alternative calculation\nof total economic production"]
+    B2a --> B2b["Measuring the potential of marketization"]
+```
+
+### (Proposed) Additional questions on Travel Diary Surveys
+
+#### Layer 1: Capturing the trip
+- For whom is this trip done?
+ - Is this trip your main activity? Or were you planning to go somewhere else before picking up / after dropping off?
+
+#### Layer 2: Acknowledging the emotional relationship
+- Do you drive others because it is your responsibility?
+- Do you feel this activity will become a burden to others if you avoid or cancel?
+- Is this driving activity actively involved in building emotional relationships?
+- Is this activity reducing or included at the intended time?
+- For the passenger: "Do you feel losing control of your life when driven somewhere?"
+
+### References
+
+- Becker, G. S. (1965). A Theory of the Allocation of Time. _The Economic Journal_, _75_(299), 493–517. [https://doi.org/10.2307/2228949](https://doi.org/10.2307/2228949
+- Ironmonger, D. (1996). Counting outputs, capital inputs and caring labor: Estimating gross household product. _Feminist Economics_, _2_(3), 37–64. [https://doi.org/10.1080/13545709610001707756](https://doi.org/10.1080/13545709610001707756)
+- Folbre, N., & Nelson, J. A. (2000). For Love or Money—Or Both? _Journal of Economic Perspectives_, _14_(4), 123–140. [https://doi.org/10.1257/jep.14.4.123](https://doi.org/10.1257/jep.14.4.123)
+- Morgan, K. J. (2005). The “Production” of Child Care: How Labor Markets Shape Social Policy and Vice Versa. _Social Politics: International Studies in Gender, State & Society_, _12_(2), 243–263. [https://doi.org/10.1093/sp/jxi013](https://doi.org/10.1093/sp/jxi013)
+- Miller, R., & Sedai, A. K. (2021). Opportunity Costs of Unpaid Caregiving: Evidence from Panel Time Diaries. _SSRN Electronic Journal_. [https://doi.org/10.2139/ssrn.3827577](https://doi.org/10.2139/ssrn.3827577)
+
+
+## Feedback and Action Items
+
+### 1. Feedback from the Lab Members
+- From Chikaraishi Sensei:
+ - Read Takai san's paper on the preference for driving others on the way to campus and relate it to the effect of personal relationships and emotional attachment on travel behavior.
+ - Consider DDCM (Dynamic Discrete Choice Models) for modeling the decision-making process of caregivers on time allocation and measuring the value of time spent on caregiving activities.
+- From Reem san:
+ - Explore the use of MDCEV to model the decision-making process on time allocation
+- From Yaqiu san:
+ - Be more specific on mentioning the outcome and the output of the research in the introduction section of the paper
+
+
+### 2. Action Items for Next Meeting
+
+- [ ] Read papers on MDCEV
+- [ ] Read papers on DDCM
+- [ ] Read papers on driving as a derived demand of other person's needs
+- [ ] Read papers on the effect of personal relationships and emotional attachment on travel decision
+- [ ] Make a structured list of the questions that I want to include in the improved travel survey and relate them to the findings from the literature
+
+

@@ -1,0 +1,24 @@
+---
+title: "Evaluating stakeholder structure and private actor involvement on the distribution of relief goods considering a partly centralised decision"
+date: 2023-02-22
+author:
+- Febri Zukhruf
+- Taufiq Suryo Nugroho
+- Russ Bona Frazila
+- Rizqi Ramadhan
+- Alma Rizka Octaviana
+description: "This paper proposes a model to evaluate various stakeholder structures with no single centralised decision-maker for distributing relief goods."
+categories:
+ - journal article
+ - disaster management
+ - humanitarian logistics
+slug: evaluating-stakeholder
+---
+
+## Links
+
+- [{{< fa file >}} Publication](https://www.tandfonline.com/doi/abs/10.1080/17509653.2023.2183279)
+
+## Abstract
+
+Relief distribution involves numerous stakeholders with various roles and different structures regarding stakeholders’ coordination. This paper proposes a model to evaluate various stakeholder structures for distributing relief goods. Unlike previous research, this model evaluates the coordination structure, assuming no single centralised decision-maker exists. The proposed model is developed based on the decomposition-based framework, assuming a partly centralised decision. The proposed model also integrates road network restoration into the model by capturing the disrupted road network. The role of the private sector is elaborated by exploring the impact of private business involvement in food-related distribution and road network restoration. The proposed model is applied to an actual case, namely the Palu earthquake and tsunami in 2018. We found that the multifocal structure performs better in distributing relief goods. Furthermore, the involvement of the private sector succeeds in minimising the unsatisfied demand.

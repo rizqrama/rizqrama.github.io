@@ -1,0 +1,14 @@
+---
+title: "Short-term Traffic Prediction Using Statistical Time Series Analysis. A Study Case of National Route 31, Hiroshima, Japan"
+date: 2021-08-10
+author:
+- Rizqi Ramadhan
+description: "This paper proposes ARIMA and Dynamic Regression models for short-term traffic prediction using data from loop detectors."
+categories:
+ - thesis
+ - time series analysis
+slug: short-term-traffic-prediction
+---
+
+## Abstract
+Road traffic possesses a dynamic and anticipatory nature. Previous medium-long interval macro traffic models that require complex data are becoming irrelevant for dealing with the stochastic nature of traffic. Thus, short-term prediction approach come as a solution to model the dynamic and continuity of traffic. This research is structured to formulate short-term traffic flow prediction model alternatives, in which the best-performing model will be used to predict traffic flow at a downstream point on the National Route 31 arterial road, Kure City, Hiroshima, Japan. The models will utilize statistical time series analysis approach, consisted of ARIMA method and Dynamic Regression method. The modeling process resulted in 2 alternative ARIMA models and 10 alternative Dynamic Regression models.

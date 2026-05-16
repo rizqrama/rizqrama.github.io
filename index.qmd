@@ -1,0 +1,26 @@
+---
+title: "Rizqi Ramadhan"
+subtitle: "PhD Researcher"
+image: assets/profile.jpeg
+about:
+  template: trestles
+  links:
+    - icon: github
+      href: https://github.com/rizqrama
+    - icon: globe2
+      href: https://scholar.google.com/citations?user=KrurKh0AAAAJ&hl=en
+      aria-label: Google Scholar
+    - icon: linkedin
+      href: https://www.linkedin.com/in/rizqi-ramadhan/
+    - icon: globe2
+      href: https://rizqrama.substack.com/
+      aria-label: Substack
+    - icon: globe2
+      href: https://rramadhan.medium.com/
+      aria-label: Medium
+    - icon: globe2
+      href: https://www.goodreads.com/user/show/170108017-rama
+      aria-label: Goodreads
+---
+
+Hi! My name is Rama, short for Rizqi Ramadhan, and I am a PhD student under the supervision of Chikaraishi Sensei at the Urban and Transportation Planning Lab ([UTPL](https://home.hiroshima-u.ac.jp/~mkt682/)) of Hiroshima University. My research focuses on the travel behavior of households having dual caregiving responsibilities. I am passionate about understanding how to capture trips that derived from other person's needs and howcaregiving roles influence travel patterns. I am excited to share my research progress and projects on this website, and I welcome any feedback or collaboration opportunities.
