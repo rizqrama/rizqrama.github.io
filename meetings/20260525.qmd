@@ -1,0 +1,304 @@
+---
+title: "Progress Report — 2026-05-25"
+date: 2026-05-25
+description: "Structuring narrative alternatives for Paper 1 and finding related literatures"
+categories: [literature, narrative, methodology]
+---
+
+::: {.panel-tabset}
+
+## Progress Report
+
+> **Notes on preparing this document**
+>
+> - This week's progress was largely conceptual and exploratory. The session with the AI copilot focused on stress-testing the three proposed research questions for Paper 1, drafting two competing narrative arcs, and assembling a structured reading list. No new calculations, equations, or figures were produced — the corresponding sections are therefore omitted.
+> - Terms introduced this week (notably *externally-derived demand*) are defined explicitly in Section 3.
+> - Full supporting material — proposed narrative, alternative narrative, and the consolidated literature list — is attached as appendices rather than embedded inline, to keep the main body of this document discussable.
+
+---
+
+### 1. What I Want to Discuss Today (Most Important)
+
+1. Whether the **triple-invisibility** framing of Paper 1 (invisible in transport theory, in surveys, and in economic accounts) is a defensible spine for the paper, or whether it overstates the conceptual gap.
+2. Whether the **alternative narrative** — leading with the relational/emotional dimension (current RQ3) as the motivating insight, rather than placing it as the third research question — is a better organization for the paper. This is a structural decision I cannot make alone.
+3. Whether to commit early to **DDCM** (Sensei's direction) over **MDCEV** (Reem's suggestion), or to defer the choice until I have written a side-by-side comparison note grounded in Becker (1965) and Gronau (1977). I would also like guidance on whether Sensei has a specific lab paper he wants me to start from for DDCM.
+
+### 2. Current Situation (Progress Since Last Meeting)
+
+#### What I did
+
+- Initiated a structured AI-assisted brainstorming session (see `03_inbox/Brainstorming 20260522.md`) to surface weaknesses in the three proposed research questions for Paper 1 before further reading.
+- Produced critical reviews — strengths, weaknesses, mentor questions, and reading priorities — for each of the three RQs: survey design (RQ1), economic valuation (RQ2), and resistance to marketization (RQ3). These are stored in `03_inbox/` as fleeting notes tagged `#claude/suggestion`.
+- Drafted two competing narrative arcs for Paper 1: a **proposed four-act narrative** built around the triple-invisibility framing, and an **alternative narrative** that reorders the argument so that the relational/emotional observation becomes the motivating insight rather than the third finding. Both are fleeting notes, not draft sections.
+- Assembled three clustered literature lists for the three RQs (survey design and escort trips; economic valuation and time allocation; emotional and relational dimensions). Each list is organized into clusters and annotated with priority and confidence levels.
+- Drafted a Zettelkasten implementation guide describing the four movements (reading → fleeting → grouped reading → permanent note → argument chain) and identifying where I am right now in that cycle.
+
+#### What I could not do / what is delayed
+
+- I have not yet obtained or read Takai-san's paper. It is the most important single source for both RQ1 (provider-beneficiary capture) and RQ3 (closeness as a utility term). I need Sensei's help to identify the correct citation.
+- I have not yet read Becker (1965) in full, nor Gronau (1977). Both are foundational for RQ2 and I have so far been working from secondary summaries.
+- I have not started reading DDCM or MDCEV references. I would like to begin with the specific DDCM paper Sensei recommends rather than the broader continuous-time scheduling literature.
+- I have not begun operationalizing the emotional/relational concepts (closeness, obligation, responsibility) into draft survey items. The zettelkasten guide identifies this as a red flag: a concept I cannot turn into even a draft survey question is a concept I do not yet understand well enough.
+- No mathematical work on the economic output calculation has begun. The valuation method (replacement cost vs. opportunity cost vs. utility-based VoT) is still unresolved.
+
+### 3. Definitions of Terms
+
+| Term                              | Definition                                                                                                                                                                                                                                                                                                                          |
+| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PUDO trip                         | A trip whose purpose is to pick up or drop off another person — typically another household member — rather than to fulfill the driver's own activity at the destination.                                                                                                                                                            |
+| Externally-derived demand         | A coined working term for trips whose origin lies in another person's activity need rather than the traveler's own. Standard activity-based travel theory assumes demand is *internally* derived (the traveler's own activity initiates the trip); PUDO trips break that assumption. To be checked against existing literature before being treated as an original construct. |
+| Escort trip                       | An existing category in activity-based travel surveys and trip chaining literature. Classifies the driver's trip purpose ("escorting another person") but does *not* identify whose need motivates the trip nor the relational or economic stakes. The proposed contribution is to extend, not replace, this category.                          |
+| Provider–beneficiary distinction  | The distinction between the household member performing the PUDO trip (provider) and the household member whose activity need is served (beneficiary). Current travel surveys capture *with whom* one travels, but not *for whom* the trip is done.                                                                                  |
+| Main vs. secondary activity       | A trip done as the principal motivation of an outing versus one piggy-backed onto another trip (e.g., dropping a child off while commuting). The distinction matters for valuation and is already known as an unsolved problem in time-use research (Miller & Sedai 2021).                                                              |
+| Triple invisibility               | The framing in the proposed narrative: PUDO trips are simultaneously (i) misclassified in transport theory, (ii) uncaptured in travel surveys, and (iii) excluded from economic accounts.                                                                                                                                            |
+| Relational resistance to marketization | The argument that PUDO trips are not commodified at scale because their value is partly constituted by the relationship between driver and passenger — a value a market substitute cannot reproduce.                                                                                                                            |
+
+### 4. My Own Thoughts
+
+#### On discussion item 1 — the triple-invisibility framing
+
+- **Current thought**: I find the framing useful as a way to connect the three threads of Paper 1 into a single argument, but I am not yet sure each "invisibility" is equally well-grounded. The survey invisibility is clearly real (Miller & Sedai 2021 admit it openly). The economic-account invisibility is also clearly real (Ironmonger 1996; Folbre & Nelson 2000). The "invisibility in transport theory" claim is the one I am least sure about — escort trips are a recognized category, even if they are conceptually thin. I worry that claiming PUDO is invisible in transport theory could be overstating the gap.
+- **Reasoning**: The strongest version of the contribution is probably "extend an underspecified category" rather than "name an entirely missing category". The weaker claim is easier to defend and probably closer to the truth.
+- **Alternatives I considered**: Reframing as a *measurement gap* rather than a *theoretical gap*; or keeping the triple framing but qualifying the third leg ("under-theorized" rather than "invisible").
+
+#### On discussion item 2 — proposed vs. alternative narrative
+
+- **Current thought**: The alternative narrative is conceptually more honest. If the relational dimension is what makes RQ1 and RQ2 *hard at all*, then it is the motivating insight of the paper, not the closing reflection. Leading with it would also make the introduction sharper and clarify why the survey instrument and the economic valuation matter.
+- **Reasoning**: The argument in the alternative narrative is that if PUDO were purely transactional, the survey question would be trivial and the replacement cost would be the correct valuation. Both questions are non-trivial *because* of the relational structure. That asymmetry suggests the relational claim is foundational rather than third.
+- **Alternatives I considered**: Keeping the proposed four-act structure but moving the emotional/relational claim into the introduction as a hook, while still treating it as RQ3 in the substantive analysis. This is a middle path. I am not yet sure whether it weakens the structural logic of the alternative narrative or sensibly compromises with audience expectations.
+
+#### On discussion item 3 — DDCM vs. MDCEV
+
+- **Current thought**: I should not pick a model before I can articulate the research question precisely. The two models answer different questions: MDCEV is about cross-sectional allocation across activities (what share of the time portfolio is PUDO?); DDCM is about sequence and timing within a day (when does PUDO occur and how does it displace surrounding activities?). The choice has to follow the question, not the other way around.
+- **Reasoning**: If the question is *how much time is allocated to PUDO and what is that worth*, MDCEV is the closer fit. If the question is *how does providing PUDO restructure the rest of the day*, DDCM is the closer fit. Both are legitimate research questions, but they are different papers.
+- **Alternatives I considered**: A staged approach — start with MDCEV to characterize the time allocation cross-sectionally, then move to DDCM to capture the sequencing effects in a second paper. This is more honest about scope, but I am not yet sure whether it is realistic within Year 1.
+
+### 5. Where I Am Stuck / What I Cannot Decide on My Own
+
+- **Narrative structure decision (proposed vs. alternative).** This is a judgment call about how to present the paper's logic, and I do not yet have enough literature reading or supervisor feedback to make it confidently. The decision affects which sections receive the most space and which audience the paper targets.
+- **Whether *externally-derived demand* is a defensible coined term or an existing concept under a different name.** I do not yet know whether the activity-based modeling literature already has a term for "trip whose initiating agent is the passenger, not the driver". Until I check, I am uncomfortable building the paper around the new term.
+- **The boundary of "for others".** A parent driving a child to school on the way to work is serving both the child's need and their own schedule. Where to draw the boundary affects every downstream calculation. I cannot write a precise two-sentence definition yet.
+- **Value of Time approach.** Choosing between replacement cost, opportunity cost, and utility-based VoT is not just a methodological preference — each implies a different conceptual claim about *what is being valued*. I am stuck partly because I have not yet read Becker, Gronau, and Jara-Díaz carefully enough to choose with confidence.
+
+### 6. Things I Want to Confirm
+
+- Is there a specific Takai-san paper Sensei would like me to start with for the closeness-detour finding?
+- Is there a specific DDCM paper from Sensei's lab that I should use as my entry point, rather than reading the broader continuous-time scheduling literature?
+- Is the audience for Paper 1 best understood as transport economists, care economists, or transport-policy practitioners? The narrative structure decision depends on this.
+- Is "improving the survey instrument" the primary methodological contribution of Paper 1, or is the economic valuation the primary contribution, with the survey as a methodological enabler? The framing changes the target journal.
+
+### 7. Computational Results / Figures (if any)
+
+No calculations, figures, or equations were produced this week. This section is intentionally left empty.
+
+## Appendix - Research Documentation
+
+### Appendix A — Proposed Narrative: PUDO as Triple Invisibility
+
+> This is a thinking tool, not a draft section.
+
+Household PUDO trips are simultaneously invisible in transport theory (misclassified as self-motivated travel), invisible in surveys (no instrument captures *for whom* a trip is done), and invisible in economic accounts (unpaid care labor excluded from production calculations) — and grounding them as a distinct theoretical construct is the first step to making all three visible.
+
+#### The four-act arc
+
+**Act 1 — The triple invisibility.** PUDO trips are a significant share of household mobility yet are invisible at three distinct levels. Transport theory assumes every trip is derived from the *traveler's own* activity need; PUDO trips break this assumption (externally-derived demand). Travel surveys ask *with whom* one travels but not *for whom*. Economic accounts exclude unpaid household labor altogether. The triple invisibility reflects a systematic failure across transport modeling and economic accounting to recognize care-embedded activity as either theoretically meaningful demand or economically productive output. Act 1 leaves the reader asking: *why has nobody defined this as a distinct category before?*
+
+**Act 2 — Making PUDO visible: a new construct and a survey that measures it.** The first intervention is conceptual, with a methodological output. Before a new survey question can be designed, *externally-derived travel demand* must be defined as a construct: trips whose origin lies in another person's activity need rather than the traveler's own. The contribution is to extend and theoretically ground the existing but underspecified "escort trip" category — specifying the provider–beneficiary structure and designing survey items that capture whose demand is being served, including the main vs. secondary activity distinction. The Takai-san finding (closeness affecting route choice utility) becomes confirmatory: beneficiary identity is already shaping behavior in the data; the survey innovation surfaces what is already latent.
+
+**Act 3 — Valuing PUDO: economic output calculation.** With improved survey data, the economic value of PUDO trips can be estimated through two complementary questions: a time-allocation question (how does providing PUDO affect a provider's time across all activities? — DDCM for timing/sequencing, MDCEV for total time portfolio) and a valuation question (given the time cost, what is the equivalent economic value? — opportunity cost, replacement cost, or utility-based VoT, with the choice justified rather than assumed). Grounding sources include Becker (1965), Gronau (1977), and the SNA satellite account literature.
+
+**Act 4 — Why it stays personal: the resistance to marketization.** The economic calculation prompts a question: if PUDO is this costly, why don't households outsource it? Drawing on Folbre & Nelson (2000), Morgan (2005), and care ethics literature, Act 4 argues that PUDO trips are embedded in relationships of closeness, trust, and obligation that cannot be reproduced through market transactions. This has direct transport-policy implications: ride-hailing programs struggle to replace family PUDO because the relational value of the trip cannot be substituted. The survey instrument designed in Act 2 can capture these dimensions through emotional/relational items alongside travel behavior.
+
+**Conclusion.** By making PUDO visible and giving it economic value, the paper can improve transport demand modeling (PUDO is systematically underestimated), revise household economic production accounts (PUDO falls outside any existing satellite framework), and inform care and transport policy (households bear invisible care costs that markets cannot or should not fully absorb). The paper does not argue PUDO *should* be commodified — it argues it should be *counted*.
+
+#### How the three RQs connect
+
+| RQ                                                                | Act         | Relationship                                                                       |
+| ----------------------------------------------------------------- | ----------- | ---------------------------------------------------------------------------------- |
+| RQ1: define and capture externally-derived travel demand in surveys | Acts 1 & 2  | Conceptual foundation — defines the construct that RQs 2 and 3 then analyze.       |
+| RQ2: value PUDO as economic output                                  | Act 3       | Builds on the construct and data made available by RQ1.                            |
+| RQ3: why PUDO resists marketization                                 | Act 4       | Explains *why* RQ1 is theoretically hard and *why* RQ2 matters for policy.         |
+
+The RQs are sequential rather than parallel; RQ1 is the definitional step that makes the rest possible.
+
+#### Open questions on the proposed narrative
+
+1. Is Act 4 a research question or a discussion section? If the emotional/relational claim cannot be tested empirically within the paper, it may belong in the introduction as motivation rather than in the results.
+2. Is the paper making a Japan-specific claim or a universal one? Morgan's varieties-of-capitalism frame implies Japan matters but this is not yet stated.
+3. Who is the primary audience — transport economists, care economists, or public health economists? Different audiences expect different acts to receive the most space.
+4. Is the survey instrument the primary output, or is the economic valuation the primary output? The emphasis affects which journal the paper targets.
+5. Is *externally-derived demand* the right term? It must be checked against the activity-based modeling literature before being treated as original.
+
+---
+
+### Appendix B — Alternative Narrative: Leading with the Relational Structure
+
+> A counter-organization of the same material as Appendix A. The two narratives are not yet reconciled.
+
+#### Starting point: why are RQ1 and RQ2 hard at all?
+
+If PUDO trips were purely functional — like ordering a delivery or booking a taxi — neither question would be difficult. Survey capture (RQ1) would be trivial: the trip would have a clear purpose, a clear beneficiary, and a clear initiating agent. Just add a trip purpose code. Economic valuation (RQ2) would be equally straightforward: compare the trip to its market equivalent (¥800 taxi to the school = ¥800 of household-produced transport).
+
+The fact that both questions are genuinely hard, and that PUDO has been invisible in surveys and accounts for decades despite being a huge share of household activity, tells us something specific about PUDO that resists easy measurement and valuation. RQ3 is the investigation of that "something".
+
+#### Why RQ3 makes RQ1 hard
+
+The survey design problem is not technical. The problem is that *for whom was this trip done?* is a question PUDO providers themselves struggle to answer cleanly — not because they don't know but because the motivational structure of the trip is relational, not transactional. Ask a parent driving a child to school whether the trip was for them or for the child and the likely answer is "well, both — it's just what we do." The provider role and the family role are fused; there is no mental ledger that says "this trip: 100% for the child." That fusion is precisely what makes the survey hard. If PUDO were experienced transactionally (like a taxi ride), the *for whom* question would be obvious. It is because PUDO is embedded in care and obligation (RQ3 territory) that the boundary is blurry and respondents struggle to report it cleanly. RQ3 is the explanation for why RQ1 is a research problem at all.
+
+#### Why RQ3 makes RQ2 non-trivial
+
+If PUDO were perfectly commodifiable — if hiring a driver were an equivalent substitute — then replacement cost would be the correct valuation method. But RQ3 tells us PUDO is not easily commodified: households do not outsource PUDO even when market substitutes exist and even when the time cost is significant. The value of the trip is partly constituted by the relational bond between driver and passenger. The parent is not just transporting the child — they are present with the child, exercising care, fulfilling an obligation that a stranger cannot fulfill. That relational value does not survive substitution. Market prices are therefore a systematically wrong proxy for the value of PUDO time. Replacement cost (taxi fare) captures only functional displacement and misses the relational value; opportunity cost (forgone wage) captures the cost to the provider but not what the trip produces for the relationship. Neither standard VoT method is adequate. RQ3 is the explanation for why RQ2 is hard.
+
+#### The structural implication
+
+If RQ3 explains why RQ1 and RQ2 are hard, then it is the motivating insight of the paper, not a third finding appended at the end. Placing it at the end creates a paradox: the reader spends Acts 1–3 watching the author struggle with measurement and valuation problems, and only in Act 4 learns *why* those problems exist. The paper explains the solution before fully explaining the problem.
+
+Moving the relational observation to the introduction does not delete Act 4 — it reorders the logic so the paper reads as: *we observe that PUDO trips resist commodification; we argue this resistance reflects a relational structure that also explains their invisibility in surveys and their resistance to simple economic valuation; our paper addresses those two consequences*. Acts 2 and 3 then become responses to a clearly motivated problem rather than technically interesting exercises.
+
+The practical test: if Acts 2 and 3 were removed, Act 4 would still make sense as a standalone argument. If Act 4 were removed, the reader would not understand why Acts 1–3 matter. That asymmetry indicates which act is foundational.
+
+---
+
+### Appendix C — Consolidated Literature Suggestions
+
+#### C.1 Literature for RQ1 — survey design, escort trips, and externally-derived demand
+
+##### Cluster A — Activity-based travel analysis and trip chaining
+
+- Axhausen, K. W., & Gärling, T. (1992). Activity-based approaches to travel analysis: conceptual frameworks, models, and research problems. *Transport Reviews, 12*(4), 323–341.
+- Strathman, J. G., Dueker, K. J., & Davis, J. S. (1994). Effects of household structure and selected travel characteristics on trip chaining. *Transportation, 21*(1), 23–45.
+- McGuckin, N., & Murakami, E. (1999). Examining trip-chaining behavior: comparison of travel by men and women. *Transportation Research Record, 1693*, 79–85.
+- Kitamura, R. (1988). An evaluation of activity-based travel analysis. *Transportation, 15*(1), 9–34.
+
+##### Cluster B — Escort trip studies and children's mobility
+
+- Fotel, T., & Thomsen, T. U. (2004). The surveillance of children's mobility. *Surveillance & Society, 2*(4), 535–554.
+- Barker, J. (2011). 'Manic mums' and 'distant dads'? Gendered geographies of care and the journey to school. *Health & Place, 17*(2), 413–421.
+- Rosenbloom, S. (1987). The impact of growing children on their parents' travel. *Transportation, 14*(3), 183–194.
+
+##### Cluster C — Travel diary methodology and survey instrument design
+
+- Stopher, P. R., & Greaves, S. P. (2007). Household travel surveys: Where are we going? *Transportation Research Part A, 41*(5), 367–381.
+- Axhausen, K. W., Zimmermann, A., Schönfelder, S., Rindsfüser, G., & Haupt, T. (2002). Observing the rhythms of daily life: a six-week travel diary. *Transportation, 29*(2), 95–124.
+- Dillman, D. A., Smyth, J. D., & Christian, L. M. (2014). *Internet, Phone, Mail, and Mixed-Mode Surveys: The Tailored Design Method* (4th ed.). Wiley.
+
+##### Cluster D — Survey cognition and validity
+
+- Tourangeau, R., Rips, L. J., & Rasinski, K. (2000). *The Psychology of Survey Response*. Cambridge University Press.
+- Beatty, P. C., & Willis, G. B. (2007). Research synthesis: the practice of cognitive interviewing. *Public Opinion Quarterly, 71*(2), 287–311.
+
+##### Cluster E — Joint travel papers already in the vault (`02_reference/`)
+
+- *Explicit Modeling of Joint Travel by Household Members*
+- *A Model for Joint Choice of Daily Activity Pattern Types of Household Members*
+- *A tour-based mode choice model accommodating the influence of attitudes, perceptions, and inter- and intra-household interactions*
+- *Modeling Household Interactions in Daily In-Home and Out-of-Home Maintenance Activity Participation*
+
+##### Suggested reading order if time is limited
+
+1. Axhausen & Gärling (1992) — theoretical framework first.
+2. McGuckin & Murakami (1999) — empirical scale of the escort trip phenomenon.
+3. Stopher & Greaves (2007) — state of survey methodology.
+4. Vault joint-travel papers — identify the data gap the construct should fill.
+5. Defer Tourangeau and Dillman until a draft survey question exists.
+
+#### C.2 Literature for RQ2 — economic valuation of PUDO trips
+
+##### Cluster A — Time allocation theory (foundation)
+
+- Becker, G. S. (1965). A theory of the allocation of time. *Economic Journal, 75*(299), 493–517. *[Already in vault: `Becker1965TheoryAllocationTime.md`.]*
+- Gronau, R. (1977). Leisure, home production, and work — the theory of the allocation of time revisited. *Journal of Political Economy, 85*(6), 1099–1123.
+- Gronau, R. (1986). Home production — a survey. In O. Ashenfelter & R. Layard (Eds.), *Handbook of Labor Economics* (Vol. 1, pp. 273–304). Elsevier.
+
+##### Cluster B — MDCEV
+
+- Bhat, C. R. (2005). A multiple discrete-continuous extreme value model: formulation and application to discretionary time-use decisions. *Transportation Research Part B, 39*(8), 679–707.
+- Bhat, C. R. (2008). The multiple discrete-continuous extreme value (MDCEV) model: role of utility function parameters, identification considerations, and model extensions. *Transportation Research Part B, 42*(3), 274–303.
+- Castro, M., Bhat, C. R., Pendyala, R. M., & Jara-Díaz, S. R. (2012). Accommodating multiple constraints in the MDCEV model. *Transportation Research Part B, 46*(6), 729–743. *[Moderate confidence — verify.]*
+
+##### Cluster C — DDCM (verify entry paper with Sensei)
+
+- Habib, K. M. N. (2011). A random utility maximization (RUM) based dynamic activity scheduling model: application in weekend activity scheduling. *Transportation, 38*(1), 123–151.
+- *Bhat & Pinjari (2008) GMDCEV — citation not yet verified; do not use without confirmation.*
+- *Specific Chikaraishi lab DDCM paper(s) — to be requested from Sensei.*
+
+##### Cluster D — Value of Time
+
+- Jara-Díaz, S. R. (2007). *Transport Economic Theory*. Elsevier.
+- Jara-Díaz, S. R. (2000). Allocation and valuation of travel-time savings. In D. A. Hensher & K. J. Button (Eds.), *Handbook of Transport Modelling* (pp. 303–319). Elsevier.
+- Small, K. A., & Verhoef, E. T. (2007). *The Economics of Urban Transportation*. Routledge.
+
+| Method            | What it measures                                                                | Best for                                                    |
+| ----------------- | ------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| Replacement cost  | What a market substitute (taxi, paid driver) would cost                         | Estimating market value of PUDO production                  |
+| Opportunity cost  | What the driver could earn if they used that time for paid work                  | Measuring the economic burden on the provider               |
+| Utility-based VoT | Marginal utility of time in PUDO vs. alternatives, derived from an estimated model | Integrating cleanly with DDCM or MDCEV                      |
+
+##### Cluster E — Household production and satellite accounts
+
+- Ironmonger, D. (1996). Counting outputs, capital inputs and caring labor: Estimating gross household product. *Feminist Economics, 2*(3), 37–64. *[Already in vault.]*
+- Stiglitz, J. E., Sen, A., & Fitoussi, J.-P. (2009). *Report by the Commission on the Measurement of Economic Performance and Social Progress*. Government of France.
+- Abraham, K. G., & Mackie, C. (Eds.). (2005). *Beyond the Market: Designing Nonmarket Accounts for the United States*. National Academies Press.
+- Eisner, R. (1988). Extended accounts for national income and product. *Journal of Economic Literature, 26*(4), 1611–1684.
+
+##### Suggested reading order
+
+- Week 1: Becker (1965) full text → Gronau (1977).
+- Week 2: Bhat (2005) MDCEV; ask Sensei for DDCM entry paper; write a comparison note after reading both.
+- Week 3: Jara-Díaz (2000) on VoT; Ironmonger (1996) full text.
+- Defer: Stiglitz report and Abraham & Mackie until the introduction needs policy framing.
+
+#### C.3 Literature for RQ3 — emotional and relational dimensions
+
+##### Cluster A — Mobilities sociology
+
+- Urry, J. (2007). *Mobilities*. Polity Press. *(Read Chapter 3 "Mobile socialities" and Chapter 7 on car culture.)*
+- Sheller, M., & Urry, J. (2006). The new mobilities paradigm. *Environment and Planning A, 38*(2), 207–226.
+- Cresswell, T. (2006). *On the Move: Mobility in the Modern Western World*. Routledge.
+
+##### Cluster B — Gender, care, and the car (most directly relevant to PUDO)
+
+- Dowling, R. (2000). Cultures of mothering and car use in suburban Sydney: a preliminary investigation. *Geoforum, 31*(3), 345–353.
+- Barker, J. (2011). 'Manic mums' and 'distant dads'? Gendered geographies of care and the journey to school. *Health & Place, 17*(2), 413–421.
+- Fotel, T., & Thomsen, T. U. (2004). The surveillance of children's mobility. *Surveillance & Society, 2*(4), 535–554.
+- Rosenbloom, S. (1987). The impact of growing children on their parents' travel. *Transportation, 14*(3), 183–194.
+
+##### Cluster C — Feminist transport geography
+
+- Kwan, M.-P. (1999). Gender and individual access to urban opportunities: a study using space-time measures. *The Professional Geographer, 51*(2), 210–227.
+- Hanson, S., & Hanson, P. (1981). The travel-activity patterns of urban residents: dimensions and relationships to sociodemographic characteristics. *Economic Geography, 57*(4), 332–347.
+
+##### Cluster D — Social bonds, altruism, and route choice (the Takai-san connection)
+
+- Ben-Akiva, M., & Lerman, S. R. (1985). *Discrete Choice Analysis: Theory and Application to Travel Demand*. MIT Press. *(Chapter 3 on utility theory as entry point.)*
+- Takai-san's paper on the closeness-detour finding *(primary empirical anchor; specific citation to be confirmed via Sensei).*
+- Carlsson, F., Frykblom, P., & Lagerkvist, C. J. (2005). Using cheap-talk as a test of validity in choice experiments. *Economics Letters, 88*(2), 211–219. *[Verify whether this is the right Carlsson reference; several on social preferences in transport exist.]*
+
+##### Cluster E — Emotional labor and caring as gendered work
+
+- Hochschild, A. R. (1983). *The Managed Heart: Commercialization of Human Feeling*. University of California Press.
+- DeVault, M. L. (1991). *Feeding the Family: The Social Organization of Caring as Gendered Work*. University of Chicago Press.
+
+##### Cluster F — Care ethics (theoretical anchor for "responsibility")
+
+- Tronto, J. C. (1993). *Moral Boundaries: A Political Argument for an Ethic of Care*. Routledge. *(Key chapters.)*
+- Noddings, N. (1984). *Caring: A Feminine Approach to Ethics and Moral Education*. University of California Press.
+- Bowlby, S. (2011). Friendship, co-presence and care: neglected spaces. *Social & Cultural Geography*. *(Small but directly relevant on affect and mobility.)*
+
+##### Suggested reading order
+
+1. Dowling (2000) — most direct, shortest, most vivid for PUDO.
+2. Fotel & Thomsen (2004) — adds the "protection through co-presence" concept.
+3. Urry (2007), Chapter 3 — theoretical vocabulary.
+4. Defer Hochschild and DeVault until the paper's argument clearly needs the emotional-labor framework.
+
+---
+
+## Feedback and Action items
+
+### 1. Feedback
+
+- filled after seminar
+
+### 2. Action items
+- [ ] filled after seminar
