@@ -27,18 +27,18 @@ categories: [literature, narrative, methodology]
 
 #### What I did
 
-- Initiated a structured AI-assisted brainstorming session (see `03_inbox/Brainstorming 20260522.md`) to surface weaknesses in the three proposed research questions for Paper 1 before further reading.
-- Produced critical reviews — strengths, weaknesses, mentor questions, and reading priorities — for each of the three RQs: survey design (RQ1), economic valuation (RQ2), and resistance to marketization (RQ3). These are stored in `03_inbox/` as fleeting notes tagged `#claude/suggestion`.
+- Initiated a structured AI-assisted brainstorming session to surface weaknesses in the three proposed research questions for Paper 1 before further reading.
+- Produced critical reviews — strengths, weaknesses, mentor questions, and reading priorities — for each of the three RQs: survey design (RQ1), economic valuation (RQ2), and resistance to marketization (RQ3).
 - Drafted two competing narrative arcs for Paper 1: a **proposed four-act narrative** built around the triple-invisibility framing, and an **alternative narrative** that reorders the argument so that the relational/emotional observation becomes the motivating insight rather than the third finding. Both are fleeting notes, not draft sections.
 - Assembled three clustered literature lists for the three RQs (survey design and escort trips; economic valuation and time allocation; emotional and relational dimensions). Each list is organized into clusters and annotated with priority and confidence levels.
-- Drafted a Zettelkasten implementation guide describing the four movements (reading → fleeting → grouped reading → permanent note → argument chain) and identifying where I am right now in that cycle.
+
 
 #### What I could not do / what is delayed
 
 - I have not yet obtained or read Takai-san's paper. It is the most important single source for both RQ1 (provider-beneficiary capture) and RQ3 (closeness as a utility term). I need Sensei's help to identify the correct citation.
 - I have not yet read Becker (1965) in full, nor Gronau (1977). Both are foundational for RQ2 and I have so far been working from secondary summaries.
 - I have not started reading DDCM or MDCEV references. I would like to begin with the specific DDCM paper Sensei recommends rather than the broader continuous-time scheduling literature.
-- I have not begun operationalizing the emotional/relational concepts (closeness, obligation, responsibility) into draft survey items. The zettelkasten guide identifies this as a red flag: a concept I cannot turn into even a draft survey question is a concept I do not yet understand well enough.
+- I have not begun operationalizing the emotional/relational concepts (closeness, obligation, responsibility) into draft survey items. (I marked this as a red flag: a concept I cannot turn into even a draft survey question is a concept I do not yet understand well enough.)
 - No mathematical work on the economic output calculation has begun. The valuation method (replacement cost vs. opportunity cost vs. utility-based VoT) is still unresolved.
 
 ### 3. Definitions of Terms
@@ -187,7 +187,7 @@ The practical test: if Acts 2 and 3 were removed, Act 4 would still make sense a
 - Tourangeau, R., Rips, L. J., & Rasinski, K. (2000). *The Psychology of Survey Response*. Cambridge University Press.
 - Beatty, P. C., & Willis, G. B. (2007). Research synthesis: the practice of cognitive interviewing. *Public Opinion Quarterly, 71*(2), 287–311.
 
-##### Cluster E — Joint travel papers already in the vault (`02_reference/`)
+##### Cluster E — Joint travel papers
 
 - *Explicit Modeling of Joint Travel by Household Members*
 - *A Model for Joint Choice of Daily Activity Pattern Types of Household Members*
@@ -206,7 +206,7 @@ The practical test: if Acts 2 and 3 were removed, Act 4 would still make sense a
 
 ##### Cluster A — Time allocation theory (foundation)
 
-- Becker, G. S. (1965). A theory of the allocation of time. *Economic Journal, 75*(299), 493–517. *[Already in vault: `Becker1965TheoryAllocationTime.md`.]*
+- Becker, G. S. (1965). A theory of the allocation of time. *Economic Journal, 75*(299), 493–517.
 - Gronau, R. (1977). Leisure, home production, and work — the theory of the allocation of time revisited. *Journal of Political Economy, 85*(6), 1099–1123.
 - Gronau, R. (1986). Home production — a survey. In O. Ashenfelter & R. Layard (Eds.), *Handbook of Labor Economics* (Vol. 1, pp. 273–304). Elsevier.
 
