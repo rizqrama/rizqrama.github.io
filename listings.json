@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/projects/index.html",
+    "items": []
+  },
+  {
     "listing": "/publications/index.html",
     "items": [
       "/publications/20230222-evaluating-stakeholder.html",
@@ -12,9 +16,5 @@
       "/meetings/20260525.html",
       "/meetings/20260511.html"
     ]
-  },
-  {
-    "listing": "/projects/index.html",
-    "items": []
   }
 ]
