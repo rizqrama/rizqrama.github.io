@@ -1,0 +1,601 @@
+---
+title: "Progress Report - 2026-06-08"
+subtitle: "From Escort Trip to Emotional Geography: A Construct and a Survey for Externally-Derived Travel Demand"
+description: "Revising paper 1 narrative along with developing the earliest version of survey questions prototype that base on 4 (+31) paper reviews"
+author:
+  - name: "Rizqi Ramadhan"
+    affiliations:
+      - name: "Graduate School of Innovation and Practice for Smart Society, Hiroshima University"
+date: "2026-06-08"
+date-format: "iso"
+categories: [literature, narrative, methodology]
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    toc-expand: 2
+    theme: cosmo
+    embed-resources: true
+    code-fold: false
+    page-layout: article
+    fig-width: 8
+    fig-height: 5
+    smooth-scroll: true
+    callout-appearance: simple
+    link-external-newwindow: true
+    code-overflow: wrap
+mermaid:
+  theme: default
+---
+
+::: {.callout-note appearance="simple"}
+**Reading guide.** Each section has two views in a tabset — *Presentation* (slide-style action titles, tables, and mermaid diagrams) and *Detailed* (prose, definitions, and reasoning). The flow is the same in both views; pick whichever zoom level suits you. The page is one self-contained HTML; mermaid diagrams render interactively.
+:::
+
+# Two weeks at a glance
+
+::: {.panel-tabset}
+
+## Presentation
+
+### Two weeks ago: three parallel RQs, one rhetorical frame, no new readings to anchor either
+
+The 25 May report committed to a *triple-invisibility* framing for Paper 1 — PUDO trips invisible in theory, in surveys, and in economic accounts — and proposed three parallel research questions: a survey-design RQ, an economic-valuation RQ, and a marketization-resistance RQ. None had been tested against new empirical or theoretical reading.
+
+| | 25 May state |
+|---|---|
+| Narrative | Single-root triple invisibility; four-act arc |
+| Research questions | Three parallel (survey / valuation / resistance) |
+| New readings | None this cycle |
+| Survey | No items drafted |
+| Modelling | DDCM vs. MDCEV unresolved, both inside Paper 1 |
+
+### Two weeks on: 35-paper literature review, narrative restructured, RQs reduced to 1+1, survey drafted, modelling moved to Paper 1.5
+
+This fortnight produced four concrete shifts that the rest of the page unpacks. First, a 35-paper literature review was completed across three traditions. Second, the triple-invisibility framing was kept but rebuilt on *two roots* rather than one. Third, the three parallel RQs were reduced to one primary and one secondary RQ; the original marketization-resistance argument moved to the discussion. Fourth, the DDCM / MDCEV modelling was moved into a follow-up paper (Paper 1.5) so Paper 1 can finish in Year 1 as a methodological and empirical contribution.
+
+| | 25 May | 8 June |
+|---|---|---|
+| Narrative | Single-root invisibility | **Two-root** invisibility; emotion as a constituent of demand |
+| Research questions | Three parallel | **One primary + one secondary**; RQ3 → discussion |
+| Survey | Not drafted | **Four-module instrument** with literature sources and a burden audit |
+| Modelling | Inside Paper 1 | **Moved to Paper 1.5** |
+
+## Detailed
+
+### What I want to discuss today
+
+1. Whether the **emotional-first reframing** of Paper 1, in which the affective-relational structure is treated as constitutive of the demand rather than as a separate research question, is a defensible direction for the paper. The reframing keeps the *triple-invisibility* observation but argues that the three invisibilities have *two roots* (a modelling-convention root and an affective-relational root), not one. I would like Sensei's view on whether this two-root framing strengthens or weakens the contribution.
+2. Whether the **research-question structure** can be reduced from three parallel RQs to one primary RQ (capture of externally-derived demand including its affective-relational layer) and one secondary RQ (whether the affective-relational signal predicts behavioural variation beyond standard utility controls), with the *resistance to marketization* argument repositioned as a discussion-section implication rather than as a separate empirical question.
+3. Whether **descoping the DDCM / MDCEV time-allocation modelling into a follow-up paper (Paper 1.5)** is acceptable for Year 1, with Paper 1 delivering the construct, the validated instrument, and the first descriptive evidence under the new instrument.
+
+### Notes on this fortnight's work
+
+The two weeks since the last meeting were used to (i) complete a 35-paper literature review on emotion in transport across three traditions — four anchor readings (Takai et al. 2025; Sheller & Urry 2006; Souche-Le Corvec & Zhao 2020; Rosenbloom 1987) plus 31 further papers from the emotion-phases bibliography of Souche-Le Corvec & Zhao 2020 — (ii) revise the narrative for Paper 1 in light of those readings, (iii) reformulate the research questions, and (iv) draft a four-module survey instrument that turns the revised construct into items grounded in cited literature.
+
+The survey instrument, the literature review matrix, the conceptual framework diagrams, and the revised research questions are attached as supplementary materials at the bottom of this page.
+
+:::
+
+# 1 · Literature review — 35 papers across three traditions
+
+::: {.panel-tabset}
+
+## Presentation
+
+### Four anchor readings converge on relational utility across three traditions — and the contribution rests on the construct, not on any single precedent
+
+```{mermaid}
+flowchart TB
+    C[Construct<br/>Externally-derived travel demand<br/>+ affective-relational motivation]
+
+    T1[Affective-symbolic motive<br/>Souche-Le Corvec &amp; Zhao 2020<br/>Sheller &amp; Urry 2006]
+    T2[Qualitative escort-trip<br/>Rosenbloom 1987<br/>+ vault: Dowling 2000; Barker 2011;<br/>Fotel &amp; Thomsen 2004]
+    T3[Discrete-choice precedent<br/>Takai et al. 2025<br/>+ Ben-Akiva &amp; Lerman 1985]
+
+    T1 -->|conceptual ground| C
+    T2 -->|behavioural-narrative ground| C
+    T3 -->|methodological ground| C
+
+    classDef tradition fill:#1f2d2a,stroke:#7a9e8c,stroke-width:1px,color:#e6f0e8
+    classDef construct fill:#3a5a4a,stroke:#a8d5b9,stroke-width:2px,color:#ffffff
+    class T1,T2,T3 tradition
+    class C construct
+```
+
+This fortnight I read four papers — one each from the affective-symbolic motive side (Souche-Le Corvec & Zhao 2020), the mobilities-theory side (Sheller & Urry 2006), the qualitative escort-trip side (Rosenbloom 1987), and the discrete-choice methods side (Takai et al. 2025). Any one of them can only partially support the construct; the four together support it fully. If a reviewer disputes any single strand, the other three still carry the claim.
+
+### Emotion enters travel decisions in three temporal phases — and Module D measures all three
+
+```{mermaid}
+flowchart LR
+    subgraph P1["1 · Anticipated"]
+        P1a["Before the trip<br/>(decision moment)"]
+        P1b["Felt guilt /<br/>obligation / warmth"]
+        P1c["de Vos et al. 2016<br/>Loewenstein 1996"]
+        P1a --> P1b --> P1c
+    end
+
+    subgraph P2["2 · In-trip"]
+        P2a["During the trip<br/>(experienced)"]
+        P2b["Co-presence;<br/>conversation; stress"]
+        P2c["Westman et al. 2017<br/>Ettema et al. 2012"]
+        P2a --> P2b --> P2c
+    end
+
+    subgraph P3["3 · Post-trip"]
+        P3a["After the trip<br/>(evaluative)"]
+        P3b["Satisfaction;<br/>relational production"]
+        P3c["De Vos &amp; Witlox 2017<br/>PANAS / SPANE"]
+        P3a --> P3b --> P3c
+    end
+
+    P1 -.->|feeds in| P2
+    P2 -.->|updates| P3
+    P3 -.->|updates future| P1
+```
+
+Source: **Souche-Le Corvec & Zhao (2020)**, *Travel Behaviour and Society*. The phases map directly to survey Module D — anticipated, in-trip, and post-trip — which lets the paper test whether the *anticipated–experienced gap* is a measurable signal of relational motivation.
+
+### A wider review of 35 papers maps cleanly onto the four survey modules
+
+After the four anchor readings, a wider review of the 31 emotion-and-travel papers cited in Souche-Le Corvec & Zhao (2020) was completed this week. The combined 35-paper set maps onto the four survey modules as shown below — every module's items are grounded in specific cited sources, not invented. The single most replicated finding from the wider review is that **in-vehicle conversation lifts trip mood**: three independent studies converge on it — Ettema et al. (2012) on Swedish public-transport commuters, Morris & Guerra (2015) on a large US national sample, and Westman et al. (2017) on Swedish children. That finding directly motivates Module D's in-trip activity coding.
+
+| Module | What it captures | Main source literature |
+|---|---|---|
+| **A** — Trip purpose & "for whom" | Initiating agent; beneficiary; PUDO as a recognised trip category | Rosenbloom 1987; Miller & Sedai 2021; Mokhtarian & Salomon 2001; Ory & Mokhtarian 2009; Jakobsson-Bergstad et al. 2011; Delbosc & Currie 2011; McQuoid & Dijst 2012 |
+| **B** — Main vs. secondary | Trip-chaining geometry; layered intention | Rosenbloom 1987; Fotel & Thomsen 2004; Miller & Sedai 2021 |
+| **C** — Relationship characterization | Closeness, contact, obligation as *separable* constructs; positive-relations baseline | Takai et al. 2025; Ben-Akiva & Lerman 1985; Folbre & Nelson 2000; Dowling 2000; Barker 2011; Vella-Brodrick & Stanley 2013; Páez & Whalen 2010 |
+| **D** — Affective-relational signal | Anticipated / in-trip / post-trip emotion; co-presence as relational practice; STS as the standard scale | Souche-Le Corvec & Zhao 2020; Sheller & Urry 2006; Friman et al. 2013; Ettema et al. 2012; Morris & Guerra 2015; Westman et al. 2017; McQuoid & Dijst 2012; Gärling 2019; PANAS |
+
+## Detailed
+
+The literature review is a single coherent activity covering 35 papers across three traditions. Four readings were the depth-read:
+
+- **Takai, Chikaraishi & Fujiwara (2025)** — relationship strength and social similarity as utility terms inside a discrete-choice framework, with significant effects on matching preferences and ridesharing use frequency. Methodological precedent for treating relational variables inside a utility framework.
+- **Sheller & Urry (2006)** — co-presence as a relational practice; the car interior as an inhabited space whose shared time has constitutive, not only instrumental, value. Theoretical warrant for the *emotion as constituent of demand* reading.
+- **Souche-Le Corvec & Zhao (2020)** — the instrumental versus *affective-symbolic* motive distinction; the three temporal phases of trip-related emotion (anticipated, in-trip, post-trip). Identifies the specific gap I claim: the affective-symbolic motive has been studied for the traveller's own trips, not for trips made on behalf of another household member.
+- **Rosenbloom (1987)** — *linked-to-work* versus *sole-purpose* PUDO categories, with a disproportionate gendered share of escorting; the *linked vs. sole* distinction reads more defensibly as trip-chaining geometry than as intention, so Module B *adds* an intention layer rather than inheriting her framework.
+
+The further 31 papers cited in the emotion-phases section of Souche-Le Corvec & Zhao (2020) were read at appropriate depth: nine in full, fifteen for instruments and findings, six for framing context, and one (Dittmar 1992) PDF-unavailable. They are grouped by the three emotion phases plus a conceptual bucket, and rendered as a paired descriptive + survey-design table per phase in the underlying matrix. The 35-paper review maps onto the four survey modules via the source table above — every module's items are grounded in specific cited literature, not invented.
+
+Three operative findings emerged from the review:
+
+1. **In-vehicle conversation lifts trip mood** across three independent populations — Ettema et al. (2012) on Swedish PT commuters, Morris & Guerra (2015) on the US ATUS sample, and Westman et al. (2017) on Swedish children. Three different countries, three different age groups, three different methods, one finding that does not go away.
+2. **Mainstream transport surveys already include "for others" categories** but never cross them with the affect instrument layer. Six papers establish that precedent: Mokhtarian & Salomon 2001 ("Taking Others"); Ory & Mokhtarian 2009 ("just taking others where they need to go"); Jakobsson-Bergstad et al. 2011 ("picking up or leaving children at school/day care" + "transport of family members"); Delbosc & Currie 2011 ("Accompanying a child/elderly etc."); McQuoid & Dijst 2012 (qualitative case studies of childcare drop/pickup paths); Westman et al. 2017 (children's own report of parent-driven school trips).
+3. **The bridge from "for whose purpose" to affect-measured-with-STS is the methodological gap** Paper 1 fills. The category exists in the literature; the validated affect instruments exist (STS, SCAS, PANAS); the cross has not yet been made in a household-PUDO setting.
+
+McQuoid & Dijst (2012) is the single PUDO-visible empirical paper in the review (qualitative case studies of single mothers' childcare drop/pickup paths in San Francisco) and is the only qualitative paper among the depth-reads — which formally signals that the qualitative tradition carries equal weight to the quantitative one in Paper 1's literature review.
+
+:::
+
+# 2 · Narrative revision — two-root triple invisibility
+
+::: {.panel-tabset}
+
+## Presentation
+
+### The original "single-root" framing implied emotion explained all three legs — but theoretical invisibility has a different cause
+
+| Invisibility leg | Original claim (25 May) | Problem |
+|---|---|---|
+| Theoretical | Activity-based theory has no category for externally-derived demand | True, but the cause is a *modelling convention* (utility maximization of own activity), not emotion |
+| Methodological | Surveys ask *with whom*, not *for whom* | The cause genuinely *is* the affective-relational fusion of provider and family roles |
+| Economic | Unpaid care labour excluded from production accounts | The cause is also affective-relational — market substitutes systematically misprice the trip |
+
+If the single-root framing tries to make emotion explain the theoretical leg too, a reviewer can knock the whole frame down by pointing out that escort trips *are* already a recognised category — just an under-specified one. Splitting the causes keeps the punch of the triple-invisibility framing while letting each leg stand on its own.
+
+### Two roots, three invisibilities — splitting the causes lets each leg stand on its own
+
+```{mermaid}
+flowchart TB
+    R1[Root 1 — Modelling convention<br/>derived demand assumes own-derived]
+    R2[Root 2 — Affective-relational structure<br/>co-presence partly constitutes relationship]
+
+    I1[Theoretical invisibility<br/>escort trip under-specified]
+    I2[Methodological invisibility<br/>'with whom' not 'for whom']
+    I3[Economic invisibility<br/>unpaid care labour excluded]
+
+    R1 --> I1
+    R2 --> I2
+    R2 --> I3
+
+    classDef root fill:#3a5a4a,stroke:#a8d5b9,stroke-width:2px,color:#ffffff
+    classDef invis fill:#1f2d2a,stroke:#7a9e8c,stroke-width:1px,color:#e6f0e8
+    class R1,R2 root
+    class I1,I2,I3 invis
+```
+
+The split costs about 10% of the original rhetorical punch; in return, neither root has to defend the other root's leg. This is the single most important conceptual shift since 25 May.
+
+### Construct → Instrument → Behavioural signal → Implications
+
+```{mermaid}
+flowchart TB
+    C[Construct<br/>Externally-derived travel demand<br/>+ affective-relational motivation]
+
+    M[Survey instrument]
+    MA[Module A — Trip 'for whom']
+    MB[Module B — Main vs. secondary]
+    MC[Module C — Closeness / contact / obligation]
+    MD[Module D — Anticipated / in-trip / post-trip emotion]
+
+    C --> M
+    M --> MA
+    M --> MB
+    M --> MC
+    M --> MD
+
+    BS[Behavioural signal<br/>route detour, willingness to wait,<br/>trip frequency]
+    MA --> BS
+    MC --> BS
+    MD --> BS
+
+    O1[Visibility delta]
+    O2[Construct validity]
+    O3[Predictive value]
+    MA --> O1
+    MC --> O2
+    BS --> O3
+
+    classDef construct fill:#3a5a4a,stroke:#a8d5b9,stroke-width:2px,color:#ffffff
+    classDef instrument fill:#1f2d2a,stroke:#7a9e8c,stroke-width:1px,color:#e6f0e8
+    classDef output fill:#4a3a2a,stroke:#d5b89a,stroke-width:1px,color:#ffffff
+    class C construct
+    class M,MA,MB,MC,MD instrument
+    class BS,O1,O2,O3 output
+```
+
+### Working title
+
+The working title — *"From Escort Trip to Emotional Geography: A Construct and a Survey for Externally-Derived Travel Demand"* — names both of Paper 1's deliverables: the *construct* (an extension of the escort-trip category into externally-derived demand, grounded in affective geography) and the *instrument* (a survey that puts the construct into items). The fallback title "Externally-Derived Travel Demand: A Construct and a Survey for PUDO Trips" is the safest alternative if "Emotional Geography" sounds too sociological for a *Transportation Research B* audience.
+
+## Detailed
+
+**Current thought.** The reframing strengthens the paper because it makes the *measurement* of emotion non-optional. In the previous narrative the relational claim risked being a rhetorical opening with no empirical instantiation; in the revised narrative the relational claim *requires* specific survey items (Module C closeness/obligation; Module D anticipated/in-trip/post-trip affect) and a behavioural signal (Module A detour). The two-root framing also resolves a subtle inconsistency in the earlier "RQ3 explains everything" alternative narrative — theoretical invisibility has a modelling-convention root that does not need emotion to explain, and is honest about that.
+
+**Reasoning.** A reviewer who is asked to accept that emotion drives both survey-design failures and economic-account failures has to be convinced once. A reviewer who is told that the *modelling convention* explains the theoretical leg (a small, technical move) and the *affective-relational structure* explains the methodological and economic legs (a larger, evidenced move) has an easier time accepting both. Splitting the claim makes each half easier to defend.
+
+**Alternatives considered.** Keeping the original "single-root, triple-invisibility" framing because it is rhetorically tighter. The cost is that the theoretical-invisibility claim becomes harder to defend; the original framing implicitly asserts that emotion is the reason transport theory does not have a category for externally-derived demand, which is a stretch.
+
+:::
+
+# 3 · Research questions — one primary + one secondary
+
+::: {.panel-tabset}
+
+## Presentation
+
+### Reducing to one primary + one secondary RQ clarifies what Paper 1 can answer in Year 1
+
+| | RQ1 (was: survey) | RQ2 (was: valuation) | RQ3 (was: resistance) |
+|---|---|---|---|
+| **v1** | Capture-focused survey design | DDCM or MDCEV for time allocation | Why PUDO resists marketization |
+| **v2** | *Primary.* Capture externally-derived demand including affective-relational motivation; visibility delta vs. standard diary | *Secondary.* Does affective signal predict provider behaviour beyond standard utility? | *Repositioned.* Theoretical reading in the discussion; behavioural pattern in RQ2 is the evidence |
+| **Where modelling sits** | n/a | **Paper 1.5** (DDCM/MDCEV using data from RQ1's instrument) | n/a |
+
+The capture-focused RQ1 absorbs what was the affective-relational dimension of RQ3 by requiring the survey to measure it. The behavioural-signal RQ2 *tests* whether the construct is informative. The marketization-resistance argument becomes the *theoretical interpretation* of RQ2 in the discussion — empirically grounded by RQ2's data rather than requiring its own experiment.
+
+### RQ1 — *What survey design captures externally-derived demand including its affective-relational motivation, at acceptable burden?*
+
+The four sub-questions correspond to four claims the paper must defend.
+
+> **RQ1a (construct definition):** What is the precise condition that makes a trip count as externally-derived, and how does it extend the escort-trip category?
+>
+> **RQ1b (turning the construct into items):** Which items capture (i) the initiating agent, (ii) main vs. secondary status, (iii) the affective-relational motivation, and (iv) closeness, contact, and obligation as *separable* constructs?
+>
+> **RQ1c (burden and validity):** Do the new items preserve completion rates, and do respondents interpret them as intended?
+>
+> **RQ1d (visibility delta):** Under the new instrument, what share of household trips appear as PUDO that standard diaries miss?
+
+RQ1d is the *empirical* contribution; RQ1a–c are the *methodological* contributions. Together they form the conceptual–instrument pair that defines Paper 1's output.
+
+### RQ2 — *Does the affective-relational signal predict provider behaviour beyond standard utility controls?*
+
+> **RQ2a (behavioural signal):** Does anticipated emotion / felt closeness predict observable variation — route detour distance, willingness-to-wait, trip frequency — once standard utility variables are controlled?
+>
+> **RQ2b (decomposition):** Can the affective-relational variance be decomposed into closeness, anticipated emotion, and post-trip satisfaction? Which carries most predictive weight?
+>
+> **RQ2c (cross-context generalization):** Does the relational-utility finding documented across the discrete-choice, qualitative escort-trip, and affective-symbolic-motive traditions generalize to a household-PUDO observational context inside one unified instrument?
+
+Why secondary: RQ2 depends on data the instrument designed for RQ1 will collect. A modest descriptive answer is enough for Paper 1; a structural model belongs in Paper 1.5.
+
+## Detailed
+
+**Current thought.** The reduction reflects what Paper 1 can actually *answer* in Year 1. The construct-and-instrument question is answerable through design, pilot, and validation work. The behavioural-signal question is answerable through descriptive evidence and simple regression. The marketization-resistance question, as originally posed, requires either a stated-preference experiment offering market substitutes at varied prices or a longitudinal observation of resistance to a real market intervention — neither is feasible inside Paper 1, and forcing it in would weaken the paper.
+
+**Reasoning.** The behavioural signal that Paper 1 collects (detour distance as a function of closeness; willingness-to-wait as a function of felt obligation) is *itself* the evidence for the marketization-resistance argument. The marketization argument is then the *theoretical reading* of that behavioural pattern, developed in the discussion using Folbre & Nelson (2000), Morgan (2005), and the mobilities literature. This is a more honest division of labour between empirical and theoretical claims than treating marketization-resistance as a third stand-alone RQ.
+
+**Alternatives considered.** Keeping three RQs and accepting that RQ3 would be answered only theoretically. The cost is that the paper appears to make three empirical claims while in fact only two have empirical content, which invites the question of why the third is included at all.
+
+:::
+
+# 4 · Survey instrument — four modules, grounded in cited literature
+
+::: {.callout-tip}
+This section walks through the four modules in detail. For each module, a one-paragraph rationale is followed by the full item bank with literature sources per item.
+:::
+
+::: {.panel-tabset}
+
+## Overview
+
+### Four modules add ~2–4 minutes per PUDO trip on top of a standard diary — within burden tolerance
+
+| Module | What it captures | Trigger condition |
+|---|---|---|
+| **A** — Trip purpose & "for whom" | Initiating agent; beneficiary identity | Every trip |
+| **B** — Main vs. secondary status | Trip-chaining context; layered intention | Trips with ≥1 passenger or detour |
+| **C** — Relationship characterization | Closeness, contact intensity, felt obligation | **Once, at intake** (not per trip) |
+| **D** — Affective-relational signal | Anticipated, in-trip, post-trip emotion | **Per-trip sample** (not every trip) |
+
+Two design moves keep the burden down: the closeness/contact/obligation items are collected once at intake instead of every trip, and the affect items are asked on only a sample of trips instead of every one. Standard household travel diaries run 15–30 minutes per day; this instrument adds about 10 minutes per day in the worst case (four PUDO trips, two sampled for affect).
+
+## Module A
+
+### Module A — separates *for whom* from *with whom*, and uses observable route accommodation as a behavioural proxy
+
+Module A separates *for whom* the trip is made from *with whom* the person travels — a distinction no standard household travel diary asks. The new activity code "To take or pick up someone in my household" attaches to A1, so the diary stays backward-compatible with existing instruments. A2's *"hard to tell"* option for whose activity-need motivated the trip is itself a measurement: the share of respondents who choose it is a direct test of the *fused-role* idea (provider role and family role experienced as one). A5–A7 add observable route accommodation as a behavioural proxy for relational utility — did the provider choose a longer route, how much longer, and why. These items pair a self-reported feeling in Module D with an observable behaviour, so the affective claim is not left hollow. A8 and A9, asked once at intake, give a dispositional baseline for sub-group analysis: a Travel-Liking item that includes "driving or accompanying someone for their purposes," and a transport-difficulty item adapted from work on accompanying children or elderly relatives.
+
+| # | Question (short form) | Source |
+|---|---|---|
+| A1 | Main reason for the trip — adds "To take or pick up someone in my household" as a new code | Axhausen & Gärling 1992 (standard activity codes); Rosenbloom 1987 (PUDO precedent); Miller & Sedai 2021 |
+| A2 | Whose activity-need motivated the trip? (with explicit "hard to tell" option) | Miller & Sedai 2021; Barker 2011 (fused roles) |
+| A3 | If piggy-backed onto another trip: would you still have made the trip without the PUDO? | Fotel & Thomsen 2004; Rosenbloom 1987 |
+| A4 | For whom was the trip made? (multi-select from intake roster) | Takai et al. 2025; Miller & Sedai 2021 |
+| A5 | Route accommodation: did you take a longer route to accommodate this person? | Original behavioural-proxy design |
+| A6 | Detour minutes (if A5 = yes) | Original behavioural-proxy design |
+| A7 | Why accept the longer route? (4 options — no alternative / time together / would feel bad / they asked) | Folbre & Nelson 2000; Barker 2011; Sheller & Urry 2006 |
+| A8 *(intake)* | How do you feel about each of these kinds of trips? — including "driving or accompanying someone for their purposes" (5-pt Liking) | Ory & Mokhtarian 2009 (wording kept) |
+| A9 *(intake)* | How often is it hard to accompany a child, elderly relative, or other household member who needs help getting somewhere? | Delbosc & Currie 2011 |
+
+## Module B
+
+### Module B — accepts that intention is layered, and asks respondents to quantify the split
+
+The standard primary/secondary activity distinction collapses on PUDO trips that are piggy-backed onto another trip — the parent driving the child to school *on the way to work* is doing both, simultaneously, and respondents typically refuse to choose one. Module B accepts that reality. B1 offers "some of both" as a valid answer. B2 then asks the respondent to *quantify* the split with a slider (0 = entirely my destination; 100 = entirely their need). B3 and B4 capture displacement — what activities were rearranged or given up to make the PUDO happen. Together they create a descriptive picture of layered intention that DDCM can later model formally in Paper 1.5. The slider in B2 is the methodological risk in this module; cognitive interviewing will test whether respondents can give a stable answer or whether the slider is just noise.
+
+| # | Question (short form) | Source |
+|---|---|---|
+| B1 | Was the PUDO the main reason you went out, or was it part of a trip you'd have made anyway? (incl. "some of both") | Miller & Sedai 2021; Rosenbloom 1987 |
+| B2 | Slider: 0 = entirely my destination → 100 = entirely their need | Miller & Sedai 2021 (forced quantification of layered intention) |
+| B3 | Did you rearrange or give up any of your other activities today to make this trip happen? | Rosenbloom 1987; Fotel & Thomsen 2004 |
+| B4 | What did you rearrange or give up? (free text) | Rosenbloom 1987 |
+
+## Module C
+
+### Module C — splits a bundled "relationship strength" into three constructs the discrete-choice tradition hides
+
+The discrete-choice tradition typically bundles relational variables into a single observable "relationship strength" dominated by contact frequency (Takai et al. 2025 is one recent example; Ben-Akiva & Lerman 1985 set the older precedent). Module C deliberately decouples three constructs that the bundle hides: felt closeness (C2), contact intensity (C3), and felt obligation (C4). These three are correlated but not identical — close family with low contact frequency; high-contact colleagues with low obligation. Measuring them separately lets the analysis *test* the bundle the discrete-choice tradition assumes, rather than reproduce it. This is the single most important measurement decision in the instrument. C6 and C7 add dispositional baselines — a short Ryff anchor for positive relations and a preference-for-travel-with-others item — for partialling-out in subgroup analysis. Module C is collected once at intake, not per trip, so it adds no per-trip burden.
+
+| # | Question (short form) | Source |
+|---|---|---|
+| C1 | Household roster: relationship type per member | Takai et al. 2025 |
+| C2 | Felt closeness per member (7-pt) — "you would expect them to be there for you in a difficult moment" | Takai 2025; Dowling 2000; Barker 2011 |
+| C3 | Contact frequency per member (4-pt) | Takai 2025 |
+| C4 | Felt obligation per member (7-pt) — "how responsible do you feel for their getting where they need to go?" | Folbre & Nelson 2000; Barker 2011; Miller & Sedai 2021 |
+| C5 | Compared to a year ago, has the amount you drive or accompany each member changed? | Rosenbloom 1987 |
+| C6 | Ryff positive-relations anchor (2 items) — "maintaining close relationships has been difficult" (reverse-scored); "I trust my family and they trust me" | Vella-Brodrick & Stanley 2013 (short form of Ryff PWB subscale) |
+| C7 | "I prefer travel I can do together with someone close" (5-pt) | Páez & Whalen 2010 (reframed from "dislikes traveling alone") |
+
+## Module D
+
+### Module D — measures emotion at three points in the trip's life, with in-trip activity coding grounded in the wider review
+
+Module D measures emotion at three points: anticipated (before the trip), in-trip (during the journey), and post-trip (looking back). The structure follows Souche-Le Corvec & Zhao's (2020) three-phase framework, which maps directly onto Module D's three sub-sections. Two design choices: short items only (not the full 12-item SPANE), and sampled administration (e.g., every 4th trip plus all PUDO trips) so the per-trip burden is bounded. The *anticipated–experienced gap* — comparing D1 to D5 — is a publishable finding in itself regardless of magnitude; it would document a gap in retrospective versus anticipated emotion that the SWB literature has not captured for trips made on behalf of another household member. D7's in-trip activity coding (everyday talk / meaningful talk / quiet co-presence / managing their task / other-directed phone use / solitary) is grounded in the strongest replicated empirical finding across the wider review: in-vehicle conversation lifts trip mood across three independent populations.
+
+**Anticipated (before the trip):**
+
+| # | Question (short form) | Source |
+|---|---|---|
+| D1 | 4 affect items at the decision moment — happy/looking-forward · worried/anxious · tired/reluctant · calm/at-peace (5-pt) | Souche-Le Corvec & Zhao 2020 (3-phase framework); PANAS short form |
+| D2 | "I felt I had to make this trip even if I didn't really want to" (5-pt) | Folbre & Nelson 2000; Barker 2011 |
+| D8 | Anticipated multi-select — worry / no-choice / looking-forward / traffic anxiety / none | McQuoid & Dijst 2012 (the self as a constraint); Gärling 2019 (tri-phase mood framework) |
+
+**In-trip (recalled the same day):**
+
+| # | Question (short form) | Source |
+|---|---|---|
+| D3 | In-vehicle quality — 3 Likert items plus a fourth on quiet co-presence | Sheller & Urry 2006; Dowling 2000; Westman 2017 |
+| D4 | Open-ended (optional) — did anything happen that made this trip feel different? | Sheller & Urry 2006 |
+| D7 | In-trip activity coding (6-option multi-select) — everyday talk / meaningful talk / quiet co-presence / managing their task / other-directed phone use / solitary | Ettema et al. 2012; Westman et al. 2017; Morris & Guerra 2015 |
+
+**Post-trip (looking back):**
+
+| # | Question (short form) | Source |
+|---|---|---|
+| D5 | STS cognitive-evaluation subscale (3 items, 7-pt semantic differential) — worked poorly/well · low/high standard · worst/best imaginable | Friman et al. 2013 (STS-CE) |
+| D6 | "Did this trip contribute anything to your relationship with the person you drove?" (5-pt) | Sheller & Urry 2006; Dowling 2000; Barker 2011 |
+
+## Implementation path
+
+### Cognitive walkthrough → IRB submission → pilot via Reem's diary app
+
+| Stage | Sample / venue | Purpose | Timing |
+|---|---|---|---|
+| **0. Internal walkthrough** | Reem + labmates | Item-clarity check on the survey before any household contact | Week of 2026-06-16 (no IRB needed) |
+| **0.5 Sensei approval** | 1:1 with supervisor | Approval of the deployment plan inside Reem's app | Week of 2026-06-16 |
+| **1. Cognitive interview** | 5–8 households via Reem's app | Think-aloud on A2, A7, C2-vs-C3-vs-C4, D1-vs-D5 | After Hirodai IRB clearance (est. Aug–Sep 2026) |
+| **2. Small pilot** | 20–30 households, 1-week diary | Completion rate vs. standard diary; item non-response; convergent validity | Oct–Nov 2026 |
+| **3. Field deployment** | Full sample | Recruitment frame for Sensei's input | Late Year 1 / early Year 2 |
+
+Hiroshima University IRB is the *first* clearance gate; later gates, if any, are not yet confirmed. Stages 0 and 0.5 run straight away in week 2. Stage 1 evidence (cognitive interview) is required for any methodological paper of this kind. **Reem's existing travel-diary app** is the deployment platform — agreement reached separately with Reem — so we do not need to build new infrastructure.
+
+:::
+
+# 5 · Bridging to Paper 1.5 — time allocation and value of time
+
+::: {.panel-tabset}
+
+## Presentation
+
+### Once the instrument is fielded, the next question is how to value the time — and that belongs in Paper 1.5
+
+Paper 1 stops at the construct, the validated instrument, and the descriptive evidence the instrument produces: visibility delta against a standard diary, prevalence of the "hard to tell" fused-role answer, the distribution of route accommodation, and the distribution of the anticipated-versus-experienced affect gap. What Paper 1 deliberately does *not* deliver is a structural model of time allocation across own-purpose and other-purpose activities. That model is Paper 1.5. The question for Paper 1.5 then becomes: which model family fits the data — Dynamic Discrete Choice (DDCM) for timing and displacement, or Multiple Discrete-Continuous Extreme Value (MDCEV) for the time-portfolio share? The choice depends on which question we ask of the data.
+
+### DDCM and MDCEV answer different questions — model choice follows the RQ, not the other way around
+
+```{mermaid}
+flowchart TB
+    Q[Time-allocation question for PUDO<br/>after Paper 1 instrument is fielded]
+    Q --> QA{Question of interest?}
+
+    QA -->|Time portfolio share| MDCEV[MDCEV branch]
+    QA -->|Timing &amp; displacement| DDCM[DDCM branch]
+
+    MDCEV --> M1[Bhat 2005, 2008<br/>Cross-sectional<br/>Time-budget known]
+    MDCEV --> M2[Output: time share<br/>by activity category]
+    DDCM --> D1a[Habib 2011<br/>Fosgerau et al. 2013<br/>Chikaraishi lab — TBC]
+    DDCM --> D2a[Output: timing<br/>+ displacement]
+
+    M2 --> V[Valuation step]
+    D2a --> V
+    V --> V1[Replacement cost]
+    V --> V2[Opportunity cost]
+    V --> V3[Utility-based VoT]
+
+    classDef branch fill:#3a5a4a,stroke:#a8d5b9,stroke-width:2px,color:#ffffff
+    classDef detail fill:#1f2d2a,stroke:#7a9e8c,stroke-width:1px,color:#e6f0e8
+    classDef val fill:#4a3a2a,stroke:#d5b89a,stroke-width:1px,color:#ffffff
+    class MDCEV,DDCM branch
+    class M1,M2,D1a,D2a detail
+    class V,V1,V2,V3 val
+```
+
+Picking a model does *not* solve the Value-of-Time question; the bottom row is unavoidable regardless of which branch is taken. One clarification to ask Sensei: is Fosgerau, Frejinger & Karlström (2013) — which is recursive-logit route choice — intended as the actual model for PUDO sequencing, or as methodological warm-up before selecting a time-allocation DDCM?
+
+## Detailed
+
+**Current thought.** Paper 1 should deliver the construct, the validated instrument, and the descriptive evidence under the new instrument. Time-allocation modelling using DDCM or MDCEV requires the data that Paper 1's instrument will eventually collect; it is structurally a follow-up paper, not a co-equal element of Paper 1. Compressing both into one paper risks delivering neither in Year 1.
+
+**Reasoning.** The DDCM / MDCEV choice is itself non-trivial — DDCM captures sequencing and displacement, MDCEV captures portfolio share, and they answer different questions. Making that choice well requires the descriptive picture that Paper 1's instrument provides. Reversing the order — choose model first, then design instrument — is the failure mode flagged in the May 22 RQ2 critique.
+
+**Alternatives considered.** Folding a small MDCEV or DDCM application into Paper 1 as a secondary contribution. The risk is that it crowds the methods section, makes the paper hard to position (instrument paper or model paper?), and produces preliminary numbers that the reader may treat as central. Keeping the modelling work for Paper 1.5 keeps Paper 1's contribution focused.
+
+:::
+
+# 6 · Scope, asks, and the next two weeks
+
+::: {.panel-tabset}
+
+## Presentation
+
+### Paper 1 stops at the construct, instrument, and descriptive evidence — modelling is Paper 1.5
+
+| Paper | Question | Deliverable | Timeline |
+|---|---|---|---|
+| **Paper 1** | RQ1 + RQ2 | Construct + survey instrument + pilot validation + descriptive evidence + behavioural-signal test | **Year 1** (this year) |
+| **Paper 1.5** | Economic value of PUDO time using the new instrument | DDCM or MDCEV time-allocation estimation; VoT method choice | **Year 2 H1** |
+| **Paper 2** | Intra-household decision as a network problem | Conceptual + computational paper | **Year 2–3** |
+
+### Three structural decisions I cannot make alone — and want Sensei's view on today
+
+> **1. Two-root triple invisibility.** Is splitting the cause of theoretical vs. methodological/economic invisibility persuasive, or does it weaken the rhetorical punch of the original frame? My view: 10% rhetorical cost, 100% defensibility gain — worth it.
+>
+> **2. RQ collapse to 1 primary + 1 secondary.** Is folding the affective-relational dimension into RQ1 and demoting marketization-resistance to a discussion implication acceptable, or does Sensei want it kept as a separate RQ?
+>
+> **3. Paper 1.5 descoping.** Is moving DDCM / MDCEV modelling into a follow-up paper acceptable for Year 1, or should a small modelling section live inside Paper 1?
+
+### Four technical confirmations to lock in this week
+
+> **(i) Fosgerau, Frejinger & Karlström (2013)** — is recursive-logit route choice intended as the actual PUDO sequencing model, or as background reading before picking a time-allocation DDCM?
+>
+> **(ii) Audience** — primary target is travel-behaviourist (e.g., *Transportation*, *Travel Behaviour and Society*); confirming that aligns with the journal trajectory Sensei has in mind.
+>
+> **(iii) Contribution pair** — confirming the conceptual contribution (construct) + methodological contribution (instrument) framing for the target journal.
+>
+> **(iv) Cognitive interview path under the ethics gate** — household pilots need Hiroshima IRB clearance (1–2 months). Internal review with labmates does not. Which sampling frame (Hiroshima community panel / recruited household panel / staged combination) does Sensei recommend pursuing through the IRB?
+
+### Next two weeks: finalize the survey instrument, then walkthrough → Sensei approval → IRB submission
+
+| Week | Focus | Key actions |
+|---|---|---|
+| **Week 1** 2026-06-09 → 06-15 | Theory + finalize the survey instrument | Continue emotion/transport reading; confirm Reem's app constraints (supported item types, conditional logic for A2/A3 branching, sampling triggers for Module D); finalize the survey instrument so it is stable for walkthrough |
+| **Week 2** 2026-06-16 → 06-22 | Walkthrough → Sensei → IRB | (1) Cognitive walkthrough with Reem + labmates; (2) revise based on feedback + draft the deployment plan inside Reem's app; (3) present the revised survey + deployment plan to Sensei for approval; (4) finalize the survey + ethics package; (5) submit to Hiroshima University IRB |
+
+## Detailed
+
+### Where I am stuck
+
+- **The right empirical scope for the affective-relational module.** The instrument currently has Module C (dispositional, intake) and Module D (per-trip, sampled). I am uncertain whether sampling per-trip affect on, say, every fourth trip is statistically sufficient to support the behavioural-signal claim in RQ2, or whether full administration on every PUDO trip is required at the cost of burden.
+- **Sample design and recruitment frame.** The deployment platform is solved: the instrument will be embedded inside Reem's travel-diary app, on which we have already aligned. What remains open is the recruitment frame for the cognitive interview and pilot stages — Hiroshima University community, recruited Hiroshima household sample, or a small staged convenience pilot — and I would like Sensei's guidance on which path to pursue through the Hiroshima University IRB.
+- **The Fosgerau–Frejinger–Karlström (2013) routing question.** I cannot resolve, without Sensei, whether that paper is meant to be the actual model for PUDO sequencing or a methodological warm-up before selecting a time-allocation DDCM. The two intents imply different reading plans.
+- **Whether the marketization-resistance argument carries enough weight as a discussion implication.** Even after the repositioning, I want to make sure the discussion has enough substance — and enough policy relevance — to justify the introduction's promise that the paper will speak to why PUDO stays personal.
+
+### Things I want to confirm
+
+- Is the two-root triple-invisibility framing acceptable, or does Sensei prefer the original single-root framing for rhetorical reasons?
+- Is the reduction from three parallel RQs to one primary + one secondary RQ acceptable, with the marketization-resistance argument repositioned as a discussion implication?
+- Is descoping the DDCM / MDCEV modelling into a follow-up Paper 1.5 acceptable, or does Sensei want a small model section inside Paper 1?
+- Confirming Fosgerau, Frejinger & Karlström (2013) as background reading for the broader dynamic-discrete-choice toolkit, with the specific time-allocation entry paper to be identified by Sensei from his lab's work — is that the right reading order?
+- For the cognitive interviewing of the survey instrument, would Sensei prefer recruitment from (a) Hirodai community, (b) a recruited Hiroshima household sample, or (c) a small convenience pilot before any formal sampling?
+
+:::
+
+# Appendix — terms and supplementary materials
+
+::: {.panel-tabset}
+
+## Definitions of terms
+
+| Term | Definition |
+|---|---|
+| PUDO trip | A trip whose purpose is to pick up or drop off another person — typically another household member — rather than to fulfil the driver's own activity at the destination. |
+| Externally-derived travel demand | A trip whose origin lies in another person's activity-need rather than the traveller's own, and whose value to the provider includes the affective-relational quality of the co-presence the trip produces. The first half extends the existing *escort-trip* category by identifying the initiating agent; the second half makes the relational dimension part of the construct itself rather than a discussion-section appendix. |
+| Two-root triple invisibility | The framing in the revised narrative. *Root 1 (modelling convention)* produces theoretical invisibility: activity-based travel demand assumes demand is own-derived, leaving externally-derived demand under-specified. *Root 2 (affective-relational structure)* produces methodological and economic invisibility: providers experience the trip as relational care rather than as a service, blurring the for-whom boundary in surveys and making market substitutes a systematically wrong proxy for the trip's value. |
+| Anticipated, in-trip, and post-trip affect | The three temporal phases of trip-related emotion identified by Souche-Le Corvec & Zhao (2020). *Anticipated* affect is felt at the decision moment ("I would feel bad if I didn't pick him up"). *In-trip* affect is felt during the journey (conversation, presence, stress). *Post-trip* affect is the evaluative emotion after the trip ("glad I did it"). The survey instrument measures each phase with separate items. |
+| Felt closeness vs. contact intensity vs. felt obligation | The three relational constructs deliberately measured *separately* in the survey instrument. The discrete-choice tradition typically bundles relationship strength dominated by contact frequency. The instrument decomposes the bundle: closeness is dispositional emotional bond; contact intensity is observable frequency; felt obligation is the sense of responsibility for the other's mobility. These constructs are correlated but not identical, and decoupling them empirically is part of the methodological contribution. |
+| Construct, instrument, and behavioural signal | The three layers of the Paper 1 contribution. The *construct* is conceptual (externally-derived demand with affective motivation). The *instrument* is methodological (the survey modules). The *behavioural signal* is empirical (route detour, trip frequency, willingness-to-substitute as functions of the affective-relational items). |
+
+## Supplementary materials
+
+- *Revised narrative — emotional-first, two-root triple invisibility* — draft narrative document.
+- *Reformulated research questions* — primary + secondary RQ structure.
+- *Survey instrument* — full question bank for Modules A–D with literature sources and burden estimates per item.
+- *Literature review matrix — 35 papers on emotion in transport*, grouped by emotion phase, with PUDO-precedent flags and a source-table mapping each module to the cited literature behind it.
+- *Conceptual framework diagrams* — overall framework; Transport and Emotion (Souche-Le Corvec & Zhao, 2020); DDCM versus MDCEV branching.
+- *Reference notes for the four anchor readings* — Takai et al. 2025; Sheller & Urry 2006; Souche-Le Corvec & Zhao 2020; Rosenbloom 1987.
+- *Top-5 reading list for the week of 2026-06-08* — Friman et al. 2017; Mesken et al. 2007; McQuoid & Dijst 2012; Tourangeau et al. 2000 chapters 3 and 5; Folbre & Nelson 2000.
+- *Daily prose-writing practice routine* — a five-day weekday rhythm grounded in the zettelkasten workflow, intended as ongoing practice rather than a one-off deliverable.
+
+## Source-code map
+
+The survey items are grounded in the following cited sources. Each item's source column in the module tables above uses the short citation forms below.
+
+| Code | Reference |
+|---|---|
+| Takai 2025 | Takai, Chikaraishi & Fujiwara (2025) — *J. EASTS* 16, 41–60 |
+| Sheller & Urry 2006 | Sheller & Urry (2006) — *Environment & Planning A* 38(2), 207–226 |
+| Souche-Le Corvec & Zhao 2020 | Souche-Le Corvec & Zhao (2020) — *Travel Behaviour and Society* 20, 12–21 |
+| Becker 1965 | Becker (1965) — *Economic Journal* 75(299), 493–517 |
+| Miller & Sedai 2021 | Miller & Sedai (2021) — opportunity costs of unpaid caregiving |
+| Rosenbloom 1987 | Rosenbloom (1987) — *Transportation* 14(3), 183–194 |
+| Axhausen & Gärling 1992 | Axhausen & Gärling (1992) — *Transport Reviews* 12(4), 323–341 |
+| Fotel & Thomsen 2004 | Fotel & Thomsen (2004) — *Surveillance & Society* 2(4), 535–554 |
+| Barker 2011 | Barker (2011) — *Health & Place* 17(2), 413–421 |
+| Dowling 2000 | Dowling (2000) — *Geoforum* 31(3), 345–353 |
+| Folbre & Nelson 2000 | Folbre & Nelson (2000) — *J. Economic Perspectives* 14(4), 123–140 |
+| Westman 2017 | Westman et al. (2017) — *Transportation* 44(6), 1365–1382 |
+| Friman 2013 | Friman et al. (2013) — *TR Part A* 48, 132–145 — STS 9-item psychometric |
+| Ettema 2012 | Ettema et al. (2012) — *J. Transp. Geogr.* 24, 215–222 — in-vehicle activities → STS |
+| Ory & Mokhtarian 2009 | Ory & Mokhtarian (2009) — *TR Part A* 43, 26–43 — Travel Liking + "just taking others" |
+| Mokhtarian & Salomon 2001 | Mokhtarian & Salomon (2001) — *TR Part A* 35, 695–719 — "Taking Others" purpose |
+| Jakobsson-Bergstad 2011 | Jakobsson-Bergstad et al. (2011) — *Transportation* 38, 1–16 — SWB + daily travel |
+| Delbosc & Currie 2011 | Delbosc & Currie (2011) — *J. Transp. Geogr.* 19, 1130–1137 |
+| Morris & Guerra 2015 | Morris & Guerra (2015) — *Transportation* 42, 25–43 — mood and mode (ATUS) |
+| McQuoid & Dijst 2012 | McQuoid & Dijst (2012) — *J. Transp. Geogr.* 23, 26–34 — emotions in time geography |
+| Páez & Whalen 2010 | Páez & Whalen (2010) — *TR Part A* 44, 537–549 — enjoyment of commute |
+| Friman 2017 | Friman et al. (2017) — *TR Part A* 106, 170–180 — STS → emotional WB → life satisfaction |
+| Vella-Brodrick & Stanley 2013 | Vella-Brodrick & Stanley (2013) — *Transp. Policy* 29, 236–242 — Ryff PWB mediation |
+| Gärling 2019 | Gärling (2019) — *Transp. Letters* 11(1), 54–62 — tri-phase travel-feelings framework |
+
+:::
+
+::: {.callout-tip appearance="simple"}
+**Thank you for reading.** Discussion is welcome at the 2026-06-08 meeting; written questions also welcome by reply to this page.
+:::
+
+---
+
+*Last updated 2026-06-07. Generated with Quarto.*
