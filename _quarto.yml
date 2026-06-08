@@ -30,3 +30,6 @@ format:
     css: styles.css
     toc: true
     toc-depth: 2
+    embed-resources: true
+    toc-location: left
+    smooth-scroll: true

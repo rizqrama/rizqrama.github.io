@@ -90,9 +90,9 @@ The survey instrument, the literature review matrix, the conceptual framework di
 flowchart TB
     C[Construct<br/>Externally-derived travel demand<br/>+ affective-relational motivation]
 
-    T1[Affective-symbolic motive<br/>Souche-Le Corvec &amp; Zhao 2020<br/>Sheller &amp; Urry 2006]
-    T2[Qualitative escort-trip<br/>Rosenbloom 1987<br/>+ vault: Dowling 2000; Barker 2011;<br/>Fotel &amp; Thomsen 2004]
-    T3[Discrete-choice precedent<br/>Takai et al. 2025<br/>+ Ben-Akiva &amp; Lerman 1985]
+    T1["Affective-symbolic motive<br/>Souche-Le Corvec & Zhao 2020<br/>Sheller & Urry 2006"]
+    T2["Qualitative escort-trip<br/>Rosenbloom 1987<br/>+ vault: Dowling 2000; Barker 2011;<br/>Fotel & Thomsen 2004"]
+    T3["Discrete-choice precedent<br/>Takai et al. 2025<br/>+ Ben-Akiva & Lerman 1985"]
 
     T1 -->|conceptual ground| C
     T2 -->|behavioural-narrative ground| C
@@ -127,7 +127,7 @@ flowchart LR
     subgraph P3["3 · Post-trip"]
         P3a["After the trip<br/>(evaluative)"]
         P3b["Satisfaction;<br/>relational production"]
-        P3c["De Vos &amp; Witlox 2017<br/>PANAS / SPANE"]
+        P3c["De Vos & Witlox 2017<br/>PANAS / SPANE"]
         P3a --> P3b --> P3c
     end
 
@@ -442,7 +442,7 @@ flowchart TB
     Q --> QA{Question of interest?}
 
     QA -->|Time portfolio share| MDCEV[MDCEV branch]
-    QA -->|Timing &amp; displacement| DDCM[DDCM branch]
+    QA -->|"Timing & displacement"| DDCM[DDCM branch]
 
     MDCEV --> M1[Bhat 2005, 2008<br/>Cross-sectional<br/>Time-budget known]
     MDCEV --> M2[Output: time share<br/>by activity category]
@@ -598,4 +598,4 @@ The survey items are grounded in the following cited sources. Each item's source
 
 ---
 
-*Last updated 2026-06-07. Generated with Quarto.*
+*Last updated 2026-06-08. Generated with Quarto.*
