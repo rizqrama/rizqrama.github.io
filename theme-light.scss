@@ -1,0 +1,37 @@
+/*-- scss:defaults --*/
+// =============================================================
+//  Harvest Gold — LIGHT  (paired with Bootstrap `cosmo`)
+//  Golden cream + burnt-orange. All text/link pairs verified
+//  to meet WCAG 2.2 AA against their backgrounds.
+// =============================================================
+
+// ---- Typography (system stacks: fast, private, reproducible) ----
+$font-family-sans-serif: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !default;
+$font-family-serif:      Georgia, Cambria, "Times New Roman", Times, serif !default;
+$font-family-base:       $font-family-serif;        // long-form body = serif
+$headings-font-family:   $font-family-sans-serif;   // headings/UI    = sans
+$headings-font-weight:   600;
+$font-size-root:         18px;                       // comfortable reading base
+$line-height-base:       1.7;
+
+// ---- Palette ----
+$body-bg:        #f5edda;   // golden cream paper
+$body-color:     #2a2216;   // dark walnut  (13.5:1)
+$primary:        #a8541f;   // burnt orange ( 4.6:1)
+$secondary:      #5e4d34;   // muted walnut ( 7.0:1)  — captions/meta
+$link-color:     #8f5113;   // ( 5.4:1)
+$link-hover-color: #a8541f;
+$accent:         #9c6b12;   // deep gold — borders/stripes/focus (decorative)
+
+// ---- Surfaces ----
+$card-bg:           #ece0c6;
+$card-border-color: transparent;
+$border-radius:     .5rem;
+
+// ---- Navbar + footer (Quarto vars) ----
+$navbar-bg: #2a2216;
+$navbar-fg: #f5edda;
+
+// ---- Code ----
+$code-color: #8f5113;
+$code-bg:    #ece0c6;

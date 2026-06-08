@@ -15,7 +15,6 @@ format:
     toc-depth: 4
     toc-location: left
     toc-expand: 2
-    theme: cosmo
     embed-resources: true
     code-fold: false
     page-layout: article
@@ -193,8 +192,8 @@ flowchart TB
     T2 -->|behavioural-narrative ground| C
     T3 -->|methodological ground| C
 
-    classDef tradition fill:#1f2d2a,stroke:#7a9e8c,stroke-width:1px,color:#e6f0e8
-    classDef construct fill:#3a5a4a,stroke:#a8d5b9,stroke-width:2px,color:#ffffff
+    classDef tradition fill:#43331f,stroke:#c0a87f,stroke-width:1.5px,color:#f0e4cf
+    classDef construct fill:#8a3a16,stroke:#e08a4a,stroke-width:2px,color:#fff5e6
     class T1,T2,T3 tradition
     class C construct
 ```
@@ -260,8 +259,8 @@ flowchart TB
     R2 --> I2
     R2 --> I3
 
-    classDef root fill:#3a5a4a,stroke:#a8d5b9,stroke-width:2px,color:#ffffff
-    classDef invis fill:#1f2d2a,stroke:#7a9e8c,stroke-width:1px,color:#e6f0e8
+    classDef root fill:#8a3a16,stroke:#e08a4a,stroke-width:2px,color:#fff5e6
+    classDef invis fill:#43331f,stroke:#c0a87f,stroke-width:1.5px,color:#f0e4cf
     class R1,R2 root
     class I1,I2,I3 invis
 ```
@@ -298,9 +297,9 @@ flowchart TB
     MC --> O2
     BS --> O3
 
-    classDef construct fill:#3a5a4a,stroke:#a8d5b9,stroke-width:2px,color:#ffffff
-    classDef instrument fill:#1f2d2a,stroke:#7a9e8c,stroke-width:1px,color:#e6f0e8
-    classDef output fill:#4a3a2a,stroke:#d5b89a,stroke-width:1px,color:#ffffff
+    classDef construct fill:#8a3a16,stroke:#e08a4a,stroke-width:2px,color:#fff5e6
+    classDef instrument fill:#43331f,stroke:#c0a87f,stroke-width:1.5px,color:#f0e4cf
+    classDef output fill:#6e521a,stroke:#e6b54a,stroke-width:1.5px,color:#fff5e6
     class C construct
     class M,MA,MB,MC,MD instrument
     class BS,O1,O2,O3 output
@@ -448,9 +447,9 @@ flowchart TB
     V --> V2[Opportunity cost]
     V --> V3[Utility-based VoT]
 
-    classDef branch fill:#3a5a4a,stroke:#a8d5b9,stroke-width:2px,color:#ffffff
-    classDef detail fill:#1f2d2a,stroke:#7a9e8c,stroke-width:1px,color:#e6f0e8
-    classDef val fill:#4a3a2a,stroke:#d5b89a,stroke-width:1px,color:#ffffff
+    classDef branch fill:#8a3a16,stroke:#e08a4a,stroke-width:2px,color:#fff5e6
+    classDef detail fill:#43331f,stroke:#c0a87f,stroke-width:1.5px,color:#f0e4cf
+    classDef val fill:#6e521a,stroke:#e6b54a,stroke-width:1.5px,color:#fff5e6
     class MDCEV,DDCM branch
     class M1,M2,D1a,D2a detail
     class V,V1,V2,V3 val
@@ -564,8 +563,8 @@ flowchart TB
     T2 -->|behavioural-narrative ground| C
     T3 -->|methodological ground| C
 
-    classDef tradition fill:#1f2d2a,stroke:#7a9e8c,stroke-width:1px,color:#e6f0e8
-    classDef construct fill:#3a5a4a,stroke:#a8d5b9,stroke-width:2px,color:#ffffff
+    classDef tradition fill:#43331f,stroke:#c0a87f,stroke-width:1.5px,color:#f0e4cf
+    classDef construct fill:#8a3a16,stroke:#e08a4a,stroke-width:2px,color:#fff5e6
     class T1,T2,T3 tradition
     class C construct
 ```
@@ -654,8 +653,8 @@ flowchart TB
     R2 --> I2
     R2 --> I3
 
-    classDef root fill:#3a5a4a,stroke:#a8d5b9,stroke-width:2px,color:#ffffff
-    classDef invis fill:#1f2d2a,stroke:#7a9e8c,stroke-width:1px,color:#e6f0e8
+    classDef root fill:#8a3a16,stroke:#e08a4a,stroke-width:2px,color:#fff5e6
+    classDef invis fill:#43331f,stroke:#c0a87f,stroke-width:1.5px,color:#f0e4cf
     class R1,R2 root
     class I1,I2,I3 invis
 ```
@@ -691,9 +690,9 @@ flowchart TB
     MC --> O2
     BS --> O3
 
-    classDef construct fill:#3a5a4a,stroke:#a8d5b9,stroke-width:2px,color:#ffffff
-    classDef instrument fill:#1f2d2a,stroke:#7a9e8c,stroke-width:1px,color:#e6f0e8
-    classDef output fill:#4a3a2a,stroke:#d5b89a,stroke-width:1px,color:#ffffff
+    classDef construct fill:#8a3a16,stroke:#e08a4a,stroke-width:2px,color:#fff5e6
+    classDef instrument fill:#43331f,stroke:#c0a87f,stroke-width:1.5px,color:#f0e4cf
+    classDef output fill:#6e521a,stroke:#e6b54a,stroke-width:1.5px,color:#fff5e6
     class C construct
     class M,MA,MB,MC,MD instrument
     class BS,O1,O2,O3 output
@@ -889,9 +888,9 @@ flowchart TB
     V --> V2[Opportunity cost]
     V --> V3[Utility-based VoT]
 
-    classDef branch fill:#3a5a4a,stroke:#a8d5b9,stroke-width:2px,color:#ffffff
-    classDef detail fill:#1f2d2a,stroke:#7a9e8c,stroke-width:1px,color:#e6f0e8
-    classDef val fill:#4a3a2a,stroke:#d5b89a,stroke-width:1px,color:#ffffff
+    classDef branch fill:#8a3a16,stroke:#e08a4a,stroke-width:2px,color:#fff5e6
+    classDef detail fill:#43331f,stroke:#c0a87f,stroke-width:1.5px,color:#f0e4cf
+    classDef val fill:#6e521a,stroke:#e6b54a,stroke-width:1.5px,color:#fff5e6
     class MDCEV,DDCM branch
     class M1,M2,D1a,D2a detail
     class V,V1,V2,V3 val

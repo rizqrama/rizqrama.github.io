@@ -13,8 +13,4 @@ format:
   html:
     page-layout: full
 title-block-banner: false
-header-includes: >
-  <link rel="stylesheet" href="../assets/listing-default.css">
-resources:
-  - ../assets/listing-default.css
 ---

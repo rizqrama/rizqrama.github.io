@@ -1,0 +1,36 @@
+/*-- scss:defaults --*/
+// =============================================================
+//  Harvest Gold — DARK  (paired with Bootstrap `darkly`)
+//  Warm black-brown + pumpkin/gold. WCAG 2.2 AA verified.
+// =============================================================
+
+// ---- Typography (shared with light) ----
+$font-family-sans-serif: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !default;
+$font-family-serif:      Georgia, Cambria, "Times New Roman", Times, serif !default;
+$font-family-base:       $font-family-serif;
+$headings-font-family:   $font-family-sans-serif;
+$headings-font-weight:   600;
+$font-size-root:         18px;
+$line-height-base:       1.7;
+
+// ---- Palette ----
+$body-bg:        #1f1810;   // warm black-brown
+$body-color:     #f0e4cf;   // warm parchment (14.0:1)
+$primary:        #e08a4a;   // pumpkin  ( 6.6:1)
+$secondary:      #c0a87f;   // sand     ( 7.7:1)  — captions/meta
+$link-color:     #eaa05a;   // ( 7.4:1)
+$link-hover-color: #e6b54a;
+$accent:         #e6b54a;   // gold — borders/stripes/focus ( 9.3:1)
+
+// ---- Surfaces ----
+$card-bg:           #2a2015;
+$card-border-color: transparent;
+$border-radius:     .5rem;
+
+// ---- Navbar + footer ----
+$navbar-bg: #2a2015;
+$navbar-fg: #f0e4cf;
+
+// ---- Code ----
+$code-color: #eaa05a;
+$code-bg:    #2a2015;

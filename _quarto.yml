@@ -3,8 +3,12 @@ project:
   output-dir: _site
 
 website:
-  title: "Rizqi Ramadhan's Research Portfolio"
+  title: "Rama's Research Portfolio"
   description: "PhD Researcher | Research Progress and Projects"
+  site-url: "https://rizqrama.github.io"
+  favicon: assets/profile.jpeg
+  open-graph: true
+  twitter-card: true
   navbar:
     left:
       - href: index.qmd
@@ -19,17 +23,18 @@ website:
       - icon: github
         href: https://github.com/rizqrama
         aria-label: GitHub
+  search:
+    location: navbar
+    type: overlay
   page-footer:
-    center: "© 2026 Rizqi Ramadhan · Made with [Quarto](https://quarto.org)"
+    center: "© Rizqi Ramadhan · Made with [Quarto](https://quarto.org)"
 
 format:
   html:
     theme:
-      light: cosmo
-      dark: darkly
-    css: styles.css
+      light: [cosmo, theme-light.scss, theme-rules.scss]
+      dark: [darkly, theme-dark.scss, theme-rules.scss]
     toc: true
     toc-depth: 2
-    embed-resources: true
     toc-location: left
     smooth-scroll: true

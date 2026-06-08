@@ -302,3 +302,5 @@ The practical test: if Acts 2 and 3 were removed, Act 4 would still make sense a
 
 ### 2. Action items
 - [ ] filled after seminar
+
+:::

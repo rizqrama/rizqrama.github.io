@@ -282,4 +282,6 @@ flowchart TD
 - [ ] Read papers on the effect of personal relationships and emotional attachment on travel decision
 - [ ] Make a structured list of the questions that I want to include in the improved travel survey and relate them to the findings from the literature
 
+:::
+
 

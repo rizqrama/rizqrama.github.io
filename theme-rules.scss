@@ -1,0 +1,117 @@
+/*-- scss:rules --*/
+// =============================================================
+//  Shared rules for both light + dark. Colours come from the
+//  per-mode `$primary / $accent / $card-bg / $navbar-*` defaults,
+//  so this file is written once and compiles correctly in each
+//  mode. No `!important` needed — variables are set at source.
+// =============================================================
+
+// ---- Headings: sans, tighter tracking ----
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headings-font-family;
+  letter-spacing: -0.01em;
+}
+
+// ---- Links: subtle underline, accessible offset ----
+a {
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 0.06em;
+}
+
+// ---- Keyboard focus ring (WCAG 2.2 — visible focus) ----
+:focus-visible {
+  outline: 3px solid $accent;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+// ---- Navbar ----
+.navbar {
+  font-family: $font-family-sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+  color: $accent;
+}
+
+// ---- Footer (match navbar surface) ----
+.nav-footer {
+  background: $navbar-bg;
+  color: $navbar-fg;
+  font-family: $font-family-sans-serif;
+  font-size: 0.9rem;
+}
+.nav-footer a { color: $accent; }
+
+// ---- Listing cards ----
+.card {
+  background: $card-bg;
+  border: none;
+  border-top: 3px solid $accent;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
+}
+.card-img, .card-img-top { border-radius: $border-radius $border-radius 0 0; }
+
+// listing meta (date / categories) in muted tone
+.listing-date, .listing-category, .quarto-categories .quarto-category {
+  color: $secondary;
+}
+.quarto-categories .quarto-category {
+  border-color: $accent;
+  font-family: $font-family-sans-serif;
+  font-size: 0.72rem;
+}
+
+// ---- Blockquotes ----
+blockquote, .blockquote {
+  border-left: 4px solid $accent;
+  background: $card-bg;
+  margin: 1.4em 0;
+  padding: 0.8em 1.2em;
+  border-radius: 0 $border-radius $border-radius 0;
+  font-style: italic;
+  color: $secondary;
+}
+
+// ---- Tables ----
+.table > thead {
+  background: $card-bg;
+  font-family: $font-family-sans-serif;
+}
+
+// ---- Table-of-contents active state ----
+nav[role="doc-toc"] ul > li > a.active,
+nav[role="doc-toc"] ul > li > a:hover {
+  color: $primary;
+  border-left-color: $primary;
+}
+
+// ---- Panel-tabset (the reports' signature dual-view) ----
+.panel-tabset .nav-tabs .nav-link {
+  font-family: $font-family-sans-serif;
+  font-size: 0.92rem;
+}
+.panel-tabset .nav-tabs .nav-link.active {
+  color: $primary;
+  border-bottom: 2px solid $primary;
+  font-weight: 600;
+}
+
+// ---- About / landing title block ----
+#title-block-header .quarto-title .title {
+  font-family: $font-family-sans-serif;
+  color: $primary;
+}
+
+// ---- Constrain measure for comfortable reading on wide screens ----
+main.content p,
+main.content ul,
+main.content ol { max-width: 70ch; }
