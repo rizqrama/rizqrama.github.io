@@ -39,9 +39,12 @@ Pushing to `main` triggers `.github/workflows/publish.yml`, which renders with *
 
 - `index.qmd` — landing page (`about: trestles` template, profile + social links).
 - `meetings/`, `publications/`, `projects/` — three content sections. Each has an `index.qmd` that is a **Quarto listing** auto-generating cards from sibling `.qmd` files (sorted `date desc`, `index.qmd` excluded). To add an entry, drop a new `.qmd` in the folder; the listing picks it up from its front-matter `date`/`title`/`description`/`categories`. No index edits needed.
-- `_quarto.yml` — site config: navbar, global HTML format (cosmo light / darkly dark themes), `styles.css`.
-- `styles.css` — site-wide theme. Custom palette defined as CSS variables in `:root` (alabaster-grey, soft-linen, tuscan-sun, carbon-black, graphite); Georgia serif body, Helvetica nav. Light + dark mode rules.
-- `assets/listing-default.css` — styling specific to the listing index pages, linked per-page via `header-includes` (not global).
+- `_quarto.yml` — site config: navbar, navbar search, Open Graph / Twitter cards, favicon, and the dual light/dark SCSS theme.
+- **Theme = three SCSS files (the "Harvest Gold" warm/dark-autumn theme).** Idiomatic Quarto SCSS, *not* a plain CSS override:
+  - `theme-light.scss` — `scss:defaults` for light mode (paired with Bootstrap `cosmo`). Sets palette + typography via Bootstrap/Quarto SCSS variables (`$body-bg`, `$primary`, `$navbar-bg`, `$font-family-base`, a custom `$accent`, …).
+  - `theme-dark.scss` — same, for dark mode (paired with `darkly`).
+  - `theme-rules.scss` — shared `scss:rules` (navbar, footer, cards, blockquotes, tabsets, focus ring, etc.), written **once** using the SCSS variables so it compiles correctly in both modes. Wired as `light: [cosmo, theme-light.scss, theme-rules.scss]` / `dark: [darkly, theme-dark.scss, theme-rules.scss]`.
+  - Change colours in the two `defaults` files; change layout/components in the shared `rules` file. Prefer setting a Bootstrap variable in `defaults` over writing a rule with `!important`. Palette is WCAG 2.2 AA-verified — keep it that way (see the role section's contrast rules). The old `styles.css` / `assets/listing-default.css` were removed in favour of this.
 - `_extensions/quarto-ext/fontawesome/` — vendored Quarto extension; don't hand-edit.
 
 Meeting reports are named by date: `meetings/YYYYMMDD.qmd`.
@@ -52,7 +55,7 @@ Progress reports follow a deliberate, consistent structure — when creating or 
 
 - **Dual-view tabsets.** Most sections wrap content in `::: {.panel-tabset}` with a **Presentation** tab (slide-style action-title headings, summary tables, mermaid diagrams) and a **Detailed** tab (prose with *Current thought / Reasoning / Alternatives considered* paragraphs). Same logical flow, two zoom levels.
 - **Action-title headings** — section headings state the takeaway as a full sentence, not a topic label.
-- **Self-contained HTML** — reports set `embed-resources: true` in their own front matter so each page is one shareable file. Per-report front matter also commonly overrides `toc-location: left`, `toc-depth`, `theme: cosmo`, and sets `mermaid: theme: default`.
+- **Self-contained HTML** — reports set `embed-resources: true` in their own front matter so each page is one shareable file (the theme is inlined). Per-report front matter also commonly overrides `toc-location: left`, `toc-depth`, and sets `mermaid: theme: default`. Do **not** add a `theme:` key to a report — leave it unset so the page inherits the project's dual light/dark Harvest Gold theme; pinning `theme: cosmo` would bypass the site theme for that page.
 - **Mermaid diagrams** use a recurring custom color scheme (dark green `#1f2d2a`/`#3a5a4a` for concepts, brown `#4a3a2a` for outputs) via `classDef`. Reuse those classes for visual consistency across reports.
 - Reports cite a large literature with short citation keys (e.g. `Souche-Le Corvec & Zhao 2020`) and a source-code map table in the appendix. When editing report content, preserve citation accuracy — these are real academic sources, not placeholders.
 
