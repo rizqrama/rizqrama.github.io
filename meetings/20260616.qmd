@@ -1,0 +1,325 @@
+---
+title: "Progress Report - 2026-06-16"
+subtitle: "Zooming Out: Collective (Non-Unitary) Household Travel Demand and the System-Optimum / User-Equilibrium Analogy"
+description: "Reframing Paper 1 toward non-unitary household behaviour; notes on Chiappori (1988) and a seven-pillar reading list spanning collective-household models, traffic equilibrium (SO/UE), networks, altruism, and game theory."
+author:
+  - name: "Rizqi Ramadhan"
+    affiliations:
+      - name: "Graduate School of Innovation and Practice for Smart Society, Hiroshima University"
+date: "2026-06-16"
+date-format: "iso"
+categories: [household economics, game theory, reading list, literature]
+format:
+  html:
+    toc: true
+    toc-depth: 4
+    toc-location: left
+    toc-expand: 2
+    embed-resources: true
+    code-fold: false
+    page-layout: article
+    fig-width: 8
+    fig-height: 5
+    smooth-scroll: true
+    callout-appearance: simple
+    link-external-newwindow: true
+    code-overflow: wrap
+mermaid:
+  theme: default
+---
+
+::: {.callout-note appearance="simple"}
+**This report has three parts.** *Meeting Document* — the agenda, my own thoughts, and the questions I want to confirm with Sensei. *Reading* — notes on Chiappori (1988). *Suggested Reading List* — a seven-pillar reading plan, with a roadmap table up top and one tab per pillar. The two diagrams render as interactive SVG; pan and zoom work in the browser.
+:::
+
+## Meeting Document
+
+### 1. What I want to discuss today
+
+In the previous weekly lab meeting, we discussed on what to do with emotional aspects after I presented the rough prototype of the adjusted travel diaries survey questions. One of the directions we agreed upon was to "zoom out" the process. Not only to prove that there exist emotional and relational factors in PUDO trips, but also how those factors can affect household travel demand modeling nowadays.
+
+Current family structure is believed to have evolved to be more egalitarian where every member's personal opinion matters. Therefore, it is possible hypothetically to say that the unitary household model utilized in previous travel demand modeling practices may be obsolete.
+
+During the discussion, Wardrop's System Optimum and User Equilibrium analogies were mentioned to relate with the evolving family structures. Previously patriarchal household, or unitary household model, has one central decision-maker, which is analogous to SO in traffic assignment. On the other hand, an egalitarian household, where negotiation is distributed between members, is analogous to UE. Theoretically, the egalitarian household does not have a unitary utility model because every decision-maker is considered. Therefore, some weighing or bargaining, that involves emotional and relational factors beside shared income and labor, might be utilized in determining choices in travel behavior, which becomes the path we will explore further.
+
+```{mermaid}
+%%| label: fig-so-ue-analogy
+%%| fig-alt: "Two-column analogy diagram. Left column, the unitary (patriarchal) household: one central decision-maker chooses for all members, mapped to Wardrop's System Optimum, where a single planner optimises the whole network. Right column, the egalitarian household: every member's preference counts so there is no single utility function, and choices emerge from distributed negotiation weighted by emotional and relational factors as well as shared income and labour, mapped to Wardrop's User Equilibrium, where each user optimises individually. A dotted arrow marks the hypothesised shift from the unitary regime to the egalitarian one."
+flowchart LR
+    accTitle: Household-structure analogy to traffic equilibrium
+    accDescr {
+        Two-column analogy. Left: the unitary, patriarchal household, where one central decision-maker chooses for all members, mapped to Wardrop's System Optimum in which a single planner optimises the whole network. Right: the egalitarian household, where every member's preference counts so there is no single utility function, and choices emerge from distributed negotiation weighted by emotional and relational factors as well as shared income and labour, mapped to Wardrop's User Equilibrium in which each user optimises individually. A dotted arrow marks the hypothesised shift from the unitary regime to the egalitarian one.
+    }
+    subgraph U["Unitary household (patriarchal)"]
+        U1["One central decision-maker<br/>chooses for all members"]
+        U2["≈ System Optimum (SO):<br/>one planner optimises the whole"]
+        U1 --> U2
+    end
+    subgraph E["Egalitarian household"]
+        E1["Every member's preference counts;<br/>no single utility function"]
+        E2["Choices via distributed negotiation —<br/>emotional and relational factors,<br/>shared income and labour"]
+        E3["≈ User Equilibrium (UE):<br/>each member optimises individually"]
+        E1 --> E2 --> E3
+    end
+    U -. "hypothesised shift" .-> E
+
+    classDef central fill:#8a3a16,stroke:#e08a4a,stroke-width:2px,color:#fff5e6
+    classDef detail fill:#43331f,stroke:#c0a87f,stroke-width:1.5px,color:#f0e4cf
+    class U2,E3 central
+    class U1,E1,E2 detail
+```
+
+The passages above are my current understanding per last discussion. However, there are still some parts I would like to discuss with Sensei, which further will be listed below.
+
+1. Regarding the scope of Paper 1, what direction should we chase first? Is it just the empirical prove of non-unitary household behavior or do we need to push into collective-household demand synthesis modeling?
+
+2. Some others "confirmation questions" on [section 3 below](#sec-confirm)
+
+### 2. My Own Thoughts
+
+- **On discussion item 1**
+    - **Current thought:** I still do not have clear scope for each paper division regarding the "zooming out" of our research.
+    - **Reasoning:** Structuring new methodological innovation on the "collective household behavior" is really interesting to chase. However, with the expanding scope, I am not sure how we should frame each paper. Even in some points, this updated direction seems to join paper 1 and paper 2 (previously proposed) into one publication.
+    - **Alternatives I considered:**
+        - First alternative, we can focus on proving the behavior of collective household on the Paper 1 and put the population demand synthesis into Paper 2
+        - Second alternative, we chase the population demand modeling into the Paper 1 and look for another novelty later in the Paper 2
+        - Additionally, what kind of possible proxy datasets exist to utilize in modeling practice in case of taking longer duration in structuring and conducting survey?
+
+### 3. Things I Want to Confirm {#sec-confirm}
+
+::: {.callout-important appearance="simple"}
+**Questions for Sensei**
+
+1. I would like to confirm whether my understanding of the SO/UE analogy is the correct framing, or are you pointing to something different?
+2. In modeling the collective household behavior, should we made the SO/UE analogy as the backbone or should we go into more economical model like Pareto-efficient, Nash-bargaining, etc? Or is this something we can build by ourselves by combining them?
+3. Regarding the modern family structure, does Sensei have any specific paper in mind for the anchor of next reading?
+:::
+
+### 4. What I did since the last meeting
+
+- Read *Rational Household Labor Supply* by Pierre-Andre Chiappori (1988)
+- Had brainstorming session with *Claude* to structure reading list based on last week discussion
+
+### 5. Where I Am Stuck / What I Cannot Decide on My Own
+
+::: {.callout-warning appearance="simple"}
+- I had difficulties in understanding the equations written in the Chiappori paper. I would ask *Claude* to help me understand the equations, terms, and their derivations
+:::
+
+### 6. Definitions of Terms
+
+| Term                 | Definition                                                                                                                                                                      |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Unitary household    | Patriarchal system where there is only one decision maker to pick choices for all of the household members                                                                      |
+| Collective household | All members have their own decision which then shared, discussed, and considered with other member preferences, thus no single utility function can represents the whole family |
+
+## Reading
+
+### 1. Rational Household Labor Supply (P. A. Chiappori, 1988)
+
+- Chiappori approached "collective" household decision-making behavior using ***Pareto-efficient*** rather than referring to some definitive bargaining concept such as Nash-bargained case (cooperative game theory)
+
+- Each member is characterized by their own utility function, that depends on other member's leisure and consumption
+$$U_{i}=U_{i}(L_1,L_2,Z_1,Z_2)$$
+
+- Members will discuss with one another about their consumption level, $Z_i$, as a portion of total household consumption $C$ --which also act as the budget constraint obtained from labor income $w_{i}\cdot l_{i}$, and non-labor income $y$.
+$$\sum_{i=1}^{n} Z_{i}\leq C =y + \sum_{i=1}^{n} w_{i}\cdot l_{i}$$
+
+- However, Chiappori assumed only aggregate consumption was observable, thus share of personal consumption $Z_i$ remains unknown.
+
+::: {.callout-note appearance="simple"}
+**My take.** In my opinion, this case may be falsifiable as with time-use or trip diaries survey, at least travel or transport resource sharing can be inferred.
+:::
+
+- The author's hypothesis defines that if the household follows a maximizing linear welfare function, the weight of each member depends on the wage received or on the share of labor income
+
+::: {.callout-note appearance="simple"}
+**My take.** In my opinion, this could be partially misleading especially in new family structure, thus the "emotional aspect" of previously proposed survey can give insights on how weights are assigned to each household member.
+:::
+
+- Chiappori proposed that household members' behavior can be described either as egoistic or altruistic.
+
+```{mermaid}
+%%| label: fig-chiappori-behavior
+%%| fig-alt: "Flowchart with one source node, Household member behavior, branching into the two derivation strategies Chiappori treats: Altruistic, where conditions are derived in a non-parametric context, and Egoistic, where conditions are derived from both a parametric and a non-parametric point of view."
+flowchart TB
+    accTitle: Chiappori's two characterisations of household-member behaviour
+    accDescr {
+        A single source node, household member behavior, branches into the two derivation strategies Chiappori treats: altruistic, where conditions are derived in a non-parametric context, and egoistic, where conditions are derived from both a parametric and a non-parametric point of view.
+    }
+    B["Household member behavior"]
+    A["Altruistic: derive conditions in a non parametric context"]
+    E["Egoistic: derive conditions from a parametric as well as non parametric point of view"]
+
+    B --> A
+    B --> E
+
+    classDef root fill:#8a3a16,stroke:#e08a4a,stroke-width:2px,color:#fff5e6
+    classDef branch fill:#43331f,stroke:#c0a87f,stroke-width:1.5px,color:#f0e4cf
+    class B root
+    class A,E branch
+```
+
+## Suggested Reading List
+
+::: {.callout-note appearance="simple"}
+this reading list was brainstormed together with Claude, with several pillars of focus like collective household model, traffic network assignment, network and decision making, altruism and caring labor, etc.
+:::
+
+**Reading roadmap.** The "when to read" column reproduces only the sequencing cues already given in the annotations below — start with the bold-marked priorities.
+
+| Pillar | Paper | When to read |
+| --- | --- | --- |
+| 1 · Collective household | Chiappori (1988) | **Start here, Week 1** |
+| 1 · Collective household | Donni & Chiappori (2011) | After Chiappori (1988) |
+| 1 · Collective household | McElroy & Horney (1981) | Companion to Chiappori |
+| 2 · SO/UE foundations | Wardrop (1952) | **Before Sheffi** |
+| 2 · SO/UE foundations | Sheffi (1985), Ch. 1–3 | Budget 3–4 hours |
+| 2 · SO/UE foundations | Roughgarden & Tardos (2002) | Section 1, first 4 pages |
+| 2 · SO/UE foundations | Rosenthal (1973) | If extending the analogy |
+| 3 · Networks & decision-making | Easley & Kleinberg (2010) | **Start with Ch. 6–9** |
+| 3 · Networks & decision-making | Jackson & Wolinsky (1996) | After Easley & Kleinberg |
+| 3 · Networks & decision-making | Jackson (2008), Ch. 9 | Read selectively |
+| 4 · Altruism & caring labour | Becker (1974) | **Week 2, G3** |
+| 4 · Altruism & caring labour | Folbre & Nelson (2000) | Alongside Becker (1974) |
+| 5 · Family structure & travel | Empirical literature | To search — likely the gap |
+| 6 · Game-theory fundamentals | Nash (1950) | **Priority: before the meeting** |
+| 6 · Game-theory fundamentals | Nash (1951) | After Nash (1950) |
+| 6 · Game-theory fundamentals | Osborne & Rubinstein (1994), Ch. 2 & 15 | Reference, selective |
+| 7 · Non-unitary household travel | Kato & Matsumoto (2009) | Existing transport method |
+| 7 · Non-unitary household travel | Bhat & Pendyala (2005) | Best single 2005 survey |
+| 7 · Non-unitary household travel | Gliebe & Koppelman (2005) | Companion to Bradley & Vovsha |
+
+::: {.panel-tabset}
+
+### Pillar 1 — Collective household model (the theoretical backbone)
+
+**Chiappori (1988) — "Rational Household Labor Supply" — *Econometrica* 56(1), 63–90**
+
+The foundational paper that challenged the unitary household assumption in economics. Chiappori shows that if multiple household members have individual utility functions and decisions are Pareto-efficient, the household's demand functions take a specific, testable form — *different* from what the unitary model predicts. This is the mathematical home of Sensei's "egalitarian household = distributed optimisation" idea. **Start here, Week 1.**
+
+::: {.callout-tip appearance="simple"}
+**What to extract:** the collective model's structure (sharing rule, efficiency condition); how it differs from the unitary model's restrictions; the testable implications (this matters for the empirical design later).
+:::
+
+**Donni & Chiappori (2011) — survey chapter on nonunitary household models**
+
+A review chapter (in *Household Economic Behaviors*, Springer, or similar handbook) covering collective models, bargaining models, and their empirical implementations. Read *after* Chiappori (1988). Saves reading 15–20 foundational papers by giving a structured landscape.
+
+**McElroy & Horney (1981) — "Nash-Bargained Household Decisions: Toward a Generalization of the Theory of Demand" — *International Economic Review* 22(2), 333–349**
+
+The companion paper to Chiappori: models household decisions as a Nash bargaining game rather than as a Pareto-efficient sharing rule. The two frameworks have different empirical predictions; knowing both lets you choose which fits the PUDO context better. The Nash bargaining framing is more intuitive for situations where there is explicit negotiation or conflict.
+
+### Pillar 2 — SO/UE: the mathematical foundations
+
+**Wardrop (1952) — "Some Theoretical Aspects of Road Traffic Research" — *Proceedings of the Institution of Civil Engineers*, Part II, Vol. 1, 325–378**
+
+The original paper that defined the two principles Sensei used as an analogy. Only a few pages on the actual equilibrium conditions — the rest is empirical road-traffic content. Read the two-principles section first. Very short; directly relevant to being precise about what the SO/UE analogy does and does not claim. **Read before Sheffi.**
+
+**Sheffi (1985) — *Urban Transportation Networks: Equilibrium Analysis with Mathematical Programming Methods* — Prentice-Hall**
+
+The standard graduate textbook for traffic assignment mathematics. Chapters 1–3 give the mathematical formulation of UE as a convex program (Beckmann transformation) and the optimality conditions. Chapter 2 shows why UE is a Nash equilibrium. If you want to use the SO/UE analogy in a mathematically defensible way, reading these three chapters is the minimum. Budget 3–4 hours for Chapters 1–3.
+
+::: {.callout-tip appearance="simple"}
+**What to extract:** the formal statement of UE as a fixed-point / variational inequality; the Beckmann formulation; the proof sketch of why UE exists under standard assumptions; the comparison of UE and SO optimal conditions. The last point is the direct mathematical parallel to Chiappori's comparison of unitary vs. collective household models.
+:::
+
+**Roughgarden & Tardos (2002) — "How Bad Is Selfish Routing?" — *Journal of the ACM* 49(2), 236–259**
+
+Formally quantifies the efficiency loss from UE relative to SO — the "price of anarchy" result. The key theorem: for affine latency functions (linear travel time), UE total cost is at most 4/3 times the SO total cost. The paper is mathematical (combinatorial game theory), but the main result and its implications are accessible in the first 4 pages. Read Section 1 (intro and main result) even if the proofs are too dense.
+
+Why this matters for the dissertation: if the household analogy holds, there is a "price of anarchy" for egalitarian household travel decisions too — they are not simply better or worse than patriarchal ones, but different in a theoretically quantifiable way. Whether this can be formalized for households is an open question (and probably Paper 2 territory), but knowing the result helps frame what the analogy is actually claiming.
+
+**Rosenthal (1973) — "A Class of Games Possessing Pure-Strategy Nash Equilibria" — *International Journal of Game Theory* 2(1), 65–67**
+
+A 3-page paper that proved traffic assignment is a *potential game* — a game that always has at least one pure-strategy Nash equilibrium (UE always exists). Very mathematical; the result itself is more important than the proof. Relevant if you want to extend the analogy: does the "household travel as a game" also have a pure-strategy equilibrium? If so, what are the conditions?
+
+### Pillar 3 — Networks and decision-making (mathematical and methodological)
+
+**Easley & Kleinberg (2010) — *Networks, Crowds, and Markets: Reasoning About a Highly Connected World* — Cambridge University Press**
+
+The most accessible graduate-level introduction to network economics and games on networks. Free PDF available on the Cornell authors' website. Covers: network structure (Chapter 2–3), game theory on networks (Chapter 6–9), information cascades (Chapter 16), market design on networks (Chapter 10). **Start with Chapters 6–9** (games and networks) — these are directly relevant to Paper 2's question of how decisions propagate through household member networks.
+
+::: {.callout-tip appearance="simple"}
+**What to extract:** the concept of a "game on a graph" (nodes = household members, edges = influence/negotiation channels); Nash equilibria on networks; how network structure changes equilibrium outcomes. This is the bridge between Pillar 2 (SO/UE) and the intra-household decision network idea.
+:::
+
+**Jackson & Wolinsky (1996) — "A Strategic Model of Social and Economic Networks" — *Journal of Economic Theory* 71(1), 44–74**
+
+The foundational paper on *network formation games* — how networks form endogenously when agents choose their connections strategically. More formal than Easley & Kleinberg. Relevant for Paper 2 if the question becomes: how does the household's "decision network" (who influences whom) form, and is it stable? Read after Easley & Kleinberg if you want to go deeper.
+
+**Jackson (2008) — *Social and Economic Networks: Models and Analysis* — Princeton University Press**
+
+The standard graduate text on network economics. More comprehensive than Easley & Kleinberg; covers network formation (Chapters 6–7), games on networks (Chapter 9), and diffusion (Chapter 7). Read selectively — Chapter 9 on games on networks is the most relevant for the dissertation.
+
+### Pillar 4 — Altruism and caring labour
+
+**Becker (1974) — "A Theory of Social Interactions" — *Journal of Political Economy* 82(6), 1063–1093**
+
+The formal foundation for altruism in household economics. Shows that a household head who internalises others' utilities in their own utility function behaves like a "benevolent dictator" — this is the economic formalisation of the patriarch-as-system-planner idea. ~30 pages; dense but foundational. **Week 2, G3.**
+
+::: {.callout-tip appearance="simple"}
+**What to extract:** the altruism model and its demand implications; why an altruistic head produces household outcomes that look like SO even without explicit centralised planning; what changes when altruism is *distributed* rather than concentrated (this is the move from Becker's household to Chiappori's collective model).
+:::
+
+**Folbre & Nelson (2000) — "For Love or Money — or Both?" — *Journal of Economic Perspectives* 14(4)**
+
+Read alongside Becker (1974): Folbre & Nelson is the care-economics complement to Becker's formal model. Where Becker formalises altruism inside a utility function, Folbre & Nelson argue that caring labour is structurally resistant to commodification — which is why PUDO trips stay personal even when substitutes exist.
+
+### Pillar 5 — Family structure change and travel (empirical, to search)
+
+The empirical literature on how changing family structures (dual-earner households, more egalitarian task allocation) affect household travel patterns is *probably sparse* — especially for Japan. This is likely where the gap is.
+
+### Pillar 6 — Game theory fundamentals
+
+These are short, foundational, and necessary before the collective-model and bargaining literature makes sense. Nash (1950) is the priority read; the others fill in the conceptual map.
+
+**Nash (1950) — "The Bargaining Problem" — *Econometrica* 18(2), 155–162**
+
+Seven pages. Defines the *Nash bargaining solution*: the outcome that maximises the product of the two players' utility gains above their respective outside options (what each would get if no deal is reached). This is the specific equilibrium concept McElroy & Horney (1981) apply to household decisions. Reading this before McElroy & Horney makes the household model much easier to parse. **Priority: before the meeting.**
+
+::: {.callout-tip appearance="simple"}
+**What to extract:** the four axioms the bargaining solution satisfies (Pareto efficiency, symmetry, invariance to affine transformations, independence of irrelevant alternatives); the geometric intuition (maximising the product traces the northeast-pointing tangent to the Pareto frontier); the role of the *threat point* (outside option) — in a household, this is roughly "what each member's life looks like if the household dissolves or the relationship ends."
+:::
+
+**Nash (1951) — "Non-Cooperative Games" — *Annals of Mathematics* 54(2), 286–295**
+
+Defines Nash equilibrium in non-cooperative games: a strategy profile where no player can improve by unilaterally deviating. This is the concept behind Wardrop's UE (each user's routing is a Nash equilibrium on the network). Short (10 pages); quite mathematical but the core definition is in Section 1. Read after Nash (1950).
+
+**Osborne & Rubinstein (1994) — *A Course in Game Theory* — MIT Press**
+
+Free PDF at the authors' website. The most accessible graduate-level game theory text. Read selectively: Chapter 2 (Nash equilibrium), Chapter 15 (bargaining). Skip the rest for now. Useful as a reference to look things up rather than a cover-to-cover read.
+
+::: {.callout-tip appearance="simple"}
+**What to extract:** the formal definition of a normal-form game (players, strategies, payoffs); the definition of Nash equilibrium; the bargaining chapter's treatment of the Nash axiomatic approach alongside the alternating-offers approach.
+:::
+
+### Pillar 7 — Non-unitary household travel demand modeling (new)
+
+These are the transport papers that actually apply multi-decision-maker frameworks to household travel. They are the bridge between the household economics literature (Pillars 1, 6) and the travel demand modeling context.
+
+**Kato & Matsumoto (2009) — "Intra-household Interaction in a Nuclear Family: A Utility-Maximizing Approach" — *Transportation* 36(4), 413–433**
+
+Applies a joint utility-maximising model to intra-household trip decisions in a nuclear family, treating household members as having separate but interacting utility functions. One of the few transport papers that explicitly models the *interaction* between household members' utilities rather than assuming a unitary function. Read to understand what existing transport methods look like before the Chiappori collective model is introduced.
+
+::: {.callout-tip appearance="simple"}
+**What to extract:** how the model operationalises "interaction" between utility functions; what data it requires; where the unitary assumption is still implicitly present; what the results say about whose preferences dominate which trip decisions.
+:::
+
+**Bhat & Pendyala (2005) — "Modeling Intra-household Interactions and Group Decision-Making" — *Transportation* 32(5), 443–448**
+
+The editorial introduction to a dedicated special issue on household interactions in travel demand modeling. Eight pages; covers the landscape of approaches used in 2005 — joint activity pattern models (Bradley & Vovsha type), activity-allocation models, and more behaviorally rich alternatives. The best single survey of where this literature stood before the collective model fully entered transport.
+
+::: {.callout-tip appearance="simple"}
+**What to extract:** the taxonomy of approaches; which approaches assume unitary behavior implicitly; what empirical evidence suggested the unitary model fails; what the open problems were in 2005 — these are likely still open, which is where the contribution sits.
+:::
+
+**Gliebe, J. P., & Koppelman, F. S. (2005) — Modeling household activity–travel interactions as parallel constrained choices. Transportation, 32(5), 449–471.**
+
+The companion paper to Bradley & Vovsha (2005) — different model, same question (joint household activity decisions). Gliebe & Koppelman model two household members choosing their activity patterns simultaneously rather than sequentially. Useful for understanding the range of existing joint-model approaches before arguing that they all implicitly assume something close to the unitary framework.
+
+::: {.callout-tip appearance="simple"}
+**What to extract:** the modelling structure (how joint decisions are represented); comparison with Bradley & Vovsha (what differs); the implicit assumption about whose preferences govern joint decisions when they conflict.
+:::
+
+:::
