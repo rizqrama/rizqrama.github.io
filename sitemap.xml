@@ -1,47 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://rizqrama.github.io/index.html</loc>
-    <lastmod>2026-07-13T04:39:49.965Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rizqrama.github.io/publications/20230222-evaluating-stakeholder.html</loc>
-    <lastmod>2026-07-13T04:39:49.975Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rizqrama.github.io/projects/index.html</loc>
-    <lastmod>2026-07-13T04:39:49.973Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rizqrama.github.io/meetings/index.html</loc>
-    <lastmod>2026-07-13T04:39:49.973Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rizqrama.github.io/meetings/20260608.html</loc>
-    <lastmod>2026-07-13T04:39:49.967Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rizqrama.github.io/meetings/20260511.html</loc>
-    <lastmod>2026-07-13T04:39:49.965Z</lastmod>
+    <loc>https://rizqrama.github.io/plan/index.html</loc>
+    <lastmod>2026-08-06T15:46:18.134Z</lastmod>
   </url>
   <url>
     <loc>https://rizqrama.github.io/meetings/20260713.html</loc>
-    <lastmod>2026-07-13T04:39:49.968Z</lastmod>
+    <lastmod>2026-08-06T15:46:18.128Z</lastmod>
   </url>
   <url>
     <loc>https://rizqrama.github.io/meetings/20260525.html</loc>
-    <lastmod>2026-07-13T04:39:49.967Z</lastmod>
+    <lastmod>2026-08-06T15:46:18.127Z</lastmod>
   </url>
   <url>
-    <loc>https://rizqrama.github.io/meetings/20260616.html</loc>
-    <lastmod>2026-07-13T04:39:49.967Z</lastmod>
+    <loc>https://rizqrama.github.io/meetings/20260608.html</loc>
+    <lastmod>2026-08-06T15:46:18.127Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rizqrama.github.io/meetings/20260511.html</loc>
+    <lastmod>2026-08-06T15:46:18.126Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rizqrama.github.io/projects/index.html</loc>
+    <lastmod>2026-08-06T15:46:18.135Z</lastmod>
   </url>
   <url>
     <loc>https://rizqrama.github.io/publications/20210810-shortterm-traffic-prediction.html</loc>
-    <lastmod>2026-07-13T04:39:49.973Z</lastmod>
+    <lastmod>2026-08-06T15:46:18.135Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rizqrama.github.io/publications/20230222-evaluating-stakeholder.html</loc>
+    <lastmod>2026-08-06T15:46:18.135Z</lastmod>
   </url>
   <url>
     <loc>https://rizqrama.github.io/publications/index.html</loc>
-    <lastmod>2026-07-13T04:39:49.975Z</lastmod>
+    <lastmod>2026-08-06T15:46:18.135Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rizqrama.github.io/index.html</loc>
+    <lastmod>2026-08-06T15:46:18.126Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rizqrama.github.io/meetings/20260616.html</loc>
+    <lastmod>2026-08-06T15:46:18.128Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rizqrama.github.io/meetings/20260803.html</loc>
+    <lastmod>2026-08-06T15:46:18.128Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rizqrama.github.io/meetings/index.html</loc>
+    <lastmod>2026-08-06T15:46:18.134Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rizqrama.github.io/plan/research_plan.html</loc>
+    <lastmod>2026-08-06T15:46:18.135Z</lastmod>
   </url>
 </urlset>

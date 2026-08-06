@@ -1,23 +1,30 @@
 [
   {
-    "listing": "/projects/index.html",
-    "items": []
+    "listing": "/plan/index.html",
+    "items": [
+      "/plan/research_plan.html"
+    ]
   },
   {
-    "listing": "/meetings/index.html",
-    "items": [
-      "/meetings/20260713.html",
-      "/meetings/20260616.html",
-      "/meetings/20260608.html",
-      "/meetings/20260525.html",
-      "/meetings/20260511.html"
-    ]
+    "listing": "/projects/index.html",
+    "items": []
   },
   {
     "listing": "/publications/index.html",
     "items": [
       "/publications/20230222-evaluating-stakeholder.html",
       "/publications/20210810-shortterm-traffic-prediction.html"
+    ]
+  },
+  {
+    "listing": "/meetings/index.html",
+    "items": [
+      "/meetings/20260803.html",
+      "/meetings/20260713.html",
+      "/meetings/20260616.html",
+      "/meetings/20260608.html",
+      "/meetings/20260525.html",
+      "/meetings/20260511.html"
     ]
   }
 ]
