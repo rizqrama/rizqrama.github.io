@@ -1,0 +1,549 @@
+---
+title: "Two-Year Research Plan, August 2026 to July 2028"
+subtitle: "Estimating Social-Interaction Effects on Choice Behaviour Under Inferred Social Networks"
+author: "Rizqi Ramadhan"
+date: "2026-08-06"
+format:
+  pdf:
+    toc: true
+    number-sections: true
+  html:
+    toc: true
+    embed-resources: true
+---
+
+| Item | Content |
+|---|---|
+| Author | Rizqi Ramadhan |
+| Programme | Doctor of Philosophy, Graduate School of Innovation and Practice for Smart Society, Hiroshima University |
+| Supervisor | Chikaraishi Sensei |
+| Document date | 2026/08/06 |
+| Planning period | August 2026 to July 2028 |
+| Defense target | Early August 2028 |
+
+---
+
+> **How to read this document.** The plan is set at two resolutions. Everything through
+> December 2026 is planned at biweekly resolution, because that is the horizon that can
+> currently be stood behind in detail. Everything from January 2027 onward is planned at
+> quarterly resolution only: a biweekly plan for late 2027 or 2028 would be false precision
+> rather than useful detail. The quarterly spine still names every deliverable, decision point,
+> and conference target currently in view; it is refined one quarter at a time as each becomes
+> current, and the biweekly section is extended in the same way as its own horizon is reached.
+>
+> Dates that depend on something outside the author's control, above all conference deadlines,
+> are marked **to verify**. None of them have been confirmed against the relevant conference
+> websites; they are carried forward at the precision actually known, rather than invented more
+> precisely than they are known.
+
+---
+
+# Research overview
+
+## Background
+
+Discrete choice models with social-interaction effects extend standard choice models with a
+term for how a person's choice is shaped by the choices or characteristics of the people around
+them, following Brock and Durlauf (2001) and, for the case where the relevant social structure
+is a network rather than a single reference group, Lee, Li and Lin (2014). Estimating these
+models has, until recently, required the social network itself to be directly observed, in
+practice through a name-generator survey in which every person in the study population is asked
+to name the people they are tied to. Such surveys are expensive to run at any scale beyond a
+small sample, and for most existing mobility and travel-behaviour datasets they simply do not
+exist. Mobility data, by contrast, of the kind already collected for transportation research
+purposes, is comparatively abundant.
+
+## Problem statement
+
+If a social network can instead be inferred computationally from mobility data, a choice model
+with social-interaction effects becomes usable on populations for which no elicited network
+data was ever collected. But every inference method makes errors, and those errors are not
+random noise: a network built from spatial co-location, for instance, will tend to systematically
+overstate ties between people who are frequently near each other but not socially connected, so
+that a network intended to represent social relationships risks being, to a real extent, a
+proximity network wearing a social-network label. The existing network-based choice estimator
+was built assuming the network is known exactly; applying it to a predicted network without
+accounting for that prediction error risks reporting a confident result that is actually an
+artefact of the inference procedure rather than a genuine social effect.
+
+## Objective and contribution
+
+This research develops a method for **estimating social-interaction effects on choice
+behaviour under inferred social networks**: how to produce a usable network from mobility data,
+how to estimate a social-interaction choice model on that network, and how to assess how much
+the resulting estimates can be trusted given that the network was predicted rather than
+observed.
+
+A design principle follows directly from this objective: network-inference methods that require
+no elicited social-tie data at all, from any population, are preferred over methods that need
+such data to calibrate. Methods that do require an elicited calibration sample are treated as
+one candidate family among several and used mainly as a benchmark for comparison, not as the
+default path. The aim is to push this as far as it will go: a framework whose core case needs no
+social-network survey of any kind, not merely no survey of the specific population being
+studied.
+
+## Research questions
+
+**RQ1 (primary).** How should social-interaction effects in discrete-choice models be
+estimated, and their reliability assessed, when the social network is inferred from mobility
+data rather than directly observed?
+
+- **RQ1a.** What are the candidate methods for inferring a social network from mobility data,
+  and what is each method's error structure?
+- **RQ1b.** How does network-inference error propagate into the endogenous and contextual
+  social-interaction estimates of a network-based discrete choice model, and can that
+  propagation be corrected or bounded?
+- **RQ1c.** Can a genuine social effect be distinguished from a proximity artefact of the
+  network-generation process, and what auxiliary information is needed to make that distinction?
+
+**RQ2 (applied case).** Does a binary-choice version of this framework work end to end, and
+does it extend to a multinomial choice across community groupings without losing the properties,
+such as multiple equilibria and tipping behaviour, established at the binary stage?
+
+- **RQ2a (Stage 1, binary).** For a binary choice, how do estimated endogenous and contextual
+  social-interaction effects compare across networks generated from mobility data by different
+  methods?
+- **RQ2b (Stage 2, multinomial).** Does the estimation approach validated at Stage 1 extend to a
+  multinomial choice across community groupings, and does the multiple-equilibria and tipping
+  behaviour established in the binary case persist, weaken, or disappear as the number of
+  alternatives grows?
+
+---
+
+# Approach
+
+## Staged model development
+
+The model is developed in two deliberate stages rather than attempted directly at the harder,
+multinomial level.
+
+**Stage 1, binary choice.** A single yes-or-no choice is run through the existing
+social-interaction estimator with a network-generation method substituted in place of an
+observed network. This is the fastest path to a working, checkable pipeline, because the theory
+and the estimator already exist and do not need to be re-derived; only the network input and
+its consequences are new.
+
+**Stage 2, multinomial choice.** Once Stage 1 runs cleanly end to end, the model is extended to
+a multinomial choice across community groupings, using whichever multinomial estimator for the
+network-interaction case the literature search turns up, or, if none exists, developing one as
+part of this research's own contribution.
+
+Staging the work this way separates two questions that would otherwise be tangled together: a
+problem discovered at Stage 2 is then legible as a multinomial-extension problem, not muddled
+together with a network-inference problem discovered at the same time.
+
+## Network-generation methods
+
+Three families of method are under consideration, evaluated against the criteria below rather
+than one assumed by default:
+
+- **Rule-based co-location or co-movement methods.** A fixed distance or time threshold applied
+  to when two people are recorded near each other or moving together. Requires no elicited data
+  of any kind. Its error is a known function of the threshold, which makes it the easiest family
+  to reason about analytically.
+- **Unsupervised network-formation or clustering methods.** Structure is inferred from the
+  mobility data's own statistical patterns, without reference to any directly observed ties.
+  Requires no elicited data.
+- **Supervised tie-strength models.** A model trained on a sample of directly elicited tie
+  strengths, then applied to unlabelled mobility data at scale. Requires an elicited calibration
+  sample, though not of the population ultimately studied. Included as a benchmark against which
+  the no-elicited-data methods above can be compared, not as the primary path.
+
+Selection criteria, in order of priority for this research:
+
+1. Does the method's error structure admit a tractable propagation into the choice-model
+   estimates? An opaque generator is a liability here, since this propagation is the research's
+   actual contribution.
+2. Does it need elicited calibration data, and if so, how much and from whom?
+3. Does it produce continuous weights, usable directly in the estimator, or only a hard tie or
+   no-tie assignment, which would need an additional, separately justified binarizing decision?
+
+## Estimation methods
+
+Four estimation approaches are relevant to this programme. All four solve the same underlying
+problem, that each person's belief about their neighbours' behaviour has to be consistent with
+what those neighbours actually do, but differ in how they arrive at that consistency.
+
+- **NFXP (nested fixed point).** For every candidate parameter set, solve the network's belief
+  system exactly, then compare to the data. Exact but comparatively slow. This is the approach
+  already implemented and running for Stage 1.
+- **NPL (nested pseudo-likelihood).** Alternates between updating beliefs given the current
+  parameters and updating parameters given the current beliefs, rather than fully re-solving the
+  belief system at every step. Faster than NFXP, at some cost to the convergence guarantee.
+- **MPEC (mathematical programming with equilibrium constraints).** Hands parameters and beliefs
+  to a single constrained optimizer together, with consistency of beliefs written in as a
+  constraint rather than solved for separately. Can scale better for large problems, at the cost
+  of needing a heavier-duty solver.
+- **BLP (Berry, Levinsohn and Pakes).** Built for settings where only aggregate shares are
+  observed rather than individual choices. Relevant as a candidate for the multinomial Stage 2
+  case, where the object of interest may be closer to a group share than to one person's choice.
+
+Stage 1 does not require choosing among these; NFXP is already in use. The choice among NPL,
+MPEC, and BLP is a Stage 2 decision, to be made once the Stage 2 literature search is complete.
+
+## Data and validation practice
+
+The primary data source is GPS mobility data. Access terms are still being finalized. Where real
+data is not yet available, model development proceeds on a synthetic or best-available fallback
+dataset, with every result that depends on real data marked accordingly until access is
+confirmed.
+
+Every model component is derived by hand before it is coded, and every implementation is
+validated against its own hand derivation, and where an existing implementation is available,
+cross-checked against that implementation, before being applied to real or fallback data.
+
+---
+
+# Programme structure
+
+**Paper 1** delivers the network-inference-and-estimation framework together with its applied
+case: a destination or activity choice across community groupings, reached through the two-stage
+path above.
+
+**Paper 2** (indicative, method not yet fixed) takes up the comparative question that Paper 1
+sets aside: how much the social-interaction estimates depend on which network-generation method
+produced the network, tested by applying two or more different generation methods to the same
+population and comparing the resulting estimates. This question is deliberately not attempted
+within Paper 1, so that Paper 1's contribution stands on a single, well-characterized method
+before the comparative question is opened.
+
+---
+
+# Timeline
+
+::: {.content-visible when-format="html"}
+
+```{=html}
+<style>
+.gantt-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 6px;
+  padding: 0.5rem 0;
+  margin: 1rem 0;
+}
+.gantt-scroll .mermaid,
+.gantt-scroll svg {
+  min-width: 1500px;
+  max-width: none !important;
+  width: 1500px !important;
+}
+</style>
+```
+
+::: {.gantt-scroll}
+
+```{mermaid}
+gantt
+    title Two-Year Research Timeline (Aug 2026 to Jul 2028)
+    dateFormat YYYY-MM-DD
+    axisFormat %b %Y
+
+    section Foundations (Q1)
+    Plan finalized and discussed          :done, f1, 2026-08-05, 2026-08-30
+    Network-generation methods surveyed   :active, f2, 2026-08-05, 2026-09-13
+    Python repo scaffolded                :done, f3, 2026-08-05, 2026-08-12
+    Lee-et-al. engine ported to Python (Stage 1) :f4, 2026-08-17, 2026-09-13
+    First contact with real/fallback data :f5, 2026-08-24, 2026-09-13
+
+    section Stage 1 to Stage 2 (Q1-Q4)
+    Stage 1 end-to-end on real data       :s1, 2026-09-13, 2026-09-27
+    October lab presentation (Stage 1)    :milestone, s2, 2026-10-05, 0d
+    Stage 2 literature search             :s3, 2026-09-14, 2026-10-25
+    Stage 2 derivation (by hand)          :s4, 2026-10-26, 2026-11-22
+    Stage 2 code + validation             :s5, 2026-11-23, 2027-04-30
+
+    section Paper 1 writing (Q4-Q6)
+    Paper 1 draft                         :w1, 2027-05-01, 2027-08-31
+    Internal review pass                  :w2, 2027-09-01, 2027-09-15
+    hEART Kraków (dates to verify)        :milestone, w3, 2027-09-15, 0d
+    Paper 1 submitted to journal          :w4, 2027-10-01, 2027-11-30
+    IATBR Sydney (dates to verify)        :milestone, w5, 2027-12-05, 0d
+
+    section Research visits (Q3-Q7)
+    Internship host search                :rv1, 2027-02-01, 2027-07-31
+    Candidate internship window           :active, rv2, 2027-10-01, 2028-03-31
+
+    section Paper 2 (Q5-Q7, indicative)
+    Scoping                               :p2a, 2027-08-01, 2027-10-31
+    Methodology decided                   :milestone, p2b, 2027-10-31, 0d
+    Modelling                             :p2c, 2027-11-01, 2028-04-30
+
+    section Dissertation (Q7-Q8)
+    Chapters drafted                      :d1, 2028-02-01, 2028-04-30
+    Compilation and revisions             :d2, 2028-05-01, 2028-07-15
+    Defense preparation                   :d3, 2028-07-01, 2028-07-31
+    Thesis defense                        :milestone, d4, 2028-08-03, 0d
+```
+
+:::
+
+:::
+
+::: {.content-visible unless-format="html"}
+
+*The interactive timeline is only available in the HTML version of this document, since it
+depends on a diagram renderer that is not guaranteed to render in this PDF build. The same
+information is in the quarterly and biweekly tables below.*
+
+:::
+
+---
+
+# Quarterly goals
+
++---------+------------------+------------------------------------------------------------------+
+| Quarter | Months           | Headline goal                                                    |
++=========+==================+==================================================================+
+| Q1      | Aug to Oct 2026  | - Research plan finalized and discussed with the supervisor      |
+|         |                  | - Candidate network-generation methods identified and evaluated  |
+|         |                  |   against the selection criteria below                           |
+|         |                  | - Binary-choice (Stage 1) estimation engine ported to Python     |
+|         |                  | - First contact made with GPS mobility data, real or best        |
+|         |                  |   available fallback                                             |
++---------+------------------+------------------------------------------------------------------+
+| Q2      | Nov 2026 to Jan  | - Stage 1 estimation running end to end on real or realistic     |
+|         | 2027             |   fallback data                                                  |
+|         |                  | - Stage 1 results written up                                     |
+|         |                  | - Literature search resolved on whether an existing multinomial  |
+|         |                  |   network-interaction estimator can be reused                    |
++---------+------------------+------------------------------------------------------------------+
+| Q3      | Feb to Apr 2027  | - Stage 2 (multinomial) model formalized by hand                 |
+|         |                  | - Estimation approach for Stage 2 selected (NPL, MPEC, or BLP)   |
+|         |                  | - Overseas internship shortlist drawn up and first contact made  |
+|         |                  |   with candidate hosts                                           |
++---------+------------------+------------------------------------------------------------------+
+| Q4      | May to Jul 2027  | - Stage 2 implemented and validated against its own hand         |
+|         |                  |   derivation                                                     |
+|         |                  | - Paper 1 drafting begins                                        |
+|         |                  | - Internship host and funding confirmed for a window between Oct |
+|         |                  |   2027 and Mar 2028, or the internship set aside for this cycle  |
++---------+------------------+------------------------------------------------------------------+
+| Q5      | Aug to Oct 2027  | - Paper 1 full draft completed                                   |
+|         |                  | - Internal review conducted                                      |
+|         |                  | - Conference presentation (hEART, Kraków, dates to verify; EASTS |
+|         |                  |   Adelaide kept as a fallback if the hEART abstract is not       |
+|         |                  |   accepted)                                                      |
+|         |                  | - Paper 2 scoping begins                                         |
+|         |                  | - If the Oct-Dec 2027 internship window was confirmed, the stay  |
+|         |                  |   begins                                                         |
++---------+------------------+------------------------------------------------------------------+
+| Q6      | Nov 2027 to Jan  | - Paper 1 submitted to a journal                                 |
+|         | 2028             | - Conference presentation (IATBR, Sydney, dates to verify)       |
+|         |                  | - Paper 2 methodology decided                                    |
+|         |                  | - Overseas internship underway, in whichever confirmed window    |
+|         |                  |   (Oct-Dec 2027 or Jan-Mar 2028) applies                         |
++---------+------------------+------------------------------------------------------------------+
+| Q7      | Feb to Apr 2028  | - Paper 2 modelling underway                                     |
+|         |                  | - Dissertation chapters drafted from Paper 1, and from Paper 2   |
+|         |                  |   if the timeline allows                                         |
+|         |                  | - If the Jan-Mar 2028 internship window was confirmed, the stay  |
+|         |                  |   concludes early in this quarter and dissertation drafting is   |
+|         |                  |   adjusted accordingly                                           |
++---------+------------------+------------------------------------------------------------------+
+| Q8      | May to Jul 2028  | - Dissertation compiled                                          |
+|         |                  | - Revisions from Paper 1 (and Paper 2, if under review)          |
+|         |                  |   incorporated                                                   |
+|         |                  | - Defense preparation                                            |
++---------+------------------+------------------------------------------------------------------+
+
+: Quarterly goals, August 2026 to July 2028 {#tbl-quarterly tbl-colwidths="[7,19,74]"}
+
+---
+
+# Biweekly detail, August to December 2026
+
+Ten fortnights, Monday-anchored. This section is refreshed and extended a fortnight at a time as
+each one becomes current; it should be read as a plan for the next few months, not as a promise
+made about December from August.
+
++-----+----------------------+------------------------------------------------------------------+
+| \#  | Dates                | Deliverables                                                     |
++=====+======================+==================================================================+
+| 1   | Mon Aug 3 to Sun Aug | - Research plan and supporting documents finalized               |
+|     | 16                   | - Candidate network-generation methods surveyed                  |
+|     |                      | - New Python repository scaffolded                               |
++-----+----------------------+------------------------------------------------------------------+
+| 2   | Mon Aug 17 to Sun    | - Plan discussed with the supervisor                             |
+|     | Aug 30               | - Python Stage 1 port validated against the existing             |
+|     |                      |   implementation                                                 |
++-----+----------------------+------------------------------------------------------------------+
+| 3   | Mon Aug 31 to Sun    | - First network-generation pass run on the best available data   |
+|     | Sep 13               |   (real, if access is secured; a named fallback otherwise)       |
+|     |                      | - A network produced that the Stage 1 estimator can run on       |
++-----+----------------------+------------------------------------------------------------------+
+| 4   | Mon Sep 14 to Sun    | - Stage 1 results written up                                     |
+|     | Sep 27               | - Literature search on multinomial network-interaction           |
+|     |                      |   estimators underway                                            |
++-----+----------------------+------------------------------------------------------------------+
+| 5   | Mon Sep 28 to Sun    | - Progress presented at a laboratory seminar                     |
+|     | Oct 11               |                                                                  |
++-----+----------------------+------------------------------------------------------------------+
+| 6   | Mon Oct 12 to Sun    | - Post-presentation revisions incorporated                       |
+|     | Oct 25               | - Stage 2 estimation approach chosen (NPL, MPEC, or BLP)         |
++-----+----------------------+------------------------------------------------------------------+
+| 7   | Mon Oct 26 to Sun    | - Stage 2 formalized by hand                                     |
+|     | Nov 8                |                                                                  |
++-----+----------------------+------------------------------------------------------------------+
+| 8   | Mon Nov 9 to Sun Nov | - Stage 2 code-porting begins from the hand derivation           |
+|     | 22                   |                                                                  |
++-----+----------------------+------------------------------------------------------------------+
+| 9   | Mon Nov 23 to Sun    | - Stage 2 code validated against the hand derivation on          |
+|     | Dec 6                |   synthetic data                                                 |
++-----+----------------------+------------------------------------------------------------------+
+| 10  | Mon Dec 7 to Sun Dec | - Stage 2 applied to real or best-available data                 |
+|     | 20                   | - Interim results documented                                     |
++-----+----------------------+------------------------------------------------------------------+
+
+: Biweekly detail, August to December 2026 {#tbl-biweekly tbl-colwidths="[3,23,74]"}
+
+---
+
+# Decision gates
+
+Named, dated points where this plan genuinely branches, so a missed gate is visible rather than
+quietly absorbed into the next quarter.
+
++--------------------------------+------------------+------------------------------------------+
+| Gate                           | Target           | If missed                                |
++================================+==================+==========================================+
+| Network-generation method      | End of fortnight | - Proceed with the simplest rule-based   |
+| selected for Stage 1           | 2 (about Aug 30) |   generator for Stage 1; revisit once a  |
+|                                |                  |   stronger candidate is confirmed usable |
++--------------------------------+------------------+------------------------------------------+
+| GPS data access confirmed      | End of fortnight | - Escalate directly to the supervisor;   |
+|                                | 3 (about Sep 13) |   continued silence past this point is a |
+|                                |                  |   signal to ask for help, not to keep    |
+|                                |                  |   waiting                                |
++--------------------------------+------------------+------------------------------------------+
+| Stage 1 running end to end on  | End of fortnight | - The October presentation shows the     |
+| real (or realistic fallback)   | 3 (about Sep 13) |   fallback-data result honestly, not a   |
+| data                           |                  |   real-data result standing in for one   |
+|                                |                  |   that did not happen                    |
++--------------------------------+------------------+------------------------------------------+
+| Multinomial network-           | End of fortnight | - Feeds directly into how Stage 2 is     |
+| interaction estimator found in | 4 (about Sep 27) |   framed from that point forward         |
+| the literature, or claimed as  |                  |                                          |
+| this paper's originality       |                  |                                          |
++--------------------------------+------------------+------------------------------------------+
+| Paper 1 full draft exists      | End of Q4 (about | - Push back the Q5 submission target     |
+|                                | Jul 2027)        |   rather than submit before internal     |
+|                                |                  |   review is complete                     |
++--------------------------------+------------------+------------------------------------------+
+| Overseas internship host and   | End of Q4 (about | - Set the internship aside for this      |
+| funding confirmed              | Jul 2027)        |   dissertation cycle; domestic           |
+|                                |                  |   laboratory visits become the primary   |
+|                                |                  |   outside-feedback route instead         |
++--------------------------------+------------------+------------------------------------------+
+
+: Decision gates {#tbl-gates tbl-colwidths="[35,18,47]"}
+
+---
+
+# Dissemination plan
+
+| Venue | When | Submission deadline | Role |
+|---|---|---|---|
+| hEART, Kraków, Poland | 2027 edition (exact dates to verify) | To verify | Primary target for Paper 1. A PhD school runs the day before the main symposium and is also worth attending |
+| IATBR (International Association for Travel Behaviour Research), Sydney | December 2027 (to verify) | To verify | Paper 1, full version, once the journal submission is underway |
+| EASTS (Eastern Asia Society for Transportation Studies), Adelaide | September 2027 (to verify) | To verify | Fallback only, if the hEART abstract is not accepted; not a parallel target |
+
+The 2027 Kraków dates above are projected from the confirmed 2026 edition, which was held in
+Paris (Université Gustave Eiffel, hosted at the Sorbonne conference cluster), 29 September to 1
+October 2026, with an abstract deadline of 15 April 2026 and a PhD school on 28 September. The
+2026 edition has already taken place; only its pattern, not its dates, carries forward to 2027.
+
+## Research visits and overseas internship
+
+Suggestions from the supervisor are genuinely welcome on either list below, the domestic visit
+targets or the overseas internship host: neither is meant to be closed.
+
+### Domestic laboratory visits
+
+Independently of the conference targets above, shorter, lower-stakes visits to other
+laboratories for feedback are worth keeping open as options, presented in English:
+
+- The University of Tokyo, Giancarlos Sensei's laboratory
+- Kochi University of Technology, Urban Network Design Laboratory
+- Other Japanese universities, to be identified
+
+### Overseas research internship
+
+A research internship of two to three months at a university outside Japan is a further
+objective, following the precedent of a labmate's own stay abroad earlier in 2026. The target
+window is left open between **October to December 2027** and **January to March 2028**; the
+later option overlaps the dissertation-drafting quarter and would require that quarter's work to
+be pulled forward if chosen. Typical lead time for host agreement and funding is six to twelve
+months, so the host search begins well ahead of either window.
+
+Three kinds of host group are being considered, at the level of institution rather than
+individual, since no host has yet been contacted:
+
+- **Network inference and computational social science**, at institutions with strong programmes
+  inferring social structure from mobility or proximity data, such as the Technical University of
+  Denmark and Northeastern University's Network Science Institute.
+- **Econometrics of social interactions and network formation**, at institutions working on
+  models where the network itself is estimated rather than assumed known, such as National
+  Taiwan University and Monash University.
+- **Transport and choice modelling**, at institutions with an established travel-behaviour and
+  discrete-choice research group, such as the National University of Singapore, the University of
+  Washington, and the Choice Modelling Centre at the University of Leeds.
+
+The selection criterion is that the host should strengthen a part of the framework that is
+harder to strengthen from Hiroshima alone.
+
+::: {.content-visible unless-format="pdf"}
+
+A separate note carries the fuller candidate shortlist with named researchers and reasoning,
+since it names people who have not yet been approached.
+
+:::
+
+::: {.content-visible when-format="pdf"}
+
+For reference, the candidates currently identified in each cluster, none yet approached:
+
+- **Network inference and computational social science.** Sune Lehmann (Technical University of
+  Denmark, Copenhagen Networks Study) and Esteban Moro (Northeastern University, Network Science
+  Institute). DTU alone may cover most of the framework's threads, since Laura Alessandretti
+  (human mobility) and Francisco Pereira (transport machine learning) are also there.
+- **Econometrics of social interactions and network formation.** Chih-Sheng Hsieh (National
+  Taiwan University; Lung-fei Lee's own co-author, already cited in the reading list) and Yves
+  Zenou (Monash University; network economics and peer effects).
+- **Transport and choice modelling.** Prateek Bansal (National University of Singapore, BeCoS
+  lab; the labmate's own precedent), Cynthia Chen (University of Washington, THINK lab), and the
+  Choice Modelling Centre at the University of Leeds.
+
+Affiliations were verified by search in August 2026 and have not been re-confirmed since; whether
+each group currently accepts visiting doctoral students has not been checked and is the first
+thing to find out before approaching anyone.
+
+:::
+
+---
+
+# Risks and dependencies
+
+1. **An inferred network can encode geographic proximity rather than genuine social
+   relationship.** Whichever generation method is used, this has to be checked for explicitly,
+   not assumed away, since a network built substantially from distance features will produce
+   estimates that look like a social effect but are not.
+2. **The network is predicted, not known, and the underlying estimator assumes it is known.**
+   This is the research's actual contribution rather than a caveat, but it means every result
+   carries an extra layer of uncertainty that a standard application of the estimator would not
+   have to report.
+3. **The GPS dataset has not been inspected first-hand as of this writing.**
+   - Ownership of the dataset and its licence terms are not yet fully confirmed.
+   - Everything in this plan that depends on real data is provisional on access being granted on
+     a timeline compatible with the plan above.
+   - See the decision gate at fortnight 3 for the fallback if access is delayed.
+
+---
+
+# Plan maintenance
+
+This plan is refreshed at the start of each quarter, and the biweekly section is extended a
+fortnight at a time as its own horizon is reached, so the document stays honest about what is
+actually known rather than fixed at the level of detail available on the day it was written.
