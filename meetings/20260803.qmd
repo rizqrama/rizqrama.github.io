@@ -1,15 +1,27 @@
 ---
-title: "Meeting Document"
+title: "Progress Report - 2026-08-03"
 subtitle: "From One Shared Belief to a Network of Them"
-author: "Rizqi Ramadhan"
+description: "Rebuilding the toy PUDO model as a network model (Lee, Li & Lin 2014): a working NFXP estimator, a cross-check against the July model, and an experiment showing that estimating with the wrong network is worse than not modelling the network at all."
+author:
+  - name: "Rizqi Ramadhan"
+    affiliations:
+      - name: "Graduate School of Innovation and Practice for Smart Society, Hiroshima University"
 date: "2026-08-03"
+date-format: "iso"
+categories: [social interactions, network models, estimation, PUDO]
 format:
   pdf:
     toc: false
     number-sections: false
   html:
     toc: true
+    toc-depth: 4
+    toc-location: left
+    toc-expand: 2
     embed-resources: true
+    smooth-scroll: true
+    callout-appearance: simple
+    link-external-newwindow: true
 ---
 
 | Item | Content |

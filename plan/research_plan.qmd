@@ -1,15 +1,24 @@
 ---
 title: "Two-Year Research Plan, August 2026 to July 2028"
 subtitle: "Estimating Social-Interaction Effects on Choice Behaviour Under Inferred Social Networks"
+description: "The full PhD roadmap from August 2026 to the August 2028 defense: biweekly detail through December 2026, quarterly spine thereafter, covering network-generation methods, Stage 1/2 estimation, Paper 1 writing, a research visit window, Paper 2, and dissertation compilation."
 author: "Rizqi Ramadhan"
 date: "2026-08-06"
+date-format: "iso"
+categories: [research plan, PhD, social interactions, network models]
 format:
   pdf:
     toc: true
     number-sections: true
   html:
     toc: true
+    toc-depth: 4
+    toc-location: left
+    toc-expand: 2
     embed-resources: true
+    smooth-scroll: true
+    callout-appearance: simple
+    link-external-newwindow: true
 ---
 
 | Item | Content |
