@@ -87,6 +87,10 @@ blockquote, .blockquote {
   font-family: $font-family-sans-serif;
 }
 
+// Wide tables scroll sideways inside their own box on narrow screens.
+// Wrap with ::: {.table-scroll tabindex="0" role="region" aria-label="..."} so keyboard users can scroll it.
+.table-scroll { overflow-x: auto; }
+
 // ---- Table-of-contents active state ----
 nav[role="doc-toc"] ul > li > a.active,
 nav[role="doc-toc"] ul > li > a:hover {

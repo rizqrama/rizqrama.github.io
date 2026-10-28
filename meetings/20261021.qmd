@@ -1,0 +1,233 @@
+---
+title: "Progress Report - 2026-10-21"
+subtitle: "Three streams frozen, 1,061 records to screen"
+description: "Paper 1 systematic review: three search streams frozen after three versions each, a deduplicated pool of 1,061 records that sits 361 above the 700 ceiling, and two options for what comes next."
+author:
+  - name: "Rizqi Ramadhan"
+    affiliations:
+      - name: "Graduate School of Innovation and Practice for Smart Society, Hiroshima University"
+date: "2026-10-21"
+date-format: "iso"
+categories: [systematic review, literature, methodology]
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    toc-location: left
+    embed-resources: true
+    smooth-scroll: true
+    callout-appearance: simple
+    link-external-newwindow: true
+mermaid:
+  theme: default
+---
+
+## Search is frozen: 1,061 records await screening
+
+```{mermaid}
+%%{init: {"themeVariables": {"lineColor": "#8c7a5b", "arrowheadColor": "#8c7a5b"}}}%%
+flowchart LR
+    accTitle: Review workflow from search to draft, with the current step marked
+    accDescr {
+        Six steps from left to right. Search of three streams, frozen on 19 October. Database runs, 1,620 records. Zotero deduplication, 1,061 records, 361 over the ceiling. Title and abstract screening, the current step, with no date for G2. Full text and coding of up to 45 papers, with G3 on Friday 30 October. Draft to Sensei on Friday 20 November. A dashed branch from deduplication leads to citation chaining, which is still open and feeds full text through the other-methods route.
+    }
+    S1["Search<br/>3 streams<br/>frozen<br/>19 Oct"]
+    S2["Database<br/>runs<br/>1,620<br/>records"]
+    S3["Zotero<br/>dedupe<br/>1,061 records<br/>361 over<br/>ceiling"]
+    S4["YOU ARE HERE<br/>Title and<br/>abstract<br/>screening<br/>G2: no date"]
+    S5["Full text<br/>and coding<br/>up to 45<br/>papers<br/>G3: Fri 30 Oct"]
+    S6["Draft<br/>to Sensei<br/>Fri 20 Nov"]
+    CH["Citation<br/>chaining<br/>open"]
+
+    S1 --> S2 --> S3
+    S3 --> S4
+    S4 --> S5
+    S5 --> S6
+    S3 -.-> CH
+    CH -.->|"other<br/>methods"| S5
+
+    classDef concept fill:#1f2d2a,stroke:#3a5a4a,stroke-width:2px,color:#f0e4cf
+    classDef done fill:#4d768a,stroke:#c0a87f,stroke-width:2px,color:#ffffff
+    classDef here fill:#d3220b,stroke:#f0e4cf,stroke-width:4px,color:#ffffff
+    classDef open stroke-dasharray: 6 5
+    class S1,S2,S3 done
+    class S4 here
+    class S5,S6,CH concept
+    class CH open
+    linkStyle default stroke:#8c7a5b,stroke-width:2px
+```
+
+- The databases returned 1,620 records. Adding 17 hand-added papers and removing 576 duplicates leaves a pool of 1,061
+- The pool sits 361 records (34%) above the 700 ceiling in the protocol
+- Decision for the last two slides: screen all 1,061 records, or trim the pool first.
+
+::: {.callout-note appearance="default" collapse="true" title="Notes and sources"}
+Blue boxes are done, red is where I stand, dashed is open. Chaining is still open in the walkthrough and feeds full text through the other-methods route.
+
+G2 (Wed 21 Oct) has no new date. G3 is Fri 30 Oct (60% of N coded). Draft to Sensei Fri 20 Nov.
+
+Sources: search-walkthrough Now table and Dedupe, then chaining (19 Oct).
+:::
+
+## Three streams returned 1,620 records before deduplication
+
+::: {.table-scroll tabindex="0" role="region" aria-label="Records, terms, iterations and seeds per stream"}
+| Stream | Description                              | n papers | n terms | n-th iter | n seeds |
+| ------ | ---------------------------------------- | -------- | ------- | --------- | ------- |
+| A      | peer effects on decision making behavior | 553      | 22      | 3         | 13 (+6) |
+| B      | methods of inferring social network      | 330      | 17      | 3         | 0 (+1)  |
+| C      | dynamic or stochastic networks           | 737      | 11      | 3         | 5 (+10) |
+:::
+
+::: {.small}
+n papers: Scopus plus Web of Science records before deduplication. n terms: phrases, words and proximity clauses in the frozen Scopus string. n-th iter: search versions run, counting v0 where it ran. n seeds: papers named in the protocol or by Sensei, with the papers hand-added on 19 Oct in brackets. Stream B has two check papers (Eagle 2009, Crandall 2010) in place of seeds.
+:::
+
+::: {.callout-note appearance="default" collapse="true" title="Notes and sources"}
+Sources: search-walkthrough Now table (19 Oct), 02_search-log tab, 03_seeds (18 rows) plus 03_seeds_hand-added (17 rows).
+
+Pool: 1,620 database records + 17 hand-added - 576 duplicates = 1,061. Streams in the pool: A 372, A+C 2, B 253, B+C 1, C 433.
+:::
+
+## Each stream froze after three search versions
+
+```{mermaid}
+%%{init: {"themeVariables": {"lineColor": "#8c7a5b", "arrowheadColor": "#8c7a5b"}}}%%
+flowchart LR
+    accTitle: Search versions run for each stream, from first version to frozen
+    accDescr {
+        Three streams, each run in three iterations. Stream A: v0 with 15 terms and 188 records, then v1 with 21 terms and 485 records after Manski terms were added, then v2 with 22 terms and 315 records after social effect* was taken off the index. Stream B: v0 with 17 terms and 3,611 records, then v1 with 17 terms and 426 records after Block 1 was placed near Block 2, then v2 with 17 terms and 253 records after social network was limited to title or keywords. Stream C: v1 with 8 terms and 1,875 records, then v2 with 11 terms and 663 records after a social anchor was added, then v3 with 11 terms and 419 records after dynamics terms were limited to title or keywords. Frozen totals: A 553 records, 318 from Scopus and 235 from Web of Science. B 330 records, 253 from Scopus and 77 from Web of Science. C 737 records, 419 from Scopus and 318 from Web of Science.
+    }
+    subgraph I1["Iteration 1"]
+        A0["A v0<br/>15 terms<br/>188 records"]
+        B0["B v0<br/>17 terms<br/>3,611 records"]
+        C1["C v1<br/>8 terms<br/>1,875 records"]
+    end
+
+    subgraph I2["Iteration 2"]
+        A1["A v1<br/>21 terms<br/>485 records"]
+        B1["B v1<br/>17 terms<br/>426 records"]
+        C2["C v2<br/>11 terms<br/>663 records"]
+    end
+
+    subgraph I3["Iteration 3"]
+        A2["A v2<br/>22 terms<br/>315 records"]
+        B2["B v2<br/>17 terms<br/>253 records"]
+        C3["C v3<br/>11 terms<br/>419 records"]
+    end
+
+    AF["A frozen<br/>Scopus 318<br/>+ WoS 235<br/>= 553"]
+    BF["B frozen<br/>Scopus 253<br/>+ WoS 77<br/>= 330"]
+    CF["C frozen<br/>Scopus 419<br/>+ WoS 318<br/>= 737"]
+
+    A0 -->|"Manski terms<br/>added"| A1
+    A1 -->|"social effect*<br/>off index"| A2
+    B0 -->|"Block 1 near<br/>Block 2"| B1
+    B1 -->|"social network in<br/>title or keywords"| B2
+    C1 -->|"social anchor<br/>added"| C2
+    C2 -->|"dynamics terms in<br/>title or keywords"| C3
+
+    A2 --> AF
+    B2 --> BF
+    C3 --> CF
+
+    classDef concept fill:#1f2d2a,stroke:#3a5a4a,stroke-width:2px,color:#f0e4cf
+    classDef frozen fill:#4d768a,stroke:#c0a87f,stroke-width:2px,color:#ffffff
+    class A0,A1,A2,B0,B1,B2,C1,C2,C3 concept
+    class AF,BF,CF frozen
+    linkStyle default stroke:#8c7a5b,stroke-width:2px
+```
+
+::: {.small}
+A: peer effects on choice. B: inferring ties from mobility data. C: network dynamics. A v2 returned 318 records on 16 Oct.
+:::
+
+::: {.callout-note appearance="default" collapse="true" title="Notes and sources"}
+The 318 comes from a production re-run on 16 Oct, when the database gained 3 records since the 7 Oct run (315).
+
+Counts are Scopus hits per version. Frozen boxes add the Web of Science run of the frozen string: A v4 (235), B v2 (77), C v3 (318).
+
+Source: 02_search-log tab and the Now table in search-walkthrough.
+:::
+
+## Stream A froze at v2 in Scopus and v4 in Web of Science
+
+::: {.table-scroll tabindex="0" role="region" aria-label="Stream A search versions"}
+| Iter   | Keywords                                                                 | Results | Decision | Reason                                                                                                        |
+| ------ | ------------------------------------------------------------------------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------- |
+| v0     | social-interaction terms AND choice-model terms AND network terms         | 188     | revise   | Recall on the 8 dev papers 1/8; the choice-model block is the bottleneck                                      |
+| v1     | add Manski terms, social effect\*, identification near effect\*           | 485     | revise   | Noise 8/30: social effect\* matched the index term "Economic and social effects" in 175 of 297 new records    |
+| v2     | social effect* limited to title, abstract, author keywords; both spellings of neighborhood | 315 | frozen | Precision 47/50, noise 12/30                                                                                  |
+| WoS&nbsp;v2 | v2 string, topic search                                                   | 316     | revise   | Merged pool of 1,594 records exceeded the ceiling                                                             |
+| WoS&nbsp;v3 | all three blocks in title, abstract, author keywords                      | 196     | revise   | Lost 40 on-topic records whose method word comes from Keywords Plus                                           |
+| WoS&nbsp;v4 | Block 2 back on topic search                                              | 235     | frozen   | Returns 39 of the 40 lost records                                                                             |
+:::
+
+::: {.small}
+WoS: Web of Science. Topic search (TS) covers title, abstract, author keywords and Keywords Plus, the words Web of Science takes from the titles of a paper's cited references. Precision: on-topic titles among the first 50 by relevance. Noise: on-topic records in 30 random new records.
+:::
+
+## Stream B froze at v2 after the pool fell from 3,611 to 253 records
+
+::: {.table-scroll tabindex="0" role="region" aria-label="Stream B search versions"}
+| Iter   | Keywords                                                             | Results | Decision      | Reason                                                                          |
+| ------ | --------------------------------------------------------------------- | ------- | ------------- | ------------------------------------------------------------------------------- |
+| v0     | tie terms AND inference verbs AND mobility-data terms                 | 3,611   | revise        | Five times the ceiling; the bare word mobility is the only Block 3 term in 693 records |
+| v1     | tie terms within 3 words of inference verbs; conference reviews removed | 426   | frozen&nbsp;8&nbsp;Oct  | Precision 41/50, noise 13/30; Eagle and Crandall return                         |
+| v2     | social network counts when it sits in the title or author keywords                | 253     | frozen&nbsp;19&nbsp;Oct | Reopened because the merged pool reached 1,594; noise 15/30; Eagle and Crandall return |
+| WoS&nbsp;v1 | v1 string, topic search                                               | 140     | revise        | Pool above the ceiling; Keywords Plus dropped                                   |
+| WoS&nbsp;v2 | title, abstract, author keywords; social network in title or keywords | 77      | frozen        | Eagle found, Crandall missed (vocabulary gap in Block 2)                        |
+:::
+
+::: {.small}
+Stream B has no dev or test set. Its check is that Eagle, Pentland and Lazer (2009) and Crandall et al. (2010) still return.
+:::
+
+## Stream C froze at v3 after two narrowing steps
+
+::: {.table-scroll tabindex="0" role="region" aria-label="Stream C search versions"}
+| Iter   | Keywords                                                                                       | Results | Decision      | Reason                                                                                              |
+| ------ | ----------------------------------------------------------------------------------------------- | ------- | ------------- | --------------------------------------------------------------------------------------------------- |
+| v1     | actor-oriented model and relational-event phrases, network dynamics, coevolution near network terms, AND estimat* OR empirical* | 1,875 | revise | Precision 39/50; noise under 10/30: network dynamics was the only Block 1 term in 73% of records (brain connectivity, TCP queues) |
+| v2     | network dynamics and coevolution phrases anchored by social OR tie* OR actor*                   | 663     | frozen&nbsp;13&nbsp;Oct | Precision 42/50, noise 17/30; all five benchmark papers return                                      |
+| v3     | network dynamics and coevolution phrases limited to title or author keywords                       | 419     | frozen&nbsp;19&nbsp;Oct | Reopened for the pool ceiling; noise 22/30; all five benchmark papers return                        |
+| WoS&nbsp;v2 | v2 string, topic search                                                                         | 491     | revise        | Pool above the ceiling                                                                              |
+| WoS&nbsp;v3 | title, abstract, author keywords                                                                | 318     | frozen        | Benchmark papers return; two on-topic drops added by hand                                           |
+:::
+
+::: {.small}
+The v3 cut costs an estimated 40 on-topic records, read from 30 sampled records, so the true loss could lie anywhere from 5 to over 100. Eight papers dropped by Scopus v3 and two by Web of Science v3 went into the pool by hand.
+:::
+
+## Option 1: screen the full pool, which takes 7 to 10 hours
+
+- 231 of the 1,061 records carry a decision from earlier skim marks (120 include, 111 exclude)
+- The other 830 records take 7 to 10 hours at 30 to 45 seconds each. The full 1,061 would take 9 to 13 hours
+- The pool stays 361 records above the 700 ceiling, so the protocol records a deviation
+
+| Day (proposal)  | Work                                                              |
+| --------------- | ----------------------------------------------------------------- |
+| Thu 22, Fri 23 Oct | Calibration pass 1 on 20 records, then screening, 3 hours a day |
+| Mon 26 Oct      | Screening; calibration pass 2 after a day's gap                   |
+| Tue 27 Oct      | Finish screening, which becomes the new G2                        |
+| Wed 28 to Fri 30 Oct | Extraction. G3 (60% of N coded) has 3 days behind it, against 7 in the schedule. Under 60%, the stop rule cuts N |
+
+::: {.small}
+G2 was Wed 21 Oct and has no new date. The draft to Sensei stays on Fri 20 Nov.
+:::
+
+## Option 2: trim the pool first, which costs one to two search days
+
+Reaching 700 means cutting 361 records. Candidate levers, none applied:
+
+| Lever                                  | What it does                                                                                       |
+| -------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| One more version per stream            | The cap allows A v3 in Scopus, B v3 and C v4. A without effect* in the peer proximity clause cuts about 14 records and no benchmark paper |
+| Narrow C to the two named model families | Keep the actor-oriented and relational-event phrases and drop the rest. Loses De Nooy (2011), so it needs Sensei's agreement |
+| Limit document types and publication stage | 45 pool records carry a mixed document type or a book chapter. Counts by type need a Scopus run  |
+| Use more specific terms                | Phrases in place of bare words. The mobility phrase lever in Stream B lost Crandall (2010)         |
+| Date window                            | Cannot reach 700: 96% of the pool dates from 2008 or later, and a cut would remove Butts (2008), Snijders (2010) and Eagle (2009) |
+
+::: {.small}
+Timeline estimate: the 19 Oct round (three string changes, both databases, Zotero pass, sheet rebuild) took one working day, so a second round takes one to two days before screening a smaller pool starts.
+:::
