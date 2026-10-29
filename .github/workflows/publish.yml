@@ -18,12 +18,6 @@ jobs:
         with:
           version: 1.9.37
 
-      - name: Install Chromium
-        run: quarto install chromium --no-prompt
-
-      - name: Install TinyTeX
-        run: quarto install tinytex --no-prompt
-
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
