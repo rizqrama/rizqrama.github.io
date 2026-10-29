@@ -10,9 +10,6 @@ date: "2026-08-03"
 date-format: "iso"
 categories: [social interactions, network models, estimation, PUDO]
 format:
-  pdf:
-    toc: false
-    number-sections: false
   html:
     toc: true
     toc-depth: 4

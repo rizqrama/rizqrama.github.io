@@ -7,9 +7,6 @@ date: "2026-08-06"
 date-format: "iso"
 categories: [research plan, PhD, social interactions, network models]
 format:
-  pdf:
-    toc: true
-    number-sections: true
   html:
     toc: true
     toc-depth: 4
