@@ -1,0 +1,212 @@
+---
+title: "Progress Report - 2026-11-05"
+subtitle: "Streams A and B screened, first runs on a simulated city"
+description: "Paper 1 systematic review: 388 records cut before screening, Streams A and B finish title and abstract screening with a self-consistency check, citation chaining adds 41 records, and first tie-inference methods run on a simulated city."
+author:
+  - name: "Rizqi Ramadhan"
+    affiliations:
+      - name: "Graduate School of Innovation and Practice for Smart Society, Hiroshima University"
+date: "2026-11-05"
+date-format: "iso"
+categories: [systematic review, social ties, GPS data]
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    embed-resources: true
+    smooth-scroll: true
+    callout-appearance: simple
+    link-external-newwindow: true
+mermaid:
+  theme: default
+---
+
+## 1. Current Situation or Progress since Last Week
+
+### Systematic Literature Review
+
+#### What I planned
+
+- Try to add more filters or phrase combinations to reduce the number of paper to screen.
+- start on screening Stream C (decision making on dynamic networks)
+
+#### What I did
+
+- Added some keywords to filter the papers further so that no re-search is needed (reported under PRISMA 2020 items 8 and 24c),
+    - Streams A and C: six filter rules applied to the existing search results removed 325 records before screening
+    - Stream B: one new search version (31 Oct) dropped papers that predict locations or activities, 63 records
+- Finished screening stream A and B
+    - stream A: 217 excluded, 154 goes into full text screening
+    - stream B: 195 excluded, 58 goes into full text screening
+- Checked my own screening consistency by screening 20 stream A records twice, at least a day apart
+    - 17 of 20 agree (85%), Cohen's kappa 0.74, and the three differences were all stricter the second time
+- Started citation chaining and handpicking using tools like ResearchRabbit (reported under PRISMA 2020 item 6)
+    - stream B: added 41 records (54 found, 13 already in the screening pool)
+    - the 41 records go straight to full text screening
+
+#### What obstacles I found
+
+- Have not fully grasped the theoretical background of Stream C, so the screening was postponed
+    - Title and abstract screening did not finish by the planned date (Wed 4 Nov): 242 records remain, 241 of them in stream C
+
+#### What I am currently doing
+
+- reading AI-assisted teaching deck sourced from *Introduction to stochastic actor-based models for network dynamics* by Snijders et al. (2010)
+- screening the 241 undecided stream C records, title first
+
+#### What I am going to do next
+
+- Finish the title and abstract screening for all records
+- Full text screening on stream A
+- Full text screening on stream B (58 records, plus the 41 citation chaining records)
+
+### Inferring Social Ties from GPS Data
+
+#### What I planned
+
+- Start deep reading on stream B papers so that I can initiate work on inferring social ties from GPS data available
+
+#### What I did
+
+- collected stream B records' full-text document
+- Sorted 160 papers into five groups by what each paper does: the stream B records marked include, unsure or background, plus method papers added from outside the stream
+    - 38 core papers on inferring ties from mobility data
+    - 26 papers that sharpen a method
+    - 59 papers that train a method on pairs with known friendship
+    - 14 papers that use known friends to predict places
+    - 23 papers dropped
+- Wrote structured reading notes with AI assistance: the formulas, the settings and the data each method needs
+- Prepared the real GPS data on my own machine with IDs replaced by codes. The data stays there
+- Ran a first set of methods on a simulated city where friends, coworkers and strangers are known
+    - One finding: counting shared visits ranks coworkers above friends. This is one simulated city, so I treat it as exploratory
+
+#### What obstacles I found
+
+- Some papers could not be obtained through HU subscriptions
+    - 7 of 160 papers have no file, and 5 more have a short or unreadable file
+    - No file: Ma 2025, Socievole 2014, Steurer 2013, Li 2023, Nguyen 2022, Mounica 2020, He 2020
+
+#### What I am currently doing
+
+- checking the reading notes against the PDF pages, formula by formula
+- reading the papers that train a method on pairs with known friendship
+
+#### What I am going to do next
+
+- Work out how to tell friendship from plain proximity (feedback from the 2 Nov group meeting)
+- Run the methods on the real GPS data, after the checks on the simulated city pass
+
+## 2. Points of Discussion
+
+### What I want to confirm
+
+- One reviewer, me, screens all records of the review. I checked my own consistency by screening 20 stream A records twice (17 of 20 agree, Cohen's kappa 0.74) and will report this in the limitations. I want to confirm that this design is acceptable.
+
+### What obstacles I cannot decide on my own
+
+- The terms for using the GPS data, and what I may report from it. Type of stuck:
+    - not enough information, because the data owner's conditions on analysis and publication are not clear to me.
+
+## 3. Definitions of Terms
+
+::: {.table-scroll tabindex="0" role="region" aria-label="Definitions of terms"}
+| Term        | Definition                                                                 |
+| ----------- | -------------------------------------------------------------------------- |
+| Stream A    | Choice modeling affected by social interactions or peer-effects            |
+| Stream B    | Social ties or social networks inference from GPS Data                     |
+| Stream C    | Dynamic networks                                                           |
+| Social ties | Links or relationship between one person to another in a specific settings |
+| GPS Data    | Movement tracking data obtained by providers                               |
+| Title and abstract screening | First pass over the records: I read only the title and abstract and mark each record include, unsure or exclude. |
+| Full text screening | Second pass: I read the whole paper and decide whether it meets the inclusion criteria of the review. |
+| Citation chaining | Finding further papers by following the reference lists of known papers (backward) and the papers that cite them (forward). |
+| Filter rules | Fixed rules that remove records before anyone reads them, for example by document type, language or missing key words. Every removed record stays in the sheet with its reason. |
+| PRISMA 2020 | A reporting guideline for systematic reviews. It lists what a review should report, such as the sources searched, the screening method and a flow diagram of record counts. |
+| Cohen's kappa | A measure of agreement between two screening passes that removes the agreement expected by chance. 1 is perfect agreement and 0 is chance level. |
+| Shared visit (co-location) | Two people recorded at the same place in the same time window. |
+| Proximity versus friendship | Proximity means two people are near each other. Friendship needs more, because coworkers share a place every day without being friends. |
+| Stochastic actor-based model | A model of how a network changes over time: each person adds, keeps or drops ties in small steps, and the model estimates the rules behind those choices. |
+:::
+
+## 4. Computational Results or Figures (if any)
+
+No figures this week. The one simulated-city finding in section 1 comes from the private GitHub repository [paper1_gps_network_choice](https://github.com/rizqrama/paper1_gps_network_choice) at commit `d699fe1`: script `scripts/run_all.R`, output `scores.csv` (column `share_coworker`). Further simulated-city results come at a later meeting.
+
+## 5. Supplementary Materials
+
+### Systematic literature review: status on 4 Nov
+
+::: {.diagram-scroll tabindex="0" role="region" aria-label="Systematic literature review workflow diagram, scrolls sideways"}
+```{mermaid}
+%%{init: {"flowchart": {"useMaxWidth": false}, "themeVariables": {"lineColor": "#8c7a5b", "arrowheadColor": "#8c7a5b"}}}%%
+flowchart LR
+  accTitle: Systematic literature review workflow with the current step marked
+  accDescr {
+    Seven steps from left to right, plus a side branch. Step 1 is the search, with 1,620 database records and 17 added by hand. Step 2 removes duplicates, with 576 removed and 1,061 records left. Step 3 cuts records before screening, with 325 removed by filter rules in streams A and C and 63 removed by a new search in stream B, leaving 673 records. Step 4 is title and abstract screening, the current step, with 431 decided and 242 left, 241 of them in stream C. Step 5 is full text screening, with 154 records from stream A, 58 from stream B and 41 from citation chaining. Step 6 is extraction, from 5 to 13 November. Step 7 is the draft to Sensei on Friday 20 November. A dashed branch from the duplicate removal leads to citation chaining for stream B, with 54 found and 41 new to the pool, and feeds those 41 records into full text screening. Steps 1 to 3 and citation chaining are done, step 4 is in progress, and steps 5 to 7 are planned.
+  }
+  S1["1. Search<br/>1,620 database records<br/>17 added by hand"]
+  S2["2. Remove duplicates<br/>576 removed<br/>1,061 records left"]
+  S3["3. Cut before screening<br/>325 by filter rules (A, C)<br/>63 by new search (B)<br/>673 records left"]
+  S4["4. Title and abstract<br/>YOU ARE HERE<br/>431 decided<br/>242 left, 241 in stream C"]
+  S5["5. Full text<br/>154 from A<br/>58 from B<br/>41 from chaining"]
+  S6["6. Extraction<br/>5 to 13 Nov"]
+  S7["7. Draft to Sensei<br/>Fri 20 Nov"]
+  CH["Citation chaining (B)<br/>54 found<br/>41 new to the pool"]
+
+  S1 --> S2 --> S3 --> S4 --> S5 --> S6 --> S7
+  S2 -.-> CH
+  CH -.->|"41 records"| S5
+
+  classDef done fill:#4d768a,stroke:#222,color:#fff
+  classDef here fill:#d3220b,stroke:#222,stroke-width:3px,color:#fff
+  classDef next fill:#f4ecd2,stroke:#222,stroke-dasharray:6 5,color:#222
+  class S1,S2,S3,CH done
+  class S4 here
+  class S5,S6,S7 next
+  linkStyle default stroke:#8c7a5b,stroke-width:2px
+```
+:::
+
+Blue: done. Red: in progress. Dashed: planned. The counts match section 1.
+
+### General workflow of inferring social ties from GPS data
+
+::: {.diagram-scroll tabindex="0" role="region" aria-label="Workflow diagram for inferring social ties from GPS data, scrolls sideways"}
+```{mermaid}
+%%{init: {"flowchart": {"useMaxWidth": false}, "themeVariables": {"lineColor": "#8c7a5b", "arrowheadColor": "#8c7a5b"}}}%%
+flowchart LR
+  accTitle: Workflow for inferring social ties from GPS data
+  accDescr {
+    A main chain from left to right with six boxes. GPS points, which hold who, where and when. Stays, where a person stays a while. Shared visits, two people at the same place and time. Tie score, one per method. Inferred network, who is tied to whom. Choice model with a social effect. Two dashed inputs feed the tie score. Papers, read and sorted into method groups, show which methods to try. A simulated city, where friends, coworkers and strangers are known, checks each step. GPS points and the simulated city are done. Stays, shared visits, tie score and papers are in progress. The inferred network and the choice model are planned.
+  }
+  G["GPS points<br/>who, where, when"]
+  ST["Stays<br/>where a person<br/>stays a while"]
+  SV["Shared visits<br/>two people at the<br/>same place and time"]
+  M["Tie score<br/>one per method"]
+  N["Inferred network<br/>who is tied to whom"]
+  CM["Choice model<br/>with a social effect"]
+  LIT["Papers<br/>read and sorted<br/>into method groups"]
+  SIM["Simulated city<br/>friends, coworkers and<br/>strangers are known"]
+
+  G --> ST --> SV --> M --> N --> CM
+  LIT -.->|"which methods to try"| M
+  SIM -.->|"check each step"| M
+
+  classDef done fill:#4d768a,stroke:#222,color:#fff
+  classDef here fill:#d3220b,stroke:#222,stroke-width:3px,color:#fff
+  classDef next fill:#f4ecd2,stroke:#222,stroke-dasharray:6 5,color:#222
+  class G,SIM done
+  class ST,SV,M,LIT here
+  class N,CM next
+  linkStyle default stroke:#8c7a5b,stroke-width:2px
+```
+:::
+
+Blue: done. Red: in progress. Dashed: planned.
+
+## 6. Feedbacks and Additional Follow-ups
+
+- [ ]
+- [ ]
+- [ ]
