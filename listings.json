@@ -7,6 +7,10 @@
     ]
   },
   {
+    "listing": "/projects/index.html",
+    "items": []
+  },
+  {
     "listing": "/plan/index.html",
     "items": [
       "/plan/research_plan.html"
@@ -15,6 +19,7 @@
   {
     "listing": "/meetings/index.html",
     "items": [
+      "/meetings/20261105.html",
       "/meetings/20261028.html",
       "/meetings/20261021.html",
       "/meetings/20260803.html",
@@ -24,9 +29,5 @@
       "/meetings/20260525.html",
       "/meetings/20260511.html"
     ]
-  },
-  {
-    "listing": "/projects/index.html",
-    "items": []
   }
 ]
