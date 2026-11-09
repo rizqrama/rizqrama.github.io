@@ -5,7 +5,7 @@ listing:
   sort: "date desc"
   type: default
   exclude:
-    filename: "index.qmd"
+    filename: ["index.qmd", "supplementary.qmd"]
   fields: [date, title, description, categories]
   sort-ui: false
   filter-ui: false
