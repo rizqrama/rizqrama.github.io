@@ -24,6 +24,10 @@ mermaid:
   theme: default
 ---
 
+::: {.callout-warning title="The results on this page are questionable"}
+The results from the toy model and toy data need to be double-checked. They may be too good to be true because of the "perfect" generated city.
+:::
+
 ## How to read this page
 
 This page explains the work behind the [progress report of 2026-11-11](../20261111.qmd) from the first step. It follows the benchmark report in the code repository (`report/network-inference-report.qmd`) and keeps its methods, results and gaps. Each method gets a plain sentence and an example first. The formula, the source paper and the page sit in a collapsed box under the example. Click the box to open it.

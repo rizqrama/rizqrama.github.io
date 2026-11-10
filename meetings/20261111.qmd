@@ -1,14 +1,14 @@
 ---
 title: "Progress Report - 2026-11-11"
-subtitle: "Tie inference from GPS traces: methods compared on a simulated city, and the effect of the network on the estimate"
-description: "Paper 1: methods that infer social ties from GPS traces compared on a simulated city, the social effect estimated on each inferred network, and three code branches merged and rerun with 60 seeds."
+subtitle: "Two review papers to refocus the SLR, and a plan to run tie inference on the real GPS data"
+description: "Paper 1: two recent review papers on peer effects to refocus the SLR, questionable results from the simulated city, and a planned workflow for the real GPS data."
 author:
   - name: "Rizqi Ramadhan"
     affiliations:
       - name: "Graduate School of Innovation and Practice for Smart Society, Hiroshima University"
 date: "2026-11-11"
 date-format: "iso"
-categories: [social ties, GPS data, discrete choice]
+categories: [social ties, GPS data, systematic review]
 format:
   html:
     toc: true
@@ -28,23 +28,27 @@ mermaid:
 
 #### What I planned
 
--
+- read the *Introduction to stochastic actor-based models for network dynamics* by Snijders et al. (2010)
 
 #### What I did
 
--
+- Done some citation chaining of Stream A through ResearchRabbit app, found a similar review paper that discuss peer effects on social networks, also mentioning or discussing about ABM and SAOM.
+    - The paper is titled [Peer influence in social network: a review of identification, modeling and application](https://doi.org/10.1016/j.jbusres.2025.115806) by Wu et al. (2025)
 
 #### What obstacles I found
 
--
+- The newest review paper already mentioned a lot of similar things to discuss, I need another point of view on things I can focus the review on.
 
 #### What I am currently doing
 
--
+- postpone the reading AI-assisted teaching deck sourced from *Introduction to stochastic actor-based models for network dynamics* by Snijders et al. (2010)
+- start reading the review papers (Wu et al., 2025, and Bramoulle et al., 2020) to find new perspectives
+
 
 #### What I am going to do next
 
--
+- find the "gap" of the review papers mentioned above. Probably we can "play" on the inferred social networks, but this opportunity needs to be checked first.
+- get the full text of stream A papers, then deduplicate for full text screening
 
 ### Inferring Social Ties from GPS Data
 
@@ -55,41 +59,36 @@ mermaid:
 
 #### What I did
 
-- Tested a fix for the proximity problem on the simulated city: remove the time two people share at a common workplace, or at their own home (the shared-foci filter)
-    - Among the 225 top-ranked pairs, the share of true ties rises from 5 to 67 percent for the co-stay minutes count
-- Compared the full set of methods, from plain counts to tests against chance, on the same city
-    - Count-based methods fill 90 to 95 percent of their top-ranked pairs with coworkers who are not friends
-- Estimated the social effect on each inferred network and on the true network
-    - Every inferred network pulls the estimate below the true value (bias -0.28 to -0.46, against -0.03 on the true network)
-    - With no true effect, the standard test (Wald) finds one in 41 percent of fits on the true network. The likelihood ratio test finds one in 10 percent
-- Added a second test (likelihood ratio), built the last method variants, and built a check of how missed and false ties in the network shift the estimate
-- Merged the three code branches and reran everything with 60 random seeds (30 for the last check)
+- Basically, ran a test of the methodologies into a simulated city, but the result is still questionable
 
 #### What obstacles I found
 
--
+- the result from the sandbox or toy model and toy data need to be double-checked
+    - one indicating that it may be too good to be true because of the "perfect" generated city
+- got reminder from group meeting not to lose focus on the final goal, which is about the peer-effect on decision making
+    - the network inference is a supplementary tools, yet important.
+- the data I got from Kajiyama is limited to 148 people from 3 institutions, with total activity of 1 month
 
 #### What I am currently doing
 
-- Studying the method ladder with an AI-assisted teaching deck built from the method guide and the code. It flags the 12 design choices that wait for my sign-off
+- Studying the methods inferred from full text PDF pages with an AI-assisted teaching deck along with the generated code.
+- Building plan on how to run the methods on real GPS data
 
 #### What I am going to do next
 
-- Decide how to treat estimates outside the valid range (see Points of Discussion)
-- Run the methods on the real GPS data, after the checks on the simulated city pass
+- I proposed that the toy model will be focused directly on the real GPS data, as the data contract is already clear
+
 
 ## 2. Points of Discussion
 
 ### What I want to confirm
 
-- The shared-foci filter is my own design: no paper I read proposes it. I tested it on a simulated city where home and work places are detected without error. I want to confirm that I can report it as a design choice tested on simulated data, and state its behaviour on real data as a limit.
+- Should I continue the framework of the current SLR?
 
 ### What obstacles I cannot decide on my own
 
-- How to treat estimates of the social effect that fall outside the valid range (absolute value of 1 or more). In the 60-seed run, 20 percent of the fits on the true network and 35 to 58 percent of the fits on the inferred networks fall outside. The model has no unique solution there, and neither test I use handles these fits. Two routes: change the estimator (constrain the effect to the valid range) or enlarge the simulated city. Type of stuck:
-    - not enough knowledge, because I do not know which remedy the literature on this model accepts.
-- Whether the check of missed and false ties in the network belongs in Paper 1, as measurement error in the network, or in Paper 2, which asks how much the estimate depends on the method that builds the network. Type of stuck:
-    - cannot choose between two scopes, because both fit the check.
+- Regarding the choice problem, should we start from Binary Choice (Lee et al., 2014), or can we directly into standard MNL?
+- If, the choice is only binomial, what kind of destination or maybe other choice should we test? I was planning on the "decision of visiting Sake Matsuri", but it needs the MILES data
 
 ## 3. Definitions of Terms
 
@@ -138,39 +137,40 @@ mermaid:
 
 ## 4. Computational Results or Figures (if any)
 
-The simulated city has 150 people, 28 days and 225 planted friendships. Every number below comes from the run of 9 November 2026 on my Mac, on the private GitHub repository [paper1_gps_network_choice](https://github.com/rizqrama/paper1_gps_network_choice): `scripts/run_all.R est_seeds=60 null_seeds=60` and `scripts/run_perturbation.R 30`, code of commit `47eece5`. Results are exploratory.
+### Inferring Social Ties from GPS Data
 
-### How well each method finds the planted ties
+These are the general workflow I am planning after getting permission for the real data:
 
-::: {.table-scroll tabindex="0" role="region" aria-label="Network recovery of the naive count, one count method and the best method of each cell"}
-{{< include 20261111/tables/_recovery_main.md >}}
+::: {.diagram-scroll tabindex="0" role="region" aria-label="Planned workflow for the real GPS data, scrolls sideways"}
+```{mermaid}
+%%{init: {"flowchart": {"useMaxWidth": false}, "themeVariables": {"lineColor": "#8c7a5b", "arrowheadColor": "#8c7a5b"}}}%%
+flowchart LR
+  accTitle: Planned workflow for the real GPS data
+  accDescr {
+    Four planned steps from left to right, to start after permission for the real data. Step 1 applies the methods for social network inference to the unlabelled GPS data from Fukken, HU and Higashihiroshima City Hall. Step 2 gives several versions of the social network. Step 3 uses those networks as the base of the binary choice model of Lee et al. (2014), focused on destination or activity-type choice. Step 4 expands the analysis to the MILES data.
+  }
+  S1["1. Social network inference<br/>on unlabelled GPS data<br/>Fukken, HU,<br/>Higashihiroshima City Hall"]
+  S2["2. Several versions<br/>of social networks"]
+  S3["3. Binary choice model<br/>Lee et al. (2014)<br/>destination or<br/>activity-type choice"]
+  S4["4. Expand the analysis<br/>to MILES data"]
+
+  S1 --> S2 --> S3 --> S4
+
+  classDef next fill:#f4ecd2,stroke:#222,stroke-dasharray:6 5,color:#222
+  class S1,S2,S3,S4 next
+  linkStyle default stroke:#8c7a5b,stroke-width:2px
+```
 :::
 
-![Pair types among the 225 top-ranked pairs of each method. Single city, seed 1.](20261111/figures/coworker_trap.png){fig-alt="Horizontal stacked bars, one per method. Each bar splits the 225 top-ranked pairs into friend, friend_coworker, coworker and other shares. Count-based methods such as the naive count, R1b minutes, R2d F and R2e G fill the top with coworker pairs. Methods with the shared-foci filter and the place diversity D fill it with friend and friend_coworker pairs."}
+Dashed boxes: planned steps.
 
-### What the estimate of the social effect does on each network
-
-True value 0.5, 60 seeds per row.
-
-::: {.table-scroll tabindex="0" role="region" aria-label="Estimate of the social effect by network"}
-{{< include 20261111/tables/_est.md >}}
-:::
-
-Every inferred network lies below 0.5 by more than two Monte Carlo standard errors, and C10, the network with the best friend recovery, shows the largest bias. In a second experiment with a true effect of 0, the Wald test claims an effect in 41 percent of the fits on the true network and 48 to 57 percent on the cells, where a sound test claims one in 5 percent. The likelihood ratio test rejects in 10 percent of the true-network fits and 0 to 15 percent of the cell fits. Out-of-bound fits make up 20 percent of the true-network fits and 35 to 58 percent of the inferred-network fits.
-
-### What missed and false ties in the network do to the estimate
-
-![Bias of the estimate of the social effect against the recall r of the network, one line per precision p, for false ties drawn at random and from coworker pairs. The four cells sit at recall 0.72 to 0.81. Cells: 60 seeds. Specs: 30 seeds, so the true network (r1_p1) reads -0.059 here against -0.030 in the 60-seed table. Exploratory.](20261111/figures/s8_map.png){fig-alt="Two panels, false ties at random and false ties from coworker pairs. Each panel plots the bias of the estimate against recall from 0.6 to 1, with one line per precision of 1, 0.8 and 0.6 and bars of two Monte Carlo standard errors. Four diamonds mark the cells C00, C01, C10 and C11 at recall 0.72 to 0.81, with biases of -0.28 to -0.46."}
-
-Missed ties move the bias little, and false ties move it more. The largest bias, -0.648, comes with 20 percent of the true ties missed and 40 percent of the ties false, the false ties joining coworkers. The grid stops at precision 0.6, while the four cells sit at precision 0.30 to 0.32, so it cannot say whether their bias comes from low precision.
+Other results or figures are compiled into the supplementary materials
 
 ## 5. Supplementary Materials
 
-### Systematic literature review
-
 ### Network inference from GPS traces
 
-[Supplementary material: network inference from GPS traces](20261111/supplementary.qmd). It explains the workflow, each method and the results step by step, with a diagram of the general workflow, the method ladder, the four cells and the estimation loop.
+[Supplementary material: network inference from GPS traces](20261111/supplementary.qmd). It explains the workflow of the playground of the methodologies collected, including each method and the results step by step, with a diagram of the general workflow, the method ladder, the four cells and the estimation loop. However, the results are questionable.
 
 ## 6. Feedbacks and Additional Follow-ups
 
