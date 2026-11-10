@@ -32,7 +32,7 @@ mermaid:
 
 #### What I did
 
-- Done some citation chaining of Stream A through ResearchRabbit app, found a similar review paper that discuss peer effects on social networks, also mentioning or discussing about ABM and SAOM.
+- Ran citation chaining on Stream A in ResearchRabbit and found a recent review paper on peer effects in social networks that also covers ABM and SAOM.
     - The paper is titled [Peer influence in social network: a review of identification, modeling and application](https://doi.org/10.1016/j.jbusres.2025.115806) by Wu et al. (2025)
 
 #### What obstacles I found
@@ -59,7 +59,7 @@ mermaid:
 
 #### What I did
 
-- Basically, ran a test of the methodologies into a simulated city, but the result is still questionable
+- Ran the methods on a simulated city, but the results are still questionable.
 
 #### What obstacles I found
 
@@ -139,7 +139,7 @@ mermaid:
 
 ### Inferring Social Ties from GPS Data
 
-These are the general workflow I am planning after getting permission for the real data:
+This is the general workflow I plan to follow once I get permission for the real data:
 
 ::: {.diagram-scroll tabindex="0" role="region" aria-label="Planned workflow for the real GPS data, scrolls sideways"}
 ```{mermaid}
