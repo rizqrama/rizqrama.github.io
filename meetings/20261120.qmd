@@ -1,0 +1,51 @@
+---
+title: "Progress Report - 2026-11-20"
+subtitle: "Planning for EASTS 2027 Conference"
+description: "A planned workflow for submitting the inferred social network into the EASTS 2027 Conference."
+author:
+  - name: "Rizqi Ramadhan"
+    affiliations:
+      - name: "Graduate School of Innovation and Practice for Smart Society, Hiroshima University"
+date: "2026-11-20"
+date-format: "iso"
+categories: [social ties, GPS data, systematic review]
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    embed-resources: true
+    smooth-scroll: true
+    callout-appearance: simple
+    link-external-newwindow: true
+mermaid:
+  theme: default
+---
+
+## 1. Current Situation or Progress since Last Week
+
+### Binary Choice Model on Inferred Social Network
+
+#### What I planned
+
+- Building plan on how to run the methods on real GPS data
+
+#### What I did
+
+- Made plan for EASTS 2027 submission which includes timeline, general workflow, dataset to use
+
+#### What obstacles I found
+
+- missing keys to connect user IDs from trajectories data and the result survey, therefore comparing inferred and real networks is difficult. The solutions are
+    - asking and waiting for the user ID keys from Fukken (taking much time)
+    - do estimates from atrribute matching (need to learn further but preferable)
+
+#### What I am currently doing
+
+- start doing the analysis by inferring the social network first on Fukken GPS trajectories data
+- reading Lee et al.'s (2014) paper titled "Binary Choice Models with Social Network under Heterogeneous Rational Expectations"
+
+#### What I am going to do next
+
+- Considering to extend the choice model using Lin and Hu's "Binary choice with misclassification and social interactions, with an application to peer effects in attitude" because of the "unknown" real network
+- Moving the analysis to use the MacStudio M2 as my laptop was reaching full capacity when running previous analysis on the simulated city
