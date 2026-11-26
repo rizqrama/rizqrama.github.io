@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A [Quarto](https://quarto.org) website — Rizqi Ramadhan's PhD research portfolio (rizqrama.github.io). It is content, not an application: the "code" is `.qmd` (Quarto Markdown) source plus CSS theming. The main deliverables are **weekly progress reports** under `meetings/`, archived for lab meetings with Chikaraishi Sensei at Hiroshima University's Urban and Transportation Planning Lab.
+A [Quarto](https://quarto.org) website — Rizqi Ramadhan's PhD research portfolio (rizqrama.github.io). It is content, not an application: the "code" is `.qmd` (Quarto Markdown) source plus CSS theming. The sections are the research plan, publications and projects. The weekly progress reports for lab meetings moved on 2026-11-26 to the private, login-protected repo `rizqrama/lab-meetings` (local folder `~/01_phd/lab-meetings`, with its own CLAUDE.md). See "Weekly reports moved" below.
 
 ## Your role on this project
 
@@ -26,7 +26,7 @@ Act as a **web-design expert whose daily driver is Quarto** — someone fluent i
 
 - `quarto preview` — live-reload local server while editing (the normal dev loop).
 - `quarto render` — build the full site into `_site/`.
-- `quarto render meetings/20260608.qmd` — render a single page (fast iteration on one report).
+- `quarto render plan/research_plan.qmd` — render a single page (fast iteration on one page).
 - Mermaid diagrams render via headless Chromium. If a render fails on mermaid, run `quarto install chromium --no-prompt` once.
 
 Do **not** commit `_site/`, `.quarto/`, or `_freeze/` — they are gitignored build output. CI rebuilds from source.
@@ -38,7 +38,7 @@ Pushing to `main` triggers `.github/workflows/publish.yml`, which renders with *
 ## Structure
 
 - `index.qmd` — landing page (`about: trestles` template, profile + social links).
-- `meetings/`, `publications/`, `projects/` — three content sections. Each has an `index.qmd` that is a **Quarto listing** auto-generating cards from sibling `.qmd` files (sorted `date desc`, `index.qmd` excluded). To add an entry, drop a new `.qmd` in the folder; the listing picks it up from its front-matter `date`/`title`/`description`/`categories`. No index edits needed.
+- `plan/`, `publications/`, `projects/` — three content sections. Each has an `index.qmd` that is a **Quarto listing** auto-generating cards from sibling `.qmd` files (sorted `date desc`, `index.qmd` excluded). To add an entry, drop a new `.qmd` in the folder; the listing picks it up from its front-matter `date`/`title`/`description`/`categories`. No index edits needed.
 - `_quarto.yml` — site config: navbar, navbar search, Open Graph / Twitter cards, favicon, and the dual light/dark SCSS theme.
 - **Theme = three SCSS files (the "Harvest Gold" warm/dark-autumn theme).** Idiomatic Quarto SCSS, *not* a plain CSS override:
   - `theme-light.scss` — `scss:defaults` for light mode (paired with Bootstrap `cosmo`). Sets palette + typography via Bootstrap/Quarto SCSS variables (`$body-bg`, `$primary`, `$navbar-bg`, `$font-family-base`, a custom `$accent`, …).
@@ -47,24 +47,16 @@ Pushing to `main` triggers `.github/workflows/publish.yml`, which renders with *
   - Change colours in the two `defaults` files; change layout/components in the shared `rules` file. Prefer setting a Bootstrap variable in `defaults` over writing a rule with `!important`. Palette is WCAG 2.2 AA-verified — keep it that way (see the role section's contrast rules). The old `styles.css` / `assets/listing-default.css` were removed in favour of this.
 - `_extensions/quarto-ext/fontawesome/` — vendored Quarto extension; don't hand-edit.
 
-Meeting reports are named by date: `meetings/YYYYMMDD.qmd`.
+## Weekly reports moved
 
-## Report conventions (meetings/)
+The weekly progress reports (`meetings/`) left this repo on 2026-11-26. They show unpublished research and GPS-derived networks of real employees, and this repo is public. They now live in the private repo `rizqrama/lab-meetings` (local folder `~/01_phd/lab-meetings`), served at https://rama-lab-meetings.pages.dev/ behind a shared login. The report conventions, the Slidev deck recipe and the login-gate notes sit in that repo's CLAUDE.md. Do not recreate `meetings/` here. The navbar item "Weekly Progress (members)" links to the gated site. Reports published before the move remain readable in this repo's git history.
 
-Progress reports follow a deliberate, consistent structure — when creating or editing one, mirror the most recent report (e.g. `meetings/20260608.qmd`):
-
-- **Dual-view tabsets.** Most sections wrap content in `::: {.panel-tabset}` with a **Presentation** tab (slide-style action-title headings, summary tables, mermaid diagrams) and a **Detailed** tab (prose with *Current thought / Reasoning / Alternatives considered* paragraphs). Same logical flow, two zoom levels.
-- **Action-title headings** — section headings state the takeaway as a full sentence, not a topic label.
-- **Self-contained HTML** — reports set `embed-resources: true` in their own front matter so each page is one shareable file (the theme is inlined). Per-report front matter also commonly overrides `toc-location: left`, `toc-depth`, and sets `mermaid: theme: default`. Do **not** add a `theme:` key to a report — leave it unset so the page inherits the project's dual light/dark Harvest Gold theme; pinning `theme: cosmo` would bypass the site theme for that page.
-- **Mermaid diagrams** use a recurring custom color scheme (dark green `#1f2d2a`/`#3a5a4a` for concepts, brown `#4a3a2a` for outputs) via `classDef`. Reuse those classes for visual consistency across reports.
-- Reports cite a large literature with short citation keys (e.g. `Souche-Le Corvec & Zhao 2020`) and a source-code map table in the appendix. When editing report content, preserve citation accuracy — these are real academic sources, not placeholders.
-
-### Authoring gotchas that break the render (both have bitten this repo)
+## Authoring gotchas that break the render (both have bitten this repo)
 
 - **Fenced divs must start at column 0.** A single leading space before `:::` (open *or* close) stops Pandoc parsing it as a div — the `:::` then leaks into the page as literal text and CI logs `WARNING ... The following string was found in the document: :::`. Nesting is fine (tabset-in-tabset); indentation is not.
 - **In `{mermaid}` blocks, write a literal `&`, never the entity `&amp;`.** Quarto escapes the block again on render, so `&amp;` becomes `&amp;amp;` and mermaid receives garbled text (broken diagram in the browser; the build still "succeeds" because mermaid renders client-side). Also quote any label containing `&`, `;`, or `:` — e.g. `A["Foo & Bar; baz"]`.
-- After non-trivial edits, sanity-check with `quarto render meetings/<file>.qmd` and confirm the output has **no** literal `:::` and **no** `&amp;amp;` before pushing — a bad render only surfaces in CI otherwise.
+- After non-trivial edits, sanity-check with `quarto render <file>.qmd` and confirm the output has **no** literal `:::` and **no** `&amp;amp;` before pushing — a bad render only surfaces in CI otherwise.
 
-## Research context (so report edits land correctly)
+## Research context (so page edits land correctly)
 
 The active thread is **Paper 1**: a *construct* (externally-derived / PUDO travel demand with an affective-relational dimension) plus a *survey instrument* (four modules A–D) measuring emotion across anticipated / in-trip / post-trip phases. Time-allocation modelling (DDCM / MDCEV) is deliberately descoped to a follow-up "Paper 1.5". This framing recurs across reports; keep terminology (e.g. "two-root triple invisibility", "PUDO", module letters) consistent with prior entries.

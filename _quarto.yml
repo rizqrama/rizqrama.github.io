@@ -13,8 +13,8 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: meetings/index.qmd
-        text: Weekly Progress
+      - href: https://rama-lab-meetings.pages.dev/
+        text: Weekly Progress (members)
       - href: plan/index.qmd
         text: Research Plan
       - href: publications/index.qmd

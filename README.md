@@ -1,9 +1,6 @@
-# Lab Meeting Notes
+# rizqrama.github.io
 
-This site archives weekly research progress reports shared during lab meetings.
-Each entry includes a slide presentation and a full text report covering the work
-discussed that week.
-
-Reports are organized by date and accessible at the link below.
+Source of Rizqi Ramadhan's research portfolio: profile, research plan, publications and projects.
+The weekly lab meeting reports live in a separate private repository.
 
 **Site:** [rizqrama.github.io](https://rizqrama.github.io)
